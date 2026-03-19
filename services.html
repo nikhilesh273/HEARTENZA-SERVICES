@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Services | Heartenza Services</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .page-hero {
+      padding: 10rem 0 6rem;
+      background-color: var(--bg-navy);
+      background-image: linear-gradient(rgba(10, 31, 68, 0.9), rgba(10, 31, 68, 0.9)), url('https://res.cloudinary.com/dm1ig0zit/image/upload/v1773919344/wayanad_bgg4g5.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+    }
+
+    .page-hero h1 {
+      color: white;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .service-detail-card {
+      background: white;
+      border-radius: var(--radius-xl);
+      padding: 3rem;
+      margin-bottom: 3rem;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    }
+
+    .service-detail-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-xl);
+      border-color: rgba(250, 204, 21, 0.3);
+      /* faint gold border on hover */
+    }
+
+    .service-detail-card:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .sd-icon-box {
+      width: 120px;
+      height: 120px;
+      background: rgba(30, 58, 138, 0.05);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      color: var(--primary-royal-blue);
+      flex-shrink: 0;
+      transition: all var(--transition-normal);
+    }
+
+    .service-detail-card:hover .sd-icon-box {
+      background: var(--primary-royal-blue);
+      color: var(--accent-gold);
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    .sd-content h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .sd-content p {
+      color: var(--text-gray);
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    @media (max-width: 992px) {
+
+      .service-detail-card,
+      .service-detail-card:nth-child(even) {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+        padding: 2.5rem;
+      }
+    }
+  </style>
+  <style>
+    #loader-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #111111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 999999;
+      transition: opacity 0.8s cubic-bezier(0.77, 0, 0.175, 1), visibility 0.8s;
+    }
+  </style>
+  <script type="module" crossorigin src="/HEARTENZA-SERVICES/assets/main-Bi7ENGOs.js"></script>
+  <link rel="stylesheet" crossorigin href="/HEARTENZA-SERVICES/assets/main-BbLg4P-8.css">
+</head>
+
+<body>
+  <!-- Premium Loading Screen -->
+  <div id="loader-wrapper">
+    <div class="loader-content">
+      <div class="loader-circle"></div>
+      <h2 class="loader-text">Heartenza</h2>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="./" class="nav-brand">
+        <img src="./logo.png" alt="Heartenza Logo">
+      </a>
+      <ul class="nav-links">
+        <li><a href="./" class="nav-item">Home</a></li>
+        <li><a href="./tours.html" class="nav-item">Tour Packages</a></li>
+        <li><a href="./services.html" class="nav-item active">Services</a></li>
+        <li><a href="./about.html" class="nav-item">About Us</a></li>
+        <li><a href="./testimonials.html" class="nav-item">Testimonials</a></li>
+        <li><a href="./contact.html" class="nav-item">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="https://wa.me/1234567890" class="btn btn-primary" target="_blank">Book Tour <i
+            class="fa-brands fa-whatsapp" style="margin-left: 8px;"></i></a>
+      </div>
+      <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Page Header -->
+  <header class="page-header"
+    style="background-image: url('https://res.cloudinary.com/dm1ig0zit/image/upload/v1773918159/Heaven_oxn1bu.jpg')">
+    <div class="container fade-in">
+      <span class="section-subtitle text-gold">Our Services</span>
+      <h1>What We Offer</h1>
+      <p class="header-subtitle">Tailored Solutions for Modern Travelers</p>
+    </div>
+  </header>
+
+  <!-- Detailed Services List -->
+  <section class="section-padding bg-light-gray">
+    <div class="container" style="max-width: 1000px;">
+
+      <!-- Service 1 -->
+      <div class="service-detail-card fade-in">
+        <div class="sd-icon-box"><i class="fa-solid fa-plane-departure"></i></div>
+        <div class="sd-content">
+          <h3>Tour Package Planning</h3>
+          <p>We craft end-to-end, customized travel itineraries combining premium hotel stays, comfortable transport,
+            and local sightseeing for individuals, couples, and large families. Say goodbye to the stress of travel
+            planning.</p>
+          <a href="https://wa.me/1234567890?text=I'm%20interested%20in%20Tour%20Package%20Planning%20services."
+            class="btn btn-outline-dark" target="_blank">Inquire Now</a>
+        </div>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="service-detail-card fade-in">
+        <div class="sd-icon-box"><i class="fa-solid fa-car"></i></div>
+        <div class="sd-content">
+          <h3>Professional Driver Services</h3>
+          <p>Need a temporary, verified, and professional driver for an outstation trip or a special event? We provide
+            experienced chauffeurs to ensure a safe and smooth journey in the comfort of your own car.</p>
+          <a href="https://wa.me/1234567890?text=I'm%20interested%20in%20Driver%20Services."
+            class="btn btn-outline-dark" target="_blank">Inquire Now</a>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="service-detail-card fade-in">
+        <div class="sd-icon-box"><i class="fa-solid fa-house-chimney-crack"></i></div>
+        <div class="sd-content">
+          <h3>House Maintenance</h3>
+          <p>From deep cleaning to sudden plumbing issues and electrical repairs, our vetted local repair specialists
+            are available on-call to ensure your house remains in perfect condition without you lifting a finger.</p>
+          <a href="https://wa.me/1234567890?text=I'm%20interested%20in%20House%20Maintenance%20services."
+            class="btn btn-outline-dark" target="_blank">Inquire Now</a>
+        </div>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="service-detail-card fade-in">
+        <div class="sd-icon-box"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+        <div class="sd-content">
+          <h3>Vehicle Maintenance</h3>
+          <p>Don’t have time to drop your car off for a service or wash? We will pick up your vehicle from your
+            location, get it professionally serviced or detailed, and drop it back safely. Ultimate convenience for busy
+            professionals.</p>
+          <a href="https://wa.me/1234567890?text=I'm%20interested%20in%20Vehicle%20Maintenance."
+            class="btn btn-outline-dark" target="_blank">Inquire Now</a>
+        </div>
+      </div>
+
+      <!-- Service 5 -->
+      <div class="service-detail-card fade-in">
+        <div class="sd-icon-box"><i class="fa-solid fa-box-open"></i></div>
+        <div class="sd-content">
+          <h3>Fast Delivery Service</h3>
+          <p>Forgot an important document? Need a package delivered urgently across town? Our rapid delivery personnel
+            ensure your items reach their destination securely and on time.</p>
+          <a href="https://wa.me/1234567890?text=I'm%20interested%20in%20Delivery%20services."
+            class="btn btn-outline-dark" target="_blank">Inquire Now</a>
+        </div>
+      </div>
+
+      <!-- Service 6 -->
+      <div class="service-detail-card fade-in">
+        <div class="sd-icon-box"><i class="fa-solid fa-hands-holding-child"></i></div>
+        <div class="sd-content">
+          <h3>Companion Service</h3>
+          <p>Living far from aging parents? We offer compassionate companion services where our trained staff can spend
+            quality time, assist with banking, shopping, or daily tasks to support the elderly.</p>
+          <a href="https://wa.me/1234567890?text=I'm%20interested%20in%20Companion%20Services."
+            class="btn btn-outline-dark" target="_blank">Inquire Now</a>
+        </div>
+      </div>
+
+      <!-- Service 7 -->
+      <div class="service-detail-card fade-in">
+        <div class="sd-icon-box"><i class="fa-solid fa-notes-medical"></i></div>
+        <div class="sd-content">
+          <h3>Medical Assistance</h3>
+          <p>We provide reliable assistance for hospital visits, including scheduling doctor appointments,
+            transportation to local clinics, and picking up pharmacy prescriptions for your loved ones.</p>
+          <a href="https://wa.me/1234567890?text=I'm%20interested%20in%20Medical%20Assistance."
+            class="btn btn-outline-dark" target="_blank">Inquire Now</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="./logo.png" alt="Heartenza Logo" style="border-radius: 8px; padding: 5px;">
+          <p>Providing reliable travel and lifestyle support services tailored for busy professionals and families.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="./">Home</a></li>
+            <li><a href="./tours.html">Tour Packages</a></li>
+            <li><a href="./about.html">About Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Support</h4>
+          <ul class="footer-links">
+            <li><a href="./contact.html">Contact Us</a></li>
+            <li><a href="./testimonials.html">Testimonials</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Contact</h4>
+          <ul class="footer-contact">
+            <li><i class="fa-solid fa-location-dot"></i><span>123 Business Avenue, Tech Park Building, Kerala,
+                India</span></li>
+            <li><i class="fa-solid fa-phone"></i><span>+91 98765 43210</span></li>
+            <li><i class="fa-solid fa-envelope"></i><span>info@heartenzaservices.com</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Heartenza Services. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

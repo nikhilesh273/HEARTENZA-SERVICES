@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Testimonials | Heartenza Services</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .page-hero {
+      padding: 10rem 0 6rem;
+      background-color: var(--bg-navy);
+      background-image: linear-gradient(rgba(10, 31, 68, 0.9), rgba(10, 31, 68, 0.9)), url('https://res.cloudinary.com/dm1ig0zit/image/upload/v1773919344/wayanad_bgg4g5.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+    }
+
+    .page-hero h1 {
+      color: white;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .stats-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      margin-bottom: 4rem;
+      background: white;
+      padding: 3rem;
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-md);
+      text-align: center;
+    }
+
+    .stat-item h3 {
+      font-size: 2.5rem;
+      color: var(--primary-royal-blue);
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-item p {
+      color: var(--text-gray);
+      font-weight: 500;
+    }
+
+    @media (max-width: 992px) {
+      .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2rem;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .stats-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    #loader-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #111111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 999999;
+      transition: opacity 0.8s cubic-bezier(0.77, 0, 0.175, 1), visibility 0.8s;
+    }
+  </style>
+  <script type="module" crossorigin src="/HEARTENZA-SERVICES/assets/main-Bi7ENGOs.js"></script>
+  <link rel="stylesheet" crossorigin href="/HEARTENZA-SERVICES/assets/main-BbLg4P-8.css">
+</head>
+
+<body>
+  <!-- Premium Loading Screen -->
+  <div id="loader-wrapper">
+    <div class="loader-content">
+      <div class="loader-circle"></div>
+      <h2 class="loader-text">Heartenza</h2>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="./" class="nav-brand">
+        <img src="./logo.png" alt="Heartenza Logo">
+      </a>
+      <ul class="nav-links">
+        <li><a href="./" class="nav-item">Home</a></li>
+        <li><a href="./tours.html" class="nav-item">Tour Packages</a></li>
+        <li><a href="./services.html" class="nav-item">Services</a></li>
+        <li><a href="./about.html" class="nav-item">About Us</a></li>
+        <li><a href="./testimonials.html" class="nav-item active">Testimonials</a></li>
+        <li><a href="./contact.html" class="nav-item">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="https://wa.me/1234567890" class="btn btn-primary" target="_blank">Book Tour <i
+            class="fa-brands fa-whatsapp" style="margin-left: 8px;"></i></a>
+      </div>
+      <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Page Header -->
+  <header class="page-header"
+    style="background-image: url('https://res.cloudinary.com/dm1ig0zit/image/upload/v1773918740/download_11_wpeky6.jpg')">
+    <div class="container fade-in">
+      <span class="section-subtitle text-gold">Testimonials</span>
+      <h1>Client Stories</h1>
+      <p class="header-subtitle">Voices of Happy Travelers</p>
+    </div>
+  </header>
+
+  <!-- Content Section -->
+  <section class="section-padding bg-light-gray" style="min-height: 70vh;">
+    <div class="container">
+
+      <!-- Stats -->
+      <div class="stats-container fade-in">
+        <div class="stat-item">
+          <h3>500+</h3>
+          <p>Happy Families</p>
+        </div>
+        <div class="stat-item">
+          <h3>50+</h3>
+          <p>Premium Tours</p>
+        </div>
+        <div class="stat-item">
+          <h3>100%</h3>
+          <p>Verified Staff</p>
+        </div>
+        <div class="stat-item">
+          <h3>4.9</h3>
+          <p>Average Rating</p>
+        </div>
+      </div>
+
+      <!-- Reviews Grid -->
+      <div class="testimonials-grid">
+
+        <!-- Review 1 -->
+        <div class="testimonial-card fade-in">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text">"Heartenza planned our Kerala trip to perfection. From the houseboat stay to the
+            transportation, everything was premium and hassle-free."</p>
+          <div class="client-info">
+            <img src="https://ui-avatars.com/api/?name=Rajesh+Kumar&background=1E3A8A&color=fff" alt="Client">
+            <div>
+              <h5>Rajesh Kumar</h5>
+              <span>Family Vacation</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="testimonial-card fade-in" style="transition-delay: 0.1s;">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text">"Excellent tour planning and very friendly service. Highly recommend their driver
+            services as well!"</p>
+          <div class="client-info">
+            <img src="https://ui-avatars.com/api/?name=Priya+Sharma&background=FACC15&color=1F2937" alt="Client">
+            <div>
+              <h5>Priya Sharma</h5>
+              <span>Munnar Tour</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="testimonial-card fade-in" style="transition-delay: 0.2s;">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <p class="review-text">"We use their medical assistance service for my parents. It gives me absolute peace of
+            mind while I'm at work in another city. Very reliable and caring staff."</p>
+          <div class="client-info">
+            <img src="https://ui-avatars.com/api/?name=Amit+Patel&background=1E3A8A&color=fff" alt="Client">
+            <div>
+              <h5>Amit Patel</h5>
+              <span>Lifestyle Services</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 4 -->
+        <div class="testimonial-card fade-in">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text">"I needed an urgent electrical repair at my home. I contacted Heartenza via WhatsApp,
+            and they sent a professional within an hour. Excellent house maintenance service!"</p>
+          <div class="client-info">
+            <img src="https://ui-avatars.com/api/?name=Sneha+Reddy&background=0A1F44&color=fff" alt="Client">
+            <div>
+              <h5>Sneha Reddy</h5>
+              <span>House Maintenance</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 5 -->
+        <div class="testimonial-card fade-in" style="transition-delay: 0.1s;">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text">"Booked the Goa Beach Tour with them for our anniversary. The hotel they selected was
+            fantastic, and the customized itinerary was exactly what we asked for."</p>
+          <div class="client-info">
+            <img src="https://ui-avatars.com/api/?name=Vikram+Singh&background=FACC15&color=1F2937" alt="Client">
+            <div>
+              <h5>Vikram Singh</h5>
+              <span>Couple Holiday</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 6 -->
+        <div class="testimonial-card fade-in" style="transition-delay: 0.2s;">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text">"Their vehicle maintenance pickup and drop service is a lifesaver. I saved so much time
+            on my weekend. Very transparent pricing as well."</p>
+          <div class="client-info">
+            <img src="https://ui-avatars.com/api/?name=Ananya+Desai&background=1E3A8A&color=fff" alt="Client">
+            <div>
+              <h5>Ananya Desai</h5>
+              <span>Vehicle Maintenance</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA inside Testimonials -->
+      <div class="text-center" style="margin-top: 4rem;">
+        <h3 style="margin-bottom: 1.5rem; font-family: var(--font-heading); font-size: 1.8rem;">Ready to experience our
+          premium services?</h3>
+        <a href="https://wa.me/1234567890" class="btn btn-primary" target="_blank"
+          style="padding: 1rem 2rem; font-size: 1.1rem;"><i class="fa-brands fa-whatsapp"
+            style="margin-right: 10px; font-size: 1.2rem;"></i> Chat with us on WhatsApp</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" style="padding-top: 5rem;">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="./logo.png" alt="Heartenza Logo" style="border-radius: 8px; padding: 5px;">
+          <p>Providing reliable travel and lifestyle support services tailored for busy professionals and families.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="./">Home</a></li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./tours.html">Tour Packages</a></li>
+            <li><a href="./services.html">Services</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Support</h4>
+          <ul class="footer-links">
+            <li><a href="./contact.html">Contact Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Contact</h4>
+          <ul class="footer-contact">
+            <li><i class="fa-solid fa-location-dot"></i><span>123 Business Avenue, Tech Park Building, Kerala,
+                India</span></li>
+            <li><i class="fa-solid fa-phone"></i><span>+91 98765 43210</span></li>
+            <li><i class="fa-solid fa-envelope"></i><span>info@heartenzaservices.com</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Heartenza Services. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
