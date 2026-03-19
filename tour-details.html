@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tour Details | Heartenza Services</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    #loader-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #111111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 999999;
+      transition: opacity 0.8s cubic-bezier(0.77, 0, 0.175, 1), visibility 0.8s;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Premium Loading Screen -->
+  <div id="loader-wrapper">
+    <div class="loader-content">
+      <div class="loader-circle"></div>
+      <h2 class="loader-text">Heartenza</h2>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="/" class="nav-brand">
+        <img src="/public/logo.png" alt="Heartenza Logo">
+      </a>
+      <ul class="nav-links">
+        <li><a href="/" class="nav-item">Home</a></li>
+        <li><a href="/tours.html" class="nav-item active">Tour Packages</a></li>
+        <li><a href="/services.html" class="nav-item">Services</a></li>
+        <li><a href="/about.html" class="nav-item">About Us</a></li>
+        <li><a href="/testimonials.html" class="nav-item">Testimonials</a></li>
+        <li><a href="/contact.html" class="nav-item">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="https://wa.me/1234567890" class="btn btn-primary" target="_blank">Book Tour <i
+            class="fa-brands fa-whatsapp" style="margin-left: 8px;"></i></a>
+      </div>
+      <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/1234567890" class="whatsapp-float wa-booking-btn" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Page Header (Dynamic) -->
+  <header class="page-header dynamic-hero">
+    <div class="container fade-in">
+      <span class="section-subtitle text-gold font-accent">Wayanad Special</span>
+      <h1 class="font-heading">Loading Tour...</h1>
+      <p class="header-subtitle font-accent">Please wait while we fetch the details.</p>
+    </div>
+  </header>
+
+  <!-- Tour Content -->
+  <section class="section-padding bg-light-gray tour-details-section">
+    <div class="container">
+      <div class="tour-layout">
+
+        <!-- Main Content -->
+        <div class="tour-main-content fade-in">
+
+          <div class="content-section">
+            <h2 class="section-title text-navy">Overview</h2>
+            <p class="tour-overview-text">
+              Discover the breathtaking beauty and rich heritage of this magnificent region.
+            </p>
+          </div>
+
+          <div class="content-section">
+            <h2 class="section-title text-navy">Top Destinations</h2>
+            <!-- Dynamic Destinations List -->
+            <div class="places-list">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+
+          <!-- General Inclusions -->
+          <div class="content-section inclusion-section">
+            <h3 class="inclusion-title">What's Included</h3>
+            <div class="inclusion-grid">
+              <ul class="inclusion-list">
+                <li><i class="fa-solid fa-circle-check"></i> Premium Transportation</li>
+                <li><i class="fa-solid fa-circle-check"></i> Expert Local Guide</li>
+              </ul>
+              <ul class="inclusion-list">
+                <li><i class="fa-solid fa-circle-check"></i> Entry Permits & Fees</li>
+                <li><i class="fa-solid fa-circle-check"></i> Refreshments</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="booking-sidebar fade-in">
+          <h3>Book Your Journey</h3>
+          <p>Ready to explore the wonders of Wayanad? Chat with our experts to customize your itinerary and confirm your
+            dates.</p>
+
+          <div class="sidebar-contact-info">
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+              <div class="contact-text">
+                <p>Call for support</p>
+                <p>+91 98765 43210</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div class="contact-text">
+                <p>Email Us</p>
+                <p>info@heartenza.com</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="#" class="btn btn-gold wa-booking-btn">
+            <i class="fa-brands fa-whatsapp"></i> Book via WhatsApp
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="/public/logo.png" alt="Heartenza Logo" style="border-radius: 8px; padding: 5px;">
+          <p>Providing reliable travel and lifestyle support services tailored for busy professionals and families.</p>
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/tours.html">Tour Packages</a></li>
+            <li><a href="/services.html">Services</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Support</h4>
+          <ul class="footer-links">
+            <li><a href="/contact.html">Contact Us</a></li>
+            <li><a href="/testimonials.html">Testimonials</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Contact Details</h4>
+          <ul class="footer-contact">
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <span>123 Business Avenue, Tech Park Building, Kerala, India</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <span>+91 98765 43210</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <span>info@heartenzaservices.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Heartenza Services. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>

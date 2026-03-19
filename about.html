@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Heartenza Services</title>
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    #loader-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #111111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 999999;
+      transition: opacity 0.8s cubic-bezier(0.77, 0, 0.175, 1), visibility 0.8s;
+    }
+  </style>
+  <style>
+    .page-hero {
+      padding: 10rem 0 6rem;
+      background-color: var(--bg-navy);
+      background-image: linear-gradient(rgba(20, 100, 219, 0.9), rgba(118, 119, 121, 0)), url('https://res.cloudinary.com/dm1ig0zit/image/upload/v1773918740/download_11_wpeky6.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+    }
+
+    .page-hero h1 {
+      color: white;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .about-content-section p {
+      font-size: 1.1rem;
+      color: var(--text-gray);
+      margin-bottom: 1.5rem;
+    }
+
+    .mission-vision-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-top: 4rem;
+    }
+
+    .mv-card {
+      background: var(--bg-light-gray);
+      padding: 3rem;
+      border-radius: var(--radius-xl);
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--transition-normal);
+    }
+
+    .mv-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .mv-icon {
+      font-size: 3rem;
+      color: var(--accent-gold);
+      margin-bottom: 1.5rem;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .value-item {
+      text-align: center;
+      padding: 2rem;
+      background: white;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .value-item i {
+      font-size: 2.5rem;
+      color: var(--primary-royal-blue);
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 992px) {
+      .mission-vision-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .page-hero {
+        padding: 8rem 0 4rem;
+      }
+
+      .page-hero h1 {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Premium Loading Screen -->
+  <div id="loader-wrapper">
+    <div class="loader-content">
+      <div class="loader-circle"></div>
+      <h2 class="loader-text">Heartenza</h2>
+    </div>
+  </div>
+
+  <!-- Navbar (Same as index.html, with active class updated) -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="/" class="nav-brand">
+        <img src="/public/logo.png" alt="Heartenza Logo">
+      </a>
+      <ul class="nav-links">
+        <li><a href="/" class="nav-item">Home</a></li>
+        <li><a href="/tours.html" class="nav-item">Tour Packages</a></li>
+        <li><a href="/services.html" class="nav-item">Services</a></li>
+        <li><a href="/about.html" class="nav-item active">About Us</a></li>
+        <li><a href="/testimonials.html" class="nav-item">Testimonials</a></li>
+        <li><a href="/contact.html" class="nav-item">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="https://wa.me/1234567890" class="btn btn-primary" target="_blank">Book Tour <i
+            class="fa-brands fa-whatsapp" style="margin-left: 8px;"></i></a>
+      </div>
+      <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Page Hero -->
+  <header class="page-hero">
+    <div class="container fade-in">
+      <h1>About Heartenza Services</h1>
+      <p>Premium travel planning and lifestyle services.</p>
+    </div>
+  </header>
+
+  <!-- Company Intro & Why Heartenza -->
+  <section class="section-padding about-content-section" style="padding-bottom: 2rem;">
+    <div class="container">
+      <div class="about-grid" style="align-items: start;">
+        <div class="fade-in">
+          <span class="section-subtitle">Our Journey</span>
+          <h2 class="section-title">Who We Are</h2>
+          <p><strong>Heartenza Services</strong> provides reliable travel planning and comprehensive lifestyle support
+            services. In today's fast-paced world, professionals and families often struggle to find time for detailed
+            vacation planning or dealing with daily maintenance issues. That’s where we step in.</p>
+          <p>From curating the perfect itinerary to ensuring your house is well-maintained while you are away, we act as
+            your personal service partner. Our team is dedicated to offering personalized, premium experiences so you
+            can focus on what truly matters.</p>
+
+          <h3 style="margin: 2rem 0 1rem; font-size: 1.5rem;">Why Heartenza?</h3>
+          <ul style="list-style-type: none; padding-left: 0;">
+            <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 10px;">
+              <i class="fa-solid fa-circle-check text-gold"></i> Trusted and verified professionals.
+            </li>
+            <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 10px;">
+              <i class="fa-solid fa-circle-check text-gold"></i> Highly personalized services for your needs.
+            </li>
+            <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 10px;">
+              <i class="fa-solid fa-circle-check text-gold"></i> Affordable and transparent pricing.
+            </li>
+          </ul>
+        </div>
+        <div class="fade-in">
+          <img
+            src="https://res.cloudinary.com/dm1ig0zit/image/upload/v1773919667/yash-parashar-Wag11Ja47zI-unsplash_sjozog.jpg"
+            alt="Our Team" style="border-radius: var(--radius-xl); box-shadow: var(--shadow-xl);">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Vision -->
+  <section class="section-padding bg-light-gray" style="padding-top: 4rem;">
+    <div class="container">
+      <div class="mission-vision-grid">
+        <div class="mv-card fade-in">
+          <div class="mv-icon"><i class="fa-solid fa-bullseye"></i></div>
+          <h3 style="margin-bottom: 1rem; font-size: 1.8rem;">Our Mission</h3>
+          <p style="color: var(--text-gray); font-size: 1.1rem;">To provide reliable, high-quality travel and lifestyle
+            support services that simplify our clients' lives and create unforgettable memories.</p>
+        </div>
+        <div class="mv-card fade-in" style="transition-delay: 0.2s;">
+          <div class="mv-icon"><i class="fa-regular fa-eye"></i></div>
+          <h3 style="margin-bottom: 1rem; font-size: 1.8rem;">Our Vision</h3>
+          <p style="color: var(--text-gray); font-size: 1.1rem;">To become the most trusted and sought-after service
+            partner for professionals and families across the region.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Values -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="text-center fade-in" style="margin-bottom: 2rem;">
+        <span class="section-subtitle">Heartenza Ethos</span>
+        <h2 class="section-title">Our Values</h2>
+      </div>
+      <div class="values-grid">
+        <div class="value-item fade-in">
+          <i class="fa-solid fa-handshake-angle"></i>
+          <h4>Trust</h4>
+          <p style="font-size: 0.9rem; color: var(--text-gray); margin-top: 10px;">Building lasting relationships
+            through transparency.</p>
+        </div>
+        <div class="value-item fade-in" style="transition-delay: 0.1s;">
+          <i class="fa-solid fa-medal"></i>
+          <h4>Quality</h4>
+          <p style="font-size: 0.9rem; color: var(--text-gray); margin-top: 10px;">Delivering premium experiences
+            without compromise.</p>
+        </div>
+        <div class="value-item fade-in" style="transition-delay: 0.2s;">
+          <i class="fa-solid fa-mug-hot"></i>
+          <h4>Convenience</h4>
+          <p style="font-size: 0.9rem; color: var(--text-gray); margin-top: 10px;">Simplifying your life so you can
+            relax more.</p>
+        </div>
+        <div class="value-item fade-in" style="transition-delay: 0.3s;">
+          <i class="fa-solid fa-face-smile"></i>
+          <h4>Satisfaction</h4>
+          <p style="font-size: 0.9rem; color: var(--text-gray); margin-top: 10px;">Your happiness is our ultimate
+            priority.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="/public/logo.png" alt="Heartenza Logo" style="border-radius: 8px; padding: 5px;">
+          <p>Providing reliable travel and lifestyle support services tailored for busy professionals and families.</p>
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/tours.html">Tour Packages</a></li>
+            <li><a href="/services.html">Services</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Support</h4>
+          <ul class="footer-links">
+            <li><a href="/contact.html">Contact Us</a></li>
+            <li><a href="/testimonials.html">Testimonials</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Contact Details</h4>
+          <ul class="footer-contact">
+            <li><i class="fa-solid fa-location-dot"></i><span>123 Business Avenue, Tech Park Building, Kerala,
+                India</span></li>
+            <li><i class="fa-solid fa-phone"></i><span>+91 98765 43210</span></li>
+            <li><i class="fa-solid fa-envelope"></i><span>info@heartenzaservices.com</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Heartenza Services. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Heartenza Services</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .page-hero {
+      padding: 10rem 0 6rem;
+      background-color: var(--bg-navy);
+      background-image: linear-gradient(rgba(10, 31, 68, 0.9), rgba(10, 31, 68, 0.9)), url('https://res.cloudinary.com/dm1ig0zit/image/upload/v1773919344/wayanad_bgg4g5.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+    }
+
+    .page-hero h1 {
+      color: white;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+
+    .contact-info-card {
+      background: var(--bg-white);
+      border-radius: var(--radius-xl);
+      padding: 3rem;
+      box-shadow: var(--shadow-md);
+      margin-bottom: 2rem;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .info-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .info-icon {
+      width: 50px;
+      height: 50px;
+      background: rgba(30, 58, 138, 0.1);
+      color: var(--primary-royal-blue);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+
+    .info-content h4 {
+      margin-bottom: 0.25rem;
+      font-size: 1.1rem;
+    }
+
+    .info-content p {
+      color: var(--text-gray);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .contact-form-container {
+      background: var(--bg-white);
+      border-radius: var(--radius-xl);
+      padding: 3rem;
+      box-shadow: var(--shadow-xl);
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: var(--text-dark);
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 1rem;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: var(--radius-md);
+      font-family: inherit;
+      font-size: 1rem;
+      background: var(--bg-light-gray);
+      transition: border-color var(--transition-fast);
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--primary-royal-blue);
+      background: white;
+    }
+
+    textarea.form-control {
+      resize: vertical;
+      min-height: 150px;
+    }
+
+    .map-container {
+      height: 400px;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      margin-top: 4rem;
+      box-shadow: var(--shadow-md);
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    @media (max-width: 992px) {
+      .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+
+    #loader-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #111111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 999999;
+      transition: opacity 0.8s cubic-bezier(0.77, 0, 0.175, 1), visibility 0.8s;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Premium Loading Screen -->
+  <div id="loader-wrapper">
+    <div class="loader-content">
+      <div class="loader-circle"></div>
+      <h2 class="loader-text">Heartenza</h2>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="/" class="nav-brand">
+        <img src="/public/logo.png" alt="Heartenza Logo">
+      </a>
+      <ul class="nav-links">
+        <li><a href="/" class="nav-item">Home</a></li>
+        <li><a href="/tours.html" class="nav-item">Tour Packages</a></li>
+        <li><a href="/services.html" class="nav-item">Services</a></li>
+        <li><a href="/about.html" class="nav-item">About Us</a></li>
+        <li><a href="/testimonials.html" class="nav-item">Testimonials</a></li>
+        <li><a href="/contact.html" class="nav-item active">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="https://wa.me/1234567890" class="btn btn-primary" target="_blank">Book Tour <i
+            class="fa-brands fa-whatsapp" style="margin-left: 8px;"></i></a>
+      </div>
+      <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Page Header -->
+  <header class="page-header"
+    style="background-image: url('https://res.cloudinary.com/dm1ig0zit/image/upload/v1773919344/wayanad_bgg4g5.jpg')">
+    <div class="container fade-in">
+      <span class="section-subtitle text-gold">Contact Us</span>
+      <h1>Get In Touch</h1>
+      <p class="header-subtitle">Let's Plan Your Next Adventure</p>
+    </div>
+  </header>
+
+  <!-- Contact Info & Form -->
+  <section class="section-padding bg-light-gray">
+    <div class="container">
+      <div class="contact-layout">
+
+        <!-- Contact Info -->
+        <div class="fade-in">
+          <h2 class="section-title" style="font-size: 2rem;">Get In Touch</h2>
+          <p style="color: var(--text-gray); margin-bottom: 2rem;">Whether you want to book a holiday package, hire a
+            temporary driver, or arrange house maintenance, we are just a message away.</p>
+
+          <div class="contact-info-card">
+            <div class="info-item">
+              <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="info-content">
+                <h4>Head Office</h4>
+                <p>123 Business Avenue, Tech Park Building<br>Kochi, Kerala, India 682001</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+              <div class="info-content">
+                <h4>Phone Number</h4>
+                <p>+91 98765 43210<br><span style="font-size: 0.85rem;">(Available 24/7 for urgent assistance)</span>
+                </p>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div class="info-content">
+                <h4>Email Address</h4>
+                <p>info@heartenzaservices.com<br>support@heartenzaservices.com</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-action-box" style="text-align: center; margin-top: 2rem;">
+            <p style="margin-bottom: 1rem; font-weight: 500;">Fastest way to reach us?</p>
+            <a href="https://wa.me/1234567890?text=Hi%20Heartenza,%20I%20have%20an%20inquiry." class="btn btn-gold"
+              target="_blank"
+              style="width: 100%; font-size: 1.1rem; padding: 1.25rem; display: flex; justify-content: center; gap: 10px;">
+              <i class="fa-brands fa-whatsapp" style="font-size: 1.5rem;"></i> WhatsApp Us Directly
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-container fade-in" style="transition-delay: 0.2s;">
+          <h3 style="margin-bottom: 1.5rem; font-family: var(--font-heading);">Send a Message</h3>
+
+          <form
+            onsubmit="event.preventDefault(); window.open('https://wa.me/1234567890?text=Hi, I am contacting you via the website form.', '_blank');">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" class="form-control" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" class="form-control" placeholder="john@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="service">Interested Service</label>
+              <select id="service" class="form-control" style="appearance: auto;">
+                <option value="tour">Tour Packages</option>
+                <option value="driver">Driver Service</option>
+                <option value="house">House Maintenance</option>
+                <option value="vehicle">Vehicle Maintenance</option>
+                <option value="medical">Medical / Companion Assistance</option>
+                <option value="other">Other Inquiry</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" class="form-control" placeholder="Tell us how we can help you..."
+                required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem;">Send Inquiry <i
+                class="fa-solid fa-paper-plane" style="margin-left: 8px;"></i></button>
+          </form>
+          <p style="font-size: 0.8rem; color: var(--text-light); text-align: center; margin-top: 1rem;"><i
+              class="fa-solid fa-circle-info"></i> All bookings and form submissions are currently redirected to our
+            official WhatsApp support channel for faster resolution.</p>
+        </div>
+
+      </div>
+
+      <!-- Google Map Embedded -->
+      <div class="map-container fade-in">
+        <!-- Placeholder map for Kochi area -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d251482.34861875148!2d76.15589078426002!3d9.982703837424614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d514abec6bf%3A0xbd582caa5844192!2sKochi%2C%20Kerala!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="/public/logo.png" alt="Heartenza Logo" style="border-radius: 8px; padding: 5px;">
+          <p>Providing reliable travel and lifestyle support services tailored for busy professionals and families.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/tours.html">Tour Packages</a></li>
+            <li><a href="/services.html">Services</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Support</h4>
+          <ul class="footer-links">
+            <li><a href="/contact.html">Contact Us</a></li>
+            <li><a href="/testimonials.html">Testimonials</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Contact</h4>
+          <ul class="footer-contact">
+            <li><i class="fa-solid fa-location-dot"></i><span>123 Business Avenue, Tech Park Building, Kerala,
+                India</span></li>
+            <li><i class="fa-solid fa-phone"></i><span>+91 98765 43210</span></li>
+            <li><i class="fa-solid fa-envelope"></i><span>info@heartenzaservices.com</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Heartenza Services. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
