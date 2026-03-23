@@ -296,12 +296,25 @@ button {
 
 .nav-brand img {
   height: 60px;
+  max-width: 100%;
   object-fit: contain;
   transition: all var(--transition-normal);
 }
 
+@media (max-width: 768px) {
+  .nav-brand img {
+    height: 40px;
+  }
+}
+
 .navbar.scrolled .nav-brand img {
   height: 45px;
+}
+
+@media (max-width: 768px) {
+  .navbar.scrolled .nav-brand img {
+    height: 35px;
+  }
 }
 
 .nav-links {
@@ -352,7 +365,37 @@ button {
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
+}
+
+.nav-social-icons {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.nav-social-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--bg-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  transition: all var(--transition-fast);
+}
+
+.navbar.scrolled .nav-social-icon {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: var(--primary-deep-navy);
+}
+
+.nav-social-icon:hover {
+  background-color: var(--accent-gold);
+  color: var(--primary-deep-navy);
+  transform: translateY(-2px);
 }
 
 .mobile-menu-btn {
@@ -567,19 +610,61 @@ button {
 
 .hero h1 {
   font-family: var(--font-heading);
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--bg-white);
   margin-bottom: 0.5rem;
   text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.8;
 }
 
 .hero h2 {
   font-family: var(--font-heading);
-  font-size: 5rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
+  font-size: 6rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1;
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
 
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+
+  .hero h2 {
+    font-size: 3.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .hero-content {
+    padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 2.8rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+  }
 }
 
 .animated-title {
@@ -597,12 +682,12 @@ button {
 }
 
 .hero-subtitle {
-  font-family: var(--font-accent);
-  font-size: 20px;
-  color: var(--bg-white);
-  font-weight: 200;
-  margin-bottom: 2rem;
-  margin-top: -10px;
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 650px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.6;
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   opacity: 0;
   animation: fadeUp 1s ease 0.6s forwards;
