@@ -148,8 +148,8 @@
       transition: opacity 0.8s cubic-bezier(0.77, 0, 0.175, 1), visibility 0.8s;
     }
   </style>
-  <script type="module" crossorigin src="/HEARTENZA-SERVICES/assets/main-Bi7ENGOs.js"></script>
-  <link rel="stylesheet" crossorigin href="/HEARTENZA-SERVICES/assets/main-BbLg4P-8.css">
+  <script type="module" crossorigin src="/HEARTENZA-SERVICES/assets/main-CRSLIe4S.js"></script>
+  <link rel="stylesheet" crossorigin href="/HEARTENZA-SERVICES/assets/main-DkeTi3A5.css">
 </head>
 
 <body>
@@ -176,7 +176,7 @@
         <li><a href="./contact.html" class="nav-item active">Contact</a></li>
       </ul>
       <div class="nav-actions">
-        <a href="https://wa.me/1234567890" class="btn btn-primary" target="_blank">Book Tour <i
+        <a href="https://wa.me/918111844058" class="btn btn-primary" target="_blank">Book Tour <i
             class="fa-brands fa-whatsapp" style="margin-left: 8px;"></i></a>
       </div>
       <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
@@ -184,7 +184,7 @@
   </nav>
 
   <!-- Floating WhatsApp -->
-  <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
+  <a href="https://wa.me/918111844058" class="whatsapp-float" target="_blank">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
@@ -214,14 +214,14 @@
               <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
               <div class="info-content">
                 <h4>Head Office</h4>
-                <p>123 Business Avenue, Tech Park Building<br>Kochi, Kerala, India 682001</p>
+                <p>Building No: 194.A, Kammana (P.O), Mananthavady<br>Wayanad, Kerala, India</p>
               </div>
             </div>
             <div class="info-item">
               <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
               <div class="info-content">
                 <h4>Phone Number</h4>
-                <p>+91 98765 43210<br><span style="font-size: 0.85rem;">(Available 24/7 for urgent assistance)</span>
+                <p>+91 8111844058<br><span style="font-size: 0.85rem;">(Available 24/7 for urgent assistance)</span>
                 </p>
               </div>
             </div>
@@ -229,14 +229,14 @@
               <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
               <div class="info-content">
                 <h4>Email Address</h4>
-                <p>info@heartenzaservices.com<br>support@heartenzaservices.com</p>
+                <p>heartenzaservices@gmail.com</p>
               </div>
             </div>
           </div>
 
           <div class="contact-action-box" style="text-align: center; margin-top: 2rem;">
             <p style="margin-bottom: 1rem; font-weight: 500;">Fastest way to reach us?</p>
-            <a href="https://wa.me/1234567890?text=Hi%20Heartenza,%20I%20have%20an%20inquiry." class="btn btn-gold"
+            <a href="https://wa.me/918111844058?text=Hi%20Heartenza,%20I%20have%20an%20inquiry." class="btn btn-gold"
               target="_blank"
               style="width: 100%; font-size: 1.1rem; padding: 1.25rem; display: flex; justify-content: center; gap: 10px;">
               <i class="fa-brands fa-whatsapp" style="font-size: 1.5rem;"></i> WhatsApp Us Directly
@@ -248,8 +248,7 @@
         <div class="contact-form-container fade-in" style="transition-delay: 0.2s;">
           <h3 style="margin-bottom: 1.5rem; font-family: var(--font-heading);">Send a Message</h3>
 
-          <form
-            onsubmit="event.preventDefault(); window.open('https://wa.me/1234567890?text=Hi, I am contacting you via the website form.', '_blank');">
+          <form id="contactForm">
             <div class="form-group">
               <label for="name">Your Name</label>
               <input type="text" id="name" class="form-control" placeholder="John Doe" required>
@@ -323,10 +322,9 @@
         <div>
           <h4 class="footer-title">Contact</h4>
           <ul class="footer-contact">
-            <li><i class="fa-solid fa-location-dot"></i><span>123 Business Avenue, Tech Park Building, Kerala,
-                India</span></li>
-            <li><i class="fa-solid fa-phone"></i><span>+91 98765 43210</span></li>
-            <li><i class="fa-solid fa-envelope"></i><span>info@heartenzaservices.com</span></li>
+            <li><i class="fa-solid fa-location-dot"></i><span>Building No: 194.A, Kammana (P.O), Mananthavady, Wayanad, Kerala</span></li>
+            <li><i class="fa-solid fa-phone"></i><span>+91 8111844058</span></li>
+            <li><i class="fa-solid fa-envelope"></i><span>heartenzaservices@gmail.com</span></li>
           </ul>
         </div>
       </div>
@@ -335,6 +333,26 @@
       </div>
     </div>
   </footer>
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const service = document.getElementById('service').value;
+      const message = document.getElementById('message').value;
+
+      const whatsappNumber = '918111844058';
+      const text = `*New Inquiry via Website Form*%0A%0A` +
+        `*Name:* ${name}%0A` +
+        `*Email:* ${email}%0A` +
+        `*Service:* ${service}%0A` +
+        `*Message:* ${message}`;
+
+      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${text}`;
+      window.open(whatsappUrl, '_blank');
+    });
+  </script>
 </body>
 
 </html>
