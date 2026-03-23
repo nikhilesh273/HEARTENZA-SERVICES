@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const waLink = document.querySelector('.wa-booking-btn');
     if (waLink) {
       const message = encodeURIComponent(`Hi Heartenza Services! I am interested in booking the ${data.title} package.`);
-      waLink.href = `https://wa.me/1234567890?text=${message}`;
+      waLink.href = `https://wa.me/918111844058?text=${message}`;
     }
   };
 

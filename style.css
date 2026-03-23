@@ -151,6 +151,12 @@ button {
   padding: 0 1.5rem;
 }
 
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
 .section-padding {
   padding: 6rem 0;
 }
@@ -554,7 +560,7 @@ button {
 
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 10;
   color: var(--bg-white);
   max-width: 800px;
 }
@@ -816,6 +822,24 @@ button {
 .feature-card p {
   color: rgba(255, 255, 255, 0.7);
   font-size: 0.95rem;
+}
+
+/* Service Badges */
+.badge-coming-soon {
+  display: inline-block;
+  background: var(--accent-gold);
+  color: var(--primary-deep-navy);
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  margin-left: 8px;
+  vertical-align: middle;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.5px;
+  position: relative;
+  top: -2px;
 }
 
 /* Services */
@@ -1504,20 +1528,24 @@ button {
 
 @media (max-width: 768px) {
   .page-header {
-    padding: 10rem 0 6rem;
+    padding: 8rem 0 5rem;
+    background-attachment: scroll; /* Fixes "blue glow"/distortion artifact on mobile */
   }
 
   .page-header h1 {
-    font-size: 2.5rem;
-    letter-spacing: 2px;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    padding: 0 0.5rem;
   }
 
   .page-header .header-subtitle {
-    font-size: 1.75rem;
+    font-size: 1.25rem;
+    margin-top: 5px;
   }
 
   .tour-main-content {
-    padding: 2.5rem 1.5rem;
+    padding: 2rem 1.25rem;
+    border-radius: var(--radius-lg);
   }
 
   .places-list {
@@ -1597,7 +1625,7 @@ button {
 
 @media (max-width: 480px) {
   .container {
-    padding: 0 1rem;
+    padding: 0 0.75rem;
   }
 
   .page-header h1 {
