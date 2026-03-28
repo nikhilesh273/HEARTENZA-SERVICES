@@ -6,7 +6,7 @@ export const tourData = {
     "description": "Discover the cultural and historical heart of North Wayanad. From the legends of Pazhassi Raja to the mist-covered peaks of Kurumbalakotta, Mananthavady offer a blend of heritage and high-altitude beauty.",
     "places": [
       { "name": "Nagaravanam", "desc": "A lush urban forest providing a peaceful retreat into nature.", "img": "https://res.cloudinary.com/dm1ig0zit/image/upload/v1773919344/wayanad_bgg4g5.jpg" },
-      { "name": "Pazhassi Park & Kudiram", "desc": "Dedicated to the legendary 'Lion of Kerala', this park and memorial are rich in history.", "img": "https://res.cloudinary.com/dm1ig0zit/image/upload/v1773909908/download_9_bindsh.jpg" },
+      { "name": "Pazhassi Park & Kudeeram", "desc": "Dedicated to the legendary 'Lion of Kerala', this park and memorial are rich in history.", "img": "https://res.cloudinary.com/dm1ig0zit/image/upload/v1773909908/download_9_bindsh.jpg" },
       { "name": "Kurumbalakotta", "desc": "Famous for its spectacular sunrise views above the clouds.", "img": "https://res.cloudinary.com/dm1ig0zit/image/upload/v1774105005/Kurumbalakotta_sun_view_wayanad_urztjn.jpg" },
       { "name": "Valliyoorkavu Kayaking", "desc": "Thrilling river kayaking through the scenic Kabini landscapes.", "img": "https://res.cloudinary.com/dm1ig0zit/image/upload/v1774105074/kayaking_kayak_summer_summeractivityideas_river_thingstodo_outdooradventures_outdoor__kqqmqt.jpg" },
       { "name": "Thrisilery Temple", "desc": "An ancient temple dedicated to Lord Shiva with traditional architecture.", "img": "https://res.cloudinary.com/dm1ig0zit/image/upload/v1774105150/download_12_nfj7qx.jpg" },
