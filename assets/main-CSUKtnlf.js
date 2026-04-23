@@ -8,4 +8,17 @@
             <p>${e.desc}</p>
           </div>
         </div>
-      `).join(``),s.querySelectorAll(`.fade-in`).forEach(e=>r.observe(e)));let c=document.querySelector(`.wa-booking-btn`);c&&(c.href=`https://wa.me/918111844058?text=${encodeURIComponent(`Hi Heartenza Services! I am interested in booking the ${t.title} package.`)}`)})(),window.addEventListener(`load`,()=>{let e=document.getElementById(`loader-wrapper`);e&&setTimeout(()=>{e.classList.add(`loaded`)},500)})});
+      `).join(``),s.querySelectorAll(`.fade-in`).forEach(e=>r.observe(e)));let c=document.querySelector(`.wa-booking-btn`);c&&(c.href=`https://wa.me/918111844058?text=${encodeURIComponent(`Hi Heartenza Services! I am interested in booking the ${t.title} package.`)}`)})();let o=document.getElementById(`bookingModal`),s=document.querySelectorAll(`.trigger-booking-modal`),c=document.querySelector(`.close-modal`),l=document.getElementById(`bookingForm`);if(o&&s){s.forEach(e=>{e.addEventListener(`click`,e=>{e.preventDefault(),o.classList.add(`active`),document.body.style.overflow=`hidden`})});let e=()=>{o.classList.remove(`active`),document.body.style.overflow=`auto`};c&&c.addEventListener(`click`,e),window.addEventListener(`click`,t=>{t.target===o&&e()}),document.querySelectorAll(`.accordion-header`).forEach(e=>{e.addEventListener(`click`,t=>{t.target.type===`checkbox`||t.target.classList.contains(`checkmark`)||e.parentElement.classList.toggle(`active`)})}),document.querySelectorAll(`.dest-checkbox`).forEach(e=>{e.addEventListener(`change`,()=>{e.closest(`.accordion-item`).querySelectorAll(`input[name="places"]`).forEach(t=>{t.checked=e.checked})})})}l&&l.addEventListener(`submit`,e=>{e.preventDefault();let t=new FormData(l),n=t.get(`fullName`),r=t.get(`email`),i=t.get(`city`),a=t.get(`country`),s=t.get(`startDate`),c=t.get(`endDate`),u=t.get(`category`),d=t.get(`budget`),f=``;if(document.querySelectorAll(`.accordion-item`).forEach(e=>{let t=e.querySelector(`.dest-checkbox`),n=e.querySelectorAll(`input[name="places"]:checked`);if(t.checked||n.length>0){let e=t.value,r=Array.from(n).map(e=>e.value).join(`, `);f+=`\n      - ${e} : ${r||`All Places`}`}}),!f){alert(`Please select at least one destination or place.`);return}let p=`Hello, I would like to book a tour:
+
+*Name:* ${n}  
+*Email:* ${r}  
+*Location:* ${i}, ${a}  
+
+*Destinations:* ${f}
+
+*Travel Dates:* ${s} to ${c}  
+
+*Travel Type:* ${u}  
+*Budget:* ${d}  
+
+Please assist me with the booking.`,m=`https://wa.me/918111844058?text=${encodeURIComponent(p)}`;window.open(m,`_blank`),o.classList.remove(`active`),document.body.style.overflow=`auto`,l.reset()}),window.addEventListener(`load`,()=>{let e=document.getElementById(`loader-wrapper`);e&&setTimeout(()=>{e.classList.add(`loaded`)},500)})});

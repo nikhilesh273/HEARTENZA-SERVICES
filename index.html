@@ -23,8 +23,8 @@
       transition: opacity 0.8s cubic-bezier(0.77, 0, 0.175, 1), visibility 0.8s;
     }
   </style>
-  <script type="module" crossorigin src="/assets/main-BW7M8ORE.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/main-DblmA-cm.css">
+  <script type="module" crossorigin src="/assets/main-CSUKtnlf.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-DykBa5ok.css">
 </head>
 
 <body>
@@ -59,8 +59,8 @@
           <a href="https://www.instagram.com/heart_enzaservices?igsh=Z3Z0YTl0aWNzMWFo" target="_blank"
             class="nav-social-icon"><i class="fa-brands fa-instagram"></i></a>
         </div>
-        <a href="https://wa.me/918111844058" class="btn btn-primary" target="_blank">Book Tour <i
-            class="fa-brands fa-whatsapp" style="margin-left: 8px;"></i></a>
+        <a href="#" class="btn btn-primary trigger-booking-modal">Book Tour <i class="fa-brands fa-whatsapp"
+            style="margin-left: 8px;"></i></a>
       </div>
 
       <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
@@ -99,7 +99,7 @@
         for families, couples, and weekend getaways.</p>
       <div class="hero-buttons">
         <a href="tours.html" class="btn btn-primary">Explore Tour Packages</a>
-        <a href="https://wa.me/918111844058" class="btn btn-outline" target="_blank"><i class="fa-brands fa-whatsapp"
+        <a href="#" class="btn btn-outline trigger-booking-modal"><i class="fa-brands fa-whatsapp"
             style="margin-right: 8px;"></i> Book via WhatsApp</a>
       </div>
     </div>
@@ -473,8 +473,7 @@
     <div class="container text-center">
       <h2>Plan Your Dream Vacation Today</h2>
       <p>Contact us directly to craft your personalized experience.</p>
-      <a href="https://wa.me/918111844058" class="btn btn-gold" target="_blank"
-        style="font-size: 1.1rem; padding: 1rem 2.5rem;">
+      <a href="#" class="btn btn-gold trigger-booking-modal" style="font-size: 1.1rem; padding: 1rem 2.5rem;">
         <i class="fa-brands fa-whatsapp" style="margin-right: 10px; font-size: 1.3rem;"></i> Book Tour on WhatsApp
       </a>
     </div>
@@ -510,7 +509,7 @@
           <h4 class="footer-title">Support</h4>
           <ul class="footer-links">
             <li><a href="./contact.html">Contact Us</a></li>
-            <li><a href="./testimonials.html">Testimonials</a></li>
+            <!-- <li><a href="./testimonials.html">Testimonials</a></li> -->
             <li><a href="#">Privacy Policy</a></li>
             <li><a href="#">Terms of Service</a></li>
           </ul>
@@ -521,7 +520,7 @@
           <ul class="footer-contact">
             <li>
               <i class="fa-solid fa-location-dot"></i>
-              <span>Building No: 194.A, Kammana (P.O), Mananthavady, Wayanad, Kerala</span>
+              <span>Building No 407/B, Kammana (P.O), Mananthavady, Wayanad, Kerala</span>
             </li>
             <li>
               <i class="fa-solid fa-phone"></i>
@@ -540,6 +539,295 @@
       </div>
     </div>
   </footer>
+
+  <!-- Booking Modal -->
+  <div id="bookingModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Book Your Tour</h2>
+        <button class="close-modal">&times;</button>
+      </div>
+      <form id="bookingForm" class="booking-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fullName">Full Name *</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="city">Place / City *</label>
+            <input type="text" id="city" name="city" placeholder="e.g. Kochi" required>
+          </div>
+          <div class="form-group">
+            <label for="country">Country *</label>
+            <input type="text" id="country" name="country" placeholder="e.g. India" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Select Destinations & Places *</label>
+          <div class="destinations-accordion">
+            <!-- Mananthavady -->
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <label class="checkbox-container">
+                  <input type="checkbox" name="destinations" value="Mananthavady" class="dest-checkbox">
+                  <span class="checkmark"></span>
+                  Mananthavady
+                </label>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div class="accordion-content">
+                <div class="places-checkbox-list">
+                  <label class="checkbox-container place-item">
+                    <input type="checkbox" name="places" value="Nagaravanam" data-parent="Mananthavady">
+                    <span class="checkmark"></span> Nagaravanam
+                  </label>
+                  <label class="checkbox-container place-item">
+                    <input type="checkbox" name="places" value="Pazhassi Park" data-parent="Mananthavady">
+                    <span class="checkmark"></span> Pazhassi Park
+                  </label>
+                  <label class="checkbox-container place-item">
+                    <input type="checkbox" name="places" value="Kurumbalakotta" data-parent="Mananthavady">
+                    <span class="checkmark"></span> Kurumbalakotta
+                  </label>
+                  <label class="checkbox-container place-item">
+                    <input type="checkbox" name="places" value="Valliyoorkavu Kayaking" data-parent="Mananthavady">
+                    <span class="checkmark"></span> Valliyoorkavu Kayaking
+                  </label>
+                  <label class="checkbox-container place-item">
+                    <input type="checkbox" name="places" value="Thrisilery Temple" data-parent="Mananthavady">
+                    <span class="checkmark"></span> Thrisilery Temple
+                  </label>
+                  <label class="checkbox-container place-item">
+                    <input type="checkbox" name="places" value="Meenmutty Waterfalls" data-parent="Mananthavady">
+                    <span class="checkmark"></span> Meenmutty Waterfalls
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bathery -->
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <label class="checkbox-container">
+                  <input type="checkbox" name="destinations" value="Bathery" class="dest-checkbox">
+                  <span class="checkmark"></span>
+                  Bathery
+                </label>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div class="accordion-content">
+                <div class="places-checkbox-list">
+                  <label class="checkbox-container place-item">
+                    <input type="checkbox" name="places" value="Muthanga Wildlife Sanctuary" data-parent="Bathery">
+                    <span class="checkmark"></span> Muthanga Wildlife Sanctuary
+                  </label>
+                  <label class="checkbox-container place-item">
+                    <input type="checkbox" name="places" value="Swargam (Fishing Spot)" data-parent="Bathery">
+                    <span class="checkmark"></span> Swargam (Fishing Spot)
+                  </label>
+                  <label class="checkbox-container place-item">
+                    <input type="checkbox" name="places" value="Ancient Jain Temple" data-parent="Bathery">
+                    <span class="checkmark"></span> Ancient Jain Temple
+                  </label>
+                  <label class="checkbox-container place-item">
+                    <input type="checkbox" name="places" value="Kolagapara Hills" data-parent="Bathery">
+                    <span class="checkmark"></span> Kolagapara Hills
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Meppadi -->
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <label class="checkbox-container">
+                  <input type="checkbox" name="destinations" value="Meppadi" class="dest-checkbox">
+                  <span class="checkmark"></span>
+                  Meppadi
+                </label>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div class="accordion-content">
+                <div class="places-checkbox-list">
+                  <label class="checkbox-container place-item">
+                    <input type="checkbox" name="places" value="Chembra Peak" data-parent="Meppadi">
+                    <span class="checkmark"></span> Chembra Peak
+                  </label>
+                  <label class="checkbox-container place-item">
+                    <input type="checkbox" name="places" value="900 Kandi" data-parent="Meppadi">
+                    <span class="checkmark"></span> 900 Kandi
+                  </label>
+                  <label class="checkbox-container place-item">
+                    <input type="checkbox" name="places" value="Soochipara Waterfalls" data-parent="Meppadi">
+                    <span class="checkmark"></span> Soochipara Waterfalls
+                  </label>
+                  <label class="checkbox-container place-item">
+                    <input type="checkbox" name="places" value="Kanthanpara Falls" data-parent="Meppadi">
+                    <span class="checkmark"></span> Kanthanpara Falls
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Ambalavayal -->
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <label class="checkbox-container">
+                  <input type="checkbox" name="destinations" value="Ambalavayal" class="dest-checkbox">
+                  <span class="checkmark"></span>
+                  Ambalavayal
+                </label>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div class="accordion-content">
+                <div class="places-checkbox-list">
+                  <label class="checkbox-container place-item">
+                    <input type="checkbox" name="places" value="Edakkal Caves" data-parent="Ambalavayal">
+                    <span class="checkmark"></span> Edakkal Caves
+                  </label>
+                  <label class="checkbox-container place-item">
+                    <input type="checkbox" name="places" value="Phantom Rock" data-parent="Ambalavayal">
+                    <span class="checkmark"></span> Phantom Rock
+                  </label>
+                  <label class="checkbox-container place-item">
+                    <input type="checkbox" name="places" value="Karapuzha Dam" data-parent="Ambalavayal">
+                    <span class="checkmark"></span> Karapuzha Dam
+                  </label>
+                  <label class="checkbox-container place-item">
+                    <input type="checkbox" name="places" value="Heritage Museum" data-parent="Ambalavayal">
+                    <span class="checkmark"></span> Heritage Museum
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Kalpetta -->
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <label class="checkbox-container">
+                  <input type="checkbox" name="destinations" value="Kalpetta" class="dest-checkbox">
+                  <span class="checkmark"></span>
+                  Kalpetta
+                </label>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div class="accordion-content">
+                <div class="places-checkbox-list">
+                  <label class="checkbox-container place-item">
+                    <input type="checkbox" name="places" value="En Ooru" data-parent="Kalpetta">
+                    <span class="checkmark"></span> En Ooru
+                  </label>
+                  <label class="checkbox-container place-item">
+                    <input type="checkbox" name="places" value="Pookode Lake" data-parent="Kalpetta">
+                    <span class="checkmark"></span> Pookode Lake
+                  </label>
+                  <label class="checkbox-container place-item">
+                    <input type="checkbox" name="places" value="Lakkidi View Point" data-parent="Kalpetta">
+                    <span class="checkmark"></span> Lakkidi View Point
+                  </label>
+                  <label class="checkbox-container place-item">
+                    <input type="checkbox" name="places" value="Vythiri Park" data-parent="Kalpetta">
+                    <span class="checkmark"></span> Vythiri Park
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Other Destinations -->
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <label class="checkbox-container">
+                  <input type="checkbox" name="destinations" value="Other" class="dest-checkbox">
+                  <span class="checkmark"></span>
+                  Other Locations (Pulpally, etc.)
+                </label>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div class="accordion-content">
+                <div class="places-checkbox-list">
+                  <label class="checkbox-container place-item">
+                    <input type="checkbox" name="places" value="Kuruva Island" data-parent="Other">
+                    <span class="checkmark"></span> Kuruva Island
+                  </label>
+                  <label class="checkbox-container place-item">
+                    <input type="checkbox" name="places" value="Seetha Devi Temple" data-parent="Other">
+                    <span class="checkmark"></span> Seetha Devi Temple
+                  </label>
+                  <label class="checkbox-container place-item">
+                    <input type="checkbox" name="places" value="Muneeswaran Kunnu" data-parent="Other">
+                    <span class="checkmark"></span> Muneeswaran Kunnu
+                  </label>
+                  <label class="checkbox-container place-item">
+                    <input type="checkbox" name="places" value="Palchuram Viewpoint" data-parent="Other">
+                    <span class="checkmark"></span> Palchuram Viewpoint
+                  </label>
+                  <label class="checkbox-container place-item">
+                    <input type="checkbox" name="places" value="Thirunelly Temple" data-parent="Other">
+                    <span class="checkmark"></span> Thirunelly Temple
+                  </label>
+                  <label class="checkbox-container place-item">
+                    <input type="checkbox" name="places" value="Brahmagiri Hills" data-parent="Other">
+                    <span class="checkmark"></span> Brahmagiri Hills
+                  </label>
+                  <label class="checkbox-container place-item">
+                    <input type="checkbox" name="places" value="Banasura Dam" data-parent="Other">
+                    <span class="checkmark"></span> Banasura Dam
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="startDate">Start Date *</label>
+            <input type="date" id="startDate" name="startDate" required>
+          </div>
+          <div class="form-group">
+            <label for="endDate">End Date *</label>
+            <input type="date" id="endDate" name="endDate" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="category">Travel Category *</label>
+            <select id="category" name="category" required>
+              <option value="" disabled selected>Select category</option>
+              <option value="Solo">Solo</option>
+              <option value="Couple">Couple</option>
+              <option value="Honeymoon Couple">Honeymoon Couple</option>
+              <option value="Family">Family</option>
+              <option value="Group">Group</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="budget">Budget Category *</label>
+            <select id="budget" name="budget" required>
+              <option value="" disabled selected>Select budget</option>
+              <option value="Premium">Premium</option>
+              <option value="Mid-range">Mid-range</option>
+              <option value="Budget-friendly">Budget-friendly</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-gold btn-block">
+          <i class="fa-brands fa-whatsapp" style="margin-right: 10px;"></i> Submit & Open WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
 
 </body>
 
