@@ -87,6 +87,125 @@ document.addEventListener('DOMContentLoaded', () => {
     renderTourDetails();
   }
 
+  // --- BOOKING MODAL LOGIC ---
+  const bookingModal = document.getElementById('bookingModal');
+  const modalTriggers = document.querySelectorAll('.trigger-booking-modal');
+  const closeModalBtn = document.querySelector('.close-modal');
+  const bookingForm = document.getElementById('bookingForm');
+
+  if (bookingModal && modalTriggers) {
+    modalTriggers.forEach(trigger => {
+      trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        bookingModal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent scroll
+      });
+    });
+
+    const closeModal = () => {
+      bookingModal.classList.remove('active');
+      document.body.style.overflow = 'auto'; // Restore scroll
+    };
+
+    if (closeModalBtn) {
+      closeModalBtn.addEventListener('click', closeModal);
+    }
+
+    // Close on outside click
+    window.addEventListener('click', (e) => {
+      if (e.target === bookingModal) closeModal();
+    });
+
+    // Accordion Logic
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+    accordionHeaders.forEach(header => {
+      header.addEventListener('click', (e) => {
+        // Don't toggle if clicking the checkbox directly
+        if (e.target.type === 'checkbox' || e.target.classList.contains('checkmark')) return;
+        
+        const item = header.parentElement;
+        item.classList.toggle('active');
+      });
+    });
+
+    // Auto-select places logic
+    const destCheckboxes = document.querySelectorAll('.dest-checkbox');
+    destCheckboxes.forEach(destCb => {
+      destCb.addEventListener('change', () => {
+        const parentItem = destCb.closest('.accordion-item');
+        const placeCheckboxes = parentItem.querySelectorAll('input[name="places"]');
+        placeCheckboxes.forEach(placeCb => {
+          placeCb.checked = destCb.checked;
+        });
+      });
+    });
+  }
+
+  if (bookingForm) {
+    bookingForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // Collect data
+      const formData = new FormData(bookingForm);
+      const name = formData.get('fullName');
+      const email = formData.get('email');
+      const city = formData.get('city');
+      const country = formData.get('country');
+      const startDate = formData.get('startDate');
+      const endDate = formData.get('endDate');
+      const category = formData.get('category');
+      const budget = formData.get('budget');
+      
+      // Handle checkbox destinations & places grouped
+      let destinationsSummary = "";
+      const accordionItems = document.querySelectorAll('.accordion-item');
+      
+      accordionItems.forEach(item => {
+        const destCheckbox = item.querySelector('.dest-checkbox');
+        const placeCheckboxes = item.querySelectorAll('input[name="places"]:checked');
+        
+        if (destCheckbox.checked || placeCheckboxes.length > 0) {
+          const destName = destCheckbox.value;
+          const placeNames = Array.from(placeCheckboxes).map(cb => cb.value).join(', ');
+          
+          destinationsSummary += `\n      - ${destName} : ${placeNames || 'All Places'}`;
+        }
+      });
+
+      if (!destinationsSummary) {
+        alert('Please select at least one destination or place.');
+        return;
+      }
+
+      // Format message
+      const message = `Hello, I would like to book a tour:
+
+*Name:* ${name}  
+*Email:* ${email}  
+*Location:* ${city}, ${country}  
+
+*Destinations:* ${destinationsSummary}
+
+*Travel Dates:* ${startDate} to ${endDate}  
+
+*Travel Type:* ${category}  
+*Budget:* ${budget}  
+
+Please assist me with the booking.`;
+
+      // Encode and open WhatsApp
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappURL = `https://wa.me/918111844058?text=${encodedMessage}`;
+      
+      window.open(whatsappURL, '_blank');
+      
+      // Close modal after submission
+      bookingModal.classList.remove('active');
+      document.body.style.overflow = 'auto';
+      bookingForm.reset();
+    });
+  }
+
   // Hide Loader on Window Load
   window.addEventListener('load', () => {
     const loader = document.getElementById('loader-wrapper');
@@ -97,3 +216,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
