@@ -27,6 +27,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
   fadeElements.forEach(el => appearOnScroll.observe(el));
 
+  // Homepage featured-package carousel: advances automatically and remains swipe/scroll friendly.
+  const featuredCarousel = document.querySelector('.homepage .travel-showcase .sliding-cards-grid');
+  if (featuredCarousel) {
+    let carouselTimer;
+    const advanceCarousel = () => {
+      const firstCard = featuredCarousel.querySelector('.sliding-card');
+      if (!firstCard) return;
+      const cardGap = parseFloat(getComputedStyle(featuredCarousel).gap) || 0;
+      const step = firstCard.getBoundingClientRect().width + cardGap;
+      const nearEnd = featuredCarousel.scrollLeft + featuredCarousel.clientWidth >= featuredCarousel.scrollWidth - 8;
+      featuredCarousel.scrollTo({ left: nearEnd ? 0 : featuredCarousel.scrollLeft + step, behavior: 'smooth' });
+    };
+    const startCarousel = () => { window.clearInterval(carouselTimer); carouselTimer = window.setInterval(advanceCarousel, 4200); };
+    const stopCarousel = () => window.clearInterval(carouselTimer);
+    startCarousel();
+    featuredCarousel.addEventListener('mouseenter', stopCarousel);
+    featuredCarousel.addEventListener('mouseleave', startCarousel);
+    featuredCarousel.addEventListener('focusin', stopCarousel);
+    featuredCarousel.addEventListener('focusout', startCarousel);
+  }
+
   const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
   const navLinks = document.querySelector('.nav-links');
   if (mobileMenuBtn && navLinks) {

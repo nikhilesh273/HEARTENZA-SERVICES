@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Poppins:wght@300;400;500;600;700;800&family=Kristi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Poppins:wght@300;400;500;600;700;800&family=Kristi&display=swap');
 
 :root {
   /* Colors (Wanderers Dark/Gold Theme) */
@@ -521,6 +521,16 @@ button {
   overflow: hidden;
 }
 
+.service-hero {
+  background-image: linear-gradient(90deg, rgba(8, 13, 15, .91) 0%, rgba(8, 13, 15, .72) 47%, rgba(8, 13, 15, .2) 100%), url('/heartenza-services-hero.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.service-hero .hero-slider {
+  display: block;
+}
+
 .hero-slider {
   position: absolute;
   top: 0;
@@ -608,16 +618,37 @@ button {
   max-width: 800px;
 }
 
+.service-hero .hero-content {
+  margin-left: 0;
+  text-align: left;
+  max-width: 760px;
+}
+
+.service-hero .hero-subtitle,
+.service-hero .hero-buttons {
+  margin-left: 0;
+  margin-right: 0;
+  justify-content: flex-start;
+}
+
+.hero-eyebrow {
+  margin-bottom: 1rem;
+  color: var(--accent-gold);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
 .hero h1 {
   font-family: var(--font-heading);
-  font-size: 1.5rem;
+  font-size: clamp(2.75rem, 6vw, 5.6rem);
   font-weight: 700;
   color: var(--bg-white);
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.25rem;
   text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  opacity: 0.8;
+  letter-spacing: -0.03em;
+  line-height: 1.06;
 }
 
 .hero h2 {
@@ -630,15 +661,6 @@ button {
 }
 
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 1rem;
-    letter-spacing: 1px;
-  }
-
-  .hero h2 {
-    font-size: 3.5rem;
-  }
-
   .hero-subtitle {
     font-size: 0.95rem;
   }
@@ -649,10 +671,6 @@ button {
 }
 
 @media (max-width: 480px) {
-  .hero h2 {
-    font-size: 2.8rem;
-  }
-
   .hero-buttons {
     flex-direction: column;
     gap: 1rem;
@@ -719,6 +737,106 @@ button {
   display: block;
   width: 100%;
   height: auto;
+}
+
+/* Multi-service finder */
+.service-finder {
+  background: linear-gradient(180deg, #f3f4f6 0%, #ffffff 100%);
+}
+
+.service-finder-heading {
+  max-width: 720px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.service-finder-heading p {
+  color: var(--text-gray);
+}
+
+.service-finder-grid {
+  align-items: stretch;
+}
+
+.service-card {
+  text-align: left;
+}
+
+.service-card h3 {
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+}
+
+.service-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 1.25rem;
+  color: var(--primary-deep-navy);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.service-card:hover .service-link {
+  color: #a67c00;
+}
+
+.service-card-other {
+  background: var(--primary-deep-navy);
+  border-color: var(--primary-deep-navy);
+}
+
+.service-card-other h3,
+.service-card-other .service-link {
+  color: var(--bg-white);
+}
+
+.service-card-other p {
+  color: rgba(255,255,255,.72);
+}
+
+.service-card-other .service-icon {
+  color: var(--accent-gold);
+}
+
+.travel-showcase {
+  background: #fff;
+}
+
+.travel-showcase .sliding-cards-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.travel-showcase .sliding-card:nth-child(n + 4) {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .travel-showcase .sliding-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .service-hero {
+    min-height: 680px;
+    background-position: 64% center;
+  }
+
+  .service-hero .hero-content {
+    text-align: center;
+  }
+
+  .service-hero .hero-subtitle,
+  .service-hero .hero-buttons {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
+
+  .travel-showcase .sliding-cards-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* About Short */
@@ -2064,4 +2182,647 @@ button {
 .custom-select::-webkit-scrollbar-thumb {
   background: var(--accent-gold);
   border-radius: 10px;
-}
+}
+
+/* Homepage service-platform sections */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+.service-hero .hero-slider li { animation-duration: 20s; }
+.service-hero .hero-slider li:nth-child(1) { animation-delay: 0s; }
+.service-hero .hero-slider li:nth-child(2) { animation-delay: 5s; }
+.service-hero .hero-slider li:nth-child(3) { animation-delay: 10s; }
+.service-hero .hero-slider li:nth-child(4) { animation-delay: 15s; }
+.service-hero .hero-slider li:nth-child(5) { display: none; }
+
+.hero-location { display: inline-flex; gap: .55rem; align-items: center; margin: -1rem 0 2rem; color: rgba(255,255,255,.88); font-size: .9rem; }
+.quick-finder { position: relative; z-index: 20; margin-top: -4rem; padding-bottom: 1rem; }
+.quick-finder-panel { max-width: 1120px; padding: 2rem; border-radius: 1.25rem; background: #fff; box-shadow: 0 18px 55px rgba(0,0,0,.14); }
+.quick-finder h2 { font-size: 1.6rem; }
+.quick-finder-form { display: grid; grid-template-columns: 1.7fr 1fr auto; gap: .8rem; margin-top: 1.25rem; }
+.quick-finder input, .quick-finder select { min-width: 0; padding: .9rem 1rem; border: 1px solid #d7d9d4; border-radius: .6rem; color: var(--text-dark); font: inherit; }
+.quick-chips { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1rem; }
+.quick-chips a { padding: .35rem .7rem; border-radius: 999px; background: #f2f2f2; font-size: .78rem; font-weight: 600; }
+.quick-chips a:hover { color: var(--primary-deep-navy); background: var(--accent-gold); }
+
+.about-platform { background: #fff; }
+.about-platform-grid, .family-support-grid, .service-areas-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 4rem; align-items: center; }
+.about-platform-copy p, .family-support-copy p, .service-areas p { color: var(--text-gray); margin-bottom: 1rem; }
+.about-platform-points { display: grid; gap: 1rem; }
+.about-platform-points div { display: flex; gap: 1rem; align-items: center; padding: 1.25rem; border-radius: 1rem; background: #f4f6f2; font-weight: 600; }
+.about-platform-points i { color: #a67c00; font-size: 1.4rem; }
+
+.family-support { background: #f3f4f6; }
+.family-support-image img { width: 100%; height: 390px; object-fit: cover; border-radius: 1.25rem; }
+.family-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 1.25rem; margin-top: 2rem; }
+.text-action { font-weight: 700; }
+.text-action i { margin-left: .3rem; color: #a67c00; }
+
+.scenarios-section { background: #fff; }
+.scenarios-heading { max-width: 720px; margin: 0 auto 3rem; }
+.scenario-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.scenario-card { min-height: 190px; display: flex; flex-direction: column; padding: 1.4rem; border: 1px solid #e2e4df; border-radius: 1rem; transition: transform .25s ease, box-shadow .25s ease; }
+.scenario-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.scenario-card > i { color: #a67c00; font-size: 1.35rem; margin-bottom: 1.2rem; }
+.scenario-card span { font-family: var(--font-heading); font-weight: 700; line-height: 1.35; }
+.scenario-card b { margin-top: auto; padding-top: 1.2rem; font-size: .8rem; }
+
+.service-areas { background: var(--primary-deep-navy); }
+.service-areas .section-subtitle { color: var(--accent-gold); }
+.service-areas .section-title { color: #fff; }
+.service-areas p { color: rgba(255,255,255,.72); }
+.area-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: .75rem; }
+.area-list li { padding: .75rem 1rem; border: 1px solid rgba(255,255,255,.18); border-radius: .6rem; color: #fff; font-size: .9rem; }
+.cta-actions { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+.cta-actions .btn { gap: .5rem; }
+
+@media (max-width: 800px) {
+  .quick-finder { margin-top: -2rem; }
+  .quick-finder-form { grid-template-columns: 1fr; }
+  .about-platform-grid, .family-support-grid, .service-areas-grid { grid-template-columns: 1fr; gap: 2.25rem; }
+  .family-support-image { order: 2; }
+  .scenario-grid { grid-template-columns: 1fr; }
+  .quick-finder-panel { padding: 1.25rem; }
+}
+
+/* --------------------------------------------------------------------------
+   HOMEPAGE — PREMIUM SERVICE PLATFORM VISUAL SYSTEM
+   -------------------------------------------------------------------------- */
+.homepage {
+  --ink: #183832;
+  --muted-ink: #66756f;
+  --canvas: #f7f5ef;
+  --surface: #ffffff;
+  --line: #e4e5de;
+  --brand: #1d5146;
+  --brand-dark: #123c34;
+  --accent: #db9f3e;
+  --soft-accent: #f4ead8;
+  background: var(--canvas);
+  color: var(--ink);
+}
+
+.homepage h1, .homepage h2, .homepage h3, .homepage h4 { color: var(--ink); }
+.homepage .section-padding { padding: clamp(4.5rem, 8vw, 8rem) 0; }
+.homepage .section-subtitle { color: #a46917; font-size: .74rem; letter-spacing: .16em; }
+.homepage .section-title { font-size: clamp(2rem, 4vw, 3.55rem); letter-spacing: -.045em; line-height: 1.08; }
+.homepage .btn { border-radius: .7rem; padding: .9rem 1.35rem; font-size: .88rem; letter-spacing: .01em; }
+.homepage .btn-primary, .homepage .btn-gold { background: var(--accent); color: #1e2824; box-shadow: none; }
+.homepage .btn-primary:hover, .homepage .btn-gold:hover { background: #efb452; color: #1e2824; transform: translateY(-2px); }
+.homepage .btn-outline { border: 1px solid rgba(255,255,255,.6); color: #fff; }
+
+.homepage .navbar { padding: .9rem 0; background: rgba(18, 60, 52, .25); backdrop-filter: blur(14px); }
+.homepage .navbar.scrolled { padding: .7rem 0; background: rgba(255,255,255,.96); }
+.homepage .nav-brand img { height: 47px; }
+.homepage .nav-links { gap: 1.35rem; }
+.homepage .nav-item { font-size: .73rem; letter-spacing: .06em; }
+.homepage .nav-social-icons { gap: .45rem; }
+.homepage .nav-social-icon { width: 30px; height: 30px; border: 1px solid rgba(255,255,255,.28); background: transparent; }
+.homepage .navbar.scrolled .nav-social-icon { border-color: var(--line); }
+
+.homepage .service-hero { min-height: 760px; background: var(--brand-dark); }
+.homepage .hero-overlay { background: linear-gradient(90deg, rgba(10,35,30,.88) 0%, rgba(10,35,30,.67) 45%, rgba(10,35,30,.18) 100%); }
+.homepage .hero-shape { display: none; }
+.homepage .service-hero .hero-content { max-width: 780px; padding-top: 6.5rem; }
+.homepage .hero-eyebrow { display: inline-flex; padding: .42rem .75rem; border: 1px solid rgba(255,255,255,.34); border-radius: 999px; color: #fff3d6; font-size: .72rem; letter-spacing: .11em; margin-bottom: 1.3rem; }
+.homepage .hero h1 { color: #fff; font-family: var(--font-body); font-weight: 600; font-size: clamp(3rem, 6.3vw, 6.1rem); letter-spacing: -.065em; text-transform: none; text-shadow: none; }
+.homepage .hero h1 .text-gold { color: #f1bf68 !important; }
+.homepage .hero-subtitle { max-width: 610px; color: rgba(255,255,255,.84); font-size: 1.06rem; text-shadow: none; margin-bottom: 1.4rem; }
+.homepage .hero-location { padding: .55rem 0; margin: 0 0 1.75rem; color: #d4e0d8; }
+.homepage .hero-buttons { gap: .75rem; }
+
+.homepage .quick-finder { margin-top: -3.1rem; padding: 0 0 1.25rem; }
+.homepage .quick-finder-panel { max-width: 1190px; padding: 1.55rem 1.7rem; border: 1px solid rgba(255,255,255,.65); border-radius: 1.1rem; background: rgba(255,255,255,.97); box-shadow: 0 20px 50px rgba(18,60,52,.14); }
+.homepage .quick-finder-panel > div:first-child { display: flex; align-items: baseline; justify-content: space-between; gap: 2rem; }
+.homepage .quick-finder h2 { font-family: var(--font-body); font-size: 1.35rem; }
+.homepage .quick-finder-form { grid-template-columns: 1.6fr 1fr auto; gap: .6rem; }
+.homepage .quick-finder input, .homepage .quick-finder select { border-color: var(--line); border-radius: .55rem; background: #fbfbf9; }
+.homepage .quick-chips a { background: var(--soft-accent); color: #6d531c; }
+
+.homepage .service-finder { padding-top: 4.25rem; background: var(--canvas); }
+.homepage .service-finder-heading { max-width: 610px; margin-bottom: 3.25rem; }
+.homepage .service-finder-heading p { font-size: 1rem; }
+.homepage .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; justify-content: initial; }
+.homepage .service-card { width: auto; min-width: 0; min-height: 245px; padding: 1.45rem; border: 1px solid var(--line); border-radius: 1rem; background: var(--surface); box-shadow: none; display: flex; flex-direction: column; }
+.homepage .service-card:hover { transform: translateY(-5px); border-color: #c7a66d; box-shadow: 0 14px 30px rgba(24,56,50,.08); }
+.homepage .service-icon { display: grid; place-items: center; width: 2.85rem; height: 2.85rem; margin-bottom: 1.4rem; border-radius: .75rem; background: #e8f0eb; color: var(--brand); font-size: 1.2rem; }
+.homepage .service-card:hover .service-icon { transform: none; color: var(--brand); background: #d7e7dc; }
+.homepage .service-card h3 { font-family: var(--font-body); font-size: 1rem; letter-spacing: -.02em; }
+.homepage .service-card p { font-size: .82rem; line-height: 1.6; }
+.homepage .service-link { margin-top: auto; color: var(--brand); }
+.homepage .service-card-other { background: var(--brand); border-color: var(--brand); }
+.homepage .service-card-other .service-icon { background: rgba(255,255,255,.13); color: #f6d493; }
+.homepage .service-card-other h3 { color: #fff; }.homepage .service-card-other p { color: rgba(255,255,255,.74); }
+
+.homepage .about-platform { background: #fff; }
+.homepage .about-platform-grid { grid-template-columns: 1fr 1fr; gap: clamp(2.5rem, 7vw, 7rem); }
+.homepage .about-platform-copy { max-width: 580px; }
+.homepage .about-platform-points { position: relative; padding: 3.4rem 1.3rem 1.3rem; gap: .7rem; border-radius: 1.4rem; background: #e9efe8; }
+.homepage .platform-illustration { position: absolute; width: 180px; height: 180px; object-fit: contain; right: 1.25rem; top: -5.7rem; filter: drop-shadow(0 15px 20px rgba(18,60,52,.13)); }
+.homepage .about-platform-points div { padding: 1.05rem; border: 1px solid rgba(255,255,255,.8); border-radius: .75rem; background: rgba(255,255,255,.58); }
+
+.homepage .family-support { background: var(--canvas); }
+.homepage .family-support-grid { grid-template-columns: 1.05fr .95fr; }
+.homepage .family-support-image { position: relative; }
+.homepage .family-support-image::after { content: ''; position: absolute; right: -1rem; bottom: -1rem; width: 42%; height: 36%; z-index: -1; border-radius: 1.2rem; background: var(--accent); }
+.homepage .family-support-image img { height: 470px; border-radius: 1.4rem; }
+.homepage .family-support-copy { padding: 1rem 0; }
+.homepage .text-action { color: var(--brand); }
+
+.homepage .scenarios-section { background: var(--brand-dark); }
+.homepage .scenarios-section .section-subtitle { color: #f1c575; }
+.homepage .scenarios-section .section-title { color: #fff; }
+.homepage .scenario-grid { grid-template-columns: repeat(3, 1fr); gap: .85rem; }
+.homepage .scenario-card { min-height: 175px; border-color: rgba(255,255,255,.12); border-radius: .9rem; background: rgba(255,255,255,.05); color: #fff; }
+.homepage .scenario-card:hover { background: rgba(255,255,255,.1); box-shadow: none; }
+.homepage .scenario-card > i { color: #edbb61; }
+.homepage .scenario-card b { color: #f5d59d; }
+
+.homepage .travel-showcase { background: #fff; }
+.homepage .travel-showcase .sliding-cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.15rem; }
+.homepage .travel-showcase .sliding-card { border-radius: 1rem; min-height: 405px; box-shadow: none; }
+.homepage .travel-showcase .sliding-card::after { background: linear-gradient(180deg, rgba(12,26,23,0) 25%, rgba(12,26,23,.88) 100%); }
+.homepage .travel-showcase .sliding-content { padding: 1.5rem; }.homepage .travel-showcase .sliding-content h3 { color: #fff; }.homepage .travel-showcase .sliding-content p { color: rgba(255,255,255,.78); }
+.homepage .travel-showcase .btn-outline { padding: .65rem .9rem; border-radius: .55rem; font-size: .75rem; }
+
+.homepage .features-section { background: #f1eee6; }
+.homepage .features-section .section-title { color: var(--ink) !important; }
+.homepage .features-grid { grid-template-columns: repeat(3, 1fr); gap: .9rem; }
+.homepage .feature-card { padding: 1.45rem; border-radius: 1rem; background: #fff; box-shadow: none; border: 1px solid var(--line); }
+.homepage .feature-card:hover { transform: translateY(-4px); }.homepage .feature-card h4 { color: var(--ink); font-family: var(--font-body); font-size: 1rem; }.homepage .feature-card p { color: var(--muted-ink); }.homepage .icon-box { color: var(--brand); background: #e7f0eb; width: 2.6rem; height: 2.6rem; font-size: 1rem; }
+
+.homepage .how-it-works { background: #fff; background-image: none; color: var(--ink); }
+.homepage .how-it-works .section-title { color: var(--ink); }.homepage .steps-container { align-items: stretch; }.homepage .step-card { padding: 0; max-width: 230px; }.homepage .step-number { background: var(--brand); color: #fff; }.homepage .step-icon { color: var(--brand); background: #e6f0e9; width: 3.1rem; height: 3.1rem; border-radius: 1rem; margin: 1rem auto; display: grid; place-items: center; }.homepage .step-card h4 { color: var(--ink); font-family: var(--font-body); }.homepage .step-card p { color: var(--muted-ink); }.homepage .step-connector { border-top: 1px dashed #b8c1ba; background: none; }
+
+.homepage .service-areas { background: var(--brand); }.homepage .area-list li { border-color: rgba(255,255,255,.25); border-radius: .5rem; }
+.homepage .cta-section { background-image: linear-gradient(105deg, rgba(12,43,36,.95), rgba(12,43,36,.72)), url('/delivery-family-support.png'); background-attachment: scroll; }.homepage .cta-section h2 { max-width: 760px; margin-left: auto; margin-right: auto; font-size: clamp(2.1rem, 4vw, 3.5rem); letter-spacing: -.05em; }.homepage .cta-section p { max-width: 650px; margin-left: auto; margin-right: auto; }.homepage .cta-actions .btn { border-radius: .65rem; }
+.homepage .footer { background: #102c27; }
+
+@media (max-width: 1024px) { .homepage .services-grid { grid-template-columns: repeat(2, 1fr); }.homepage .about-platform-grid, .homepage .family-support-grid { grid-template-columns: 1fr; }.homepage .family-support-image { max-width: 720px; }.homepage .features-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 768px) { .homepage .navbar { background: rgba(18,60,52,.78); }.homepage .nav-links { background: #fff; }.homepage .nav-item { color: var(--ink); }.homepage .service-hero { min-height: 740px; }.homepage .hero-overlay { background: linear-gradient(180deg, rgba(10,35,30,.77), rgba(10,35,30,.62)); }.homepage .service-hero .hero-content { padding-top: 6rem; }.homepage .hero h1 { font-size: clamp(2.8rem, 13vw, 4.1rem); }.homepage .quick-finder { margin-top: -1.6rem; }.homepage .quick-finder-panel > div:first-child { display: block; }.homepage .quick-finder-form { grid-template-columns: 1fr; }.homepage .services-grid, .homepage .features-grid, .homepage .scenario-grid, .homepage .travel-showcase .sliding-cards-grid { grid-template-columns: 1fr; }.homepage .service-card { min-height: 205px; }.homepage .family-support-image img { height: 330px; }.homepage .area-list { grid-template-columns: 1fr; }.homepage .cta-actions { flex-direction: column; align-items: stretch; max-width: 290px; margin: 0 auto; }.homepage .cta-actions .btn { width: 100%; }.homepage .platform-illustration { width: 150px; right: .5rem; } }
+
+/* Reference-inspired compact layout — deliberately airy, not crowded. */
+.homepage { background: #fafaf7; }
+.homepage .container { max-width: 1200px; }
+.homepage .topbar { height: 34px; background: #0d4a3d; color: rgba(255,255,255,.86); font-size: .68rem; }
+.homepage .topbar .container { height: 100%; display: flex; align-items: center; gap: 1.25rem; }.homepage .topbar i { margin-right: .35rem; color: #f6cb78; }.homepage .topbar-note { margin-left: auto; }
+.homepage .navbar { top: 34px; padding: .55rem 0; background: rgba(255,255,255,.96); border-bottom: 1px solid rgba(22,65,53,.08); backdrop-filter: blur(18px); }.homepage .navbar.scrolled { top: 0; }.homepage .nav-brand img { height: 42px; }.homepage .nav-item, .homepage .navbar.scrolled .nav-item { color: #25443d; font-size: .69rem; text-transform: none; letter-spacing: 0; font-weight: 600; }.homepage .nav-item.active, .homepage .nav-item:hover { color: #0c624b; }.homepage .nav-social-icons a:not(:first-child) { display: none; }.homepage .nav-social-icon { border-color: #dbe5de; color: #285647; }.homepage .nav-actions { gap: .75rem; }.homepage .nav-actions .btn { background: #eb6c2a; color: #fff; padding: .65rem 1rem; border-radius: .45rem; font-size: .74rem; }.homepage .navbar.scrolled .nav-social-icon { color: #285647; }
+
+.homepage .service-hero { min-height: 570px; margin-top: 34px; }.homepage .hero-overlay { background: linear-gradient(90deg, rgba(250,250,247,.97) 0%, rgba(250,250,247,.9) 37%, rgba(250,250,247,.1) 72%); }.homepage .service-hero .hero-content { max-width: 610px; padding-top: 5.2rem; }.homepage .hero-eyebrow { padding: 0; border: 0; color: #649481; font-size: .65rem; font-weight: 700; }.homepage .hero h1 { color: #173f35; font-size: clamp(2.45rem, 4.6vw, 4.3rem); line-height: 1.08; }.homepage .hero h1 .text-gold { color: #173f35 !important; }.homepage .hero-subtitle { color: #465d56; font-size: .92rem; line-height: 1.5; max-width: 490px; }.homepage .hero-location { color: #3d6d5f; font-size: .78rem; }.homepage .hero-buttons .btn-primary { background: #e96527; color: #fff; border-radius: .45rem; }.homepage .hero-buttons .btn-outline { color: #1b5e4d; border-color: #83a99c; background: rgba(255,255,255,.56); border-radius: .45rem; }
+
+.homepage .quick-finder { margin-top: -1.8rem; }.homepage .quick-finder-panel { padding: 1rem 1.15rem 1.05rem; max-width: 1120px; border-radius: .7rem; box-shadow: 0 10px 28px rgba(22,58,47,.14); }.homepage .quick-finder h2 { font-size: 1.1rem; }.homepage .quick-finder .section-subtitle { display: none; }.homepage .quick-finder-form { margin-top: .65rem; }.homepage .quick-finder input, .homepage .quick-finder select { padding: .65rem .8rem; font-size: .75rem; }.homepage .quick-finder-form .btn { padding: .65rem 1.1rem; background: #e96527; color: #fff; border-radius: .4rem; }.homepage .quick-chips { margin-top: .65rem; }.homepage .quick-chips a { font-size: .68rem; padding: .28rem .58rem; }
+
+.homepage .service-finder { padding-top: 3.6rem; padding-bottom: 4.5rem; }.homepage .service-finder-heading { max-width: none; margin: 0 0 1.5rem; text-align: left; }.homepage .service-finder-heading .section-title { font-size: 1.45rem; margin-bottom: .15rem; }.homepage .service-finder-heading p { font-size: .78rem; margin: 0; }.homepage .services-grid { gap: .8rem; }.homepage .service-card { min-height: 188px; padding: 1rem; border-radius: .65rem; position: relative; overflow: hidden; }.homepage .service-card::after { content: ''; position: absolute; top: .72rem; right: .72rem; width: 42%; height: 45px; border-radius: .45rem; background-size: cover; background-position: center; opacity: .96; }.homepage .service-card:nth-child(1)::after { background-image: url('https://res.cloudinary.com/dm1ig0zit/image/upload/v1773909908/download_9_bindsh.jpg'); }.homepage .service-card:nth-child(2)::after, .homepage .service-card:nth-child(5)::after { background-image: url('/heartenza-services-hero.png'); }.homepage .service-card:nth-child(3)::after, .homepage .service-card:nth-child(4)::after { background-image: url('/delivery-family-support.png'); }.homepage .service-card:nth-child(6)::after, .homepage .service-card:nth-child(7)::after { background-image: url('/elderly-medical-support.png'); }.homepage .service-card:nth-child(8)::after { background-image: url('/delivery-family-support.png'); }.homepage .service-icon { width: 2rem; height: 2rem; margin-bottom: .9rem; border-radius: 50%; font-size: .85rem; background: #edf3ef; position: relative; z-index: 1; }.homepage .service-card h3 { max-width: 50%; min-height: 2.45rem; font-size: .78rem; line-height: 1.2; }.homepage .service-card p { font-size: .69rem; line-height: 1.35; max-width: 100%; }.homepage .service-link { font-size: .68rem; color: #e96527; }.homepage .service-card-other { background: #fff; border-color: #e5e5df; }.homepage .service-card-other h3 { color: #183832; }.homepage .service-card-other p { color: #66756f; }.homepage .service-card-other .service-icon { color: #e96527; background: #fff0e8; }
+
+.homepage .about-platform { padding-top: 4rem; padding-bottom: 4rem; border-top: 1px solid #edf0eb; }.homepage .about-platform-grid { gap: 3.5rem; }.homepage .about-platform-copy .section-title { font-size: 2rem; }.homepage .about-platform-copy p { font-size: .86rem; line-height: 1.65; }.homepage .about-platform-points { min-height: 290px; padding: 4.8rem 1rem 1rem; }.homepage .platform-illustration { width: 145px; height: 145px; top: -4.6rem; }.homepage .about-platform-points div { padding: .75rem; font-size: .75rem; }
+
+.homepage .family-support { padding: 0; background: #f9ede2; }.homepage .family-support-grid { max-width: none; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 0; align-items: stretch; }.homepage .family-support-image img { border-radius: 0; height: 430px; }.homepage .family-support-image::after { display: none; }.homepage .family-support-copy { padding: 4rem clamp(2rem,6vw,6rem); }.homepage .family-support-copy .section-title { font-size: 2.2rem; }.homepage .family-support-copy p { font-size: .86rem; }.homepage .family-actions .btn { background: #e96527; color: #fff; border-radius: .45rem; }
+
+.homepage .how-it-works { padding-top: 4.5rem; padding-bottom: 4.5rem; }.homepage .steps-container { max-width: 1060px; margin: 0 auto; }.homepage .step-card { max-width: 170px; }.homepage .step-number { width: 1.8rem; height: 1.8rem; font-size: .72rem; }.homepage .step-icon { width: 2.35rem; height: 2.35rem; border-radius: 50%; margin: .75rem auto; font-size: .85rem; }.homepage .step-card h4 { font-size: .74rem; }.homepage .step-card p { font-size: .65rem; line-height: 1.4; }.homepage .step-connector { margin-top: 1.3rem; }
+
+.homepage .travel-showcase { padding-top: 4rem; padding-bottom: 4rem; background: #f7f7f4; }.homepage .travel-showcase .section-title { font-size: 1.45rem; }.homepage .travel-showcase .sliding-cards-grid { gap: .8rem; }.homepage .travel-showcase .sliding-card { min-height: 250px; border-radius: .6rem; }.homepage .travel-showcase .sliding-content { padding: .9rem; }.homepage .travel-showcase .sliding-content h3 { font-size: .9rem; }.homepage .travel-showcase .sliding-content p { font-size: .65rem; margin-bottom: .55rem; }.homepage .travel-showcase .btn-outline { background: rgba(255,255,255,.15); padding: .45rem .65rem; }
+
+.homepage .scenarios-section { padding-top: 4.5rem; padding-bottom: 4.5rem; }.homepage .scenarios-heading { margin-bottom: 1.6rem; }.homepage .scenarios-section .section-title { font-size: 1.55rem; }.homepage .scenario-grid { grid-template-columns: repeat(3,1fr); gap: .8rem; }.homepage .scenario-card { min-height: 142px; padding: 1rem; border-radius: .6rem; }.homepage .scenario-card > i { margin-bottom: .7rem; font-size: 1.1rem; }.homepage .scenario-card span { font-family: var(--font-body); font-size: .73rem; }.homepage .scenario-card b { padding-top: .75rem; font-size: .65rem; }
+
+.homepage .features-section { padding-top: 4rem; padding-bottom: 4rem; }.homepage .features-section .section-title { font-size: 1.55rem; }.homepage .features-grid { gap: .7rem; }.homepage .feature-card { padding: 1rem; border-radius: .6rem; }.homepage .icon-box { width: 2rem; height: 2rem; font-size: .75rem; }.homepage .feature-card h4 { font-size: .76rem; margin-bottom: .45rem; }.homepage .feature-card p { font-size: .65rem; }
+
+.homepage .service-areas { padding-top: 4.5rem; padding-bottom: 4.5rem; }.homepage .service-areas-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }.homepage .service-areas .section-title { font-size: 1.75rem; }.homepage .service-areas p { font-size: .78rem; }.homepage .wayanad-map { width: 290px; max-width: 100%; height: 180px; object-fit: contain; display: block; margin: 1rem auto 0; }.homepage .area-list { gap: .55rem; }.homepage .area-list li { padding: .55rem .7rem; font-size: .72rem; }
+
+.homepage .cta-section { padding: 4.2rem 0; }.homepage .cta-section h2 { font-size: 2.25rem; }.homepage .cta-section p { font-size: .85rem; }.homepage .footer { padding-top: 3.5rem; }.homepage .footer-top { gap: 2rem; }.homepage .footer-brand p,.homepage .footer-links a,.homepage .footer-contact li { font-size: .72rem; }
+
+@media (max-width: 900px) { .homepage .services-grid { grid-template-columns: repeat(2,1fr); }.homepage .family-support-grid { grid-template-columns: 1fr; }.homepage .family-support-copy { padding: 3rem 1.5rem; }.homepage .service-areas-grid { grid-template-columns: 1fr; }.homepage .topbar-note { display: none; } }
+@media (max-width: 768px) { .homepage .topbar { display: none; }.homepage .navbar { top: 0; }.homepage .service-hero { margin-top: 0; min-height: 620px; }.homepage .hero-overlay { background: linear-gradient(180deg,rgba(250,250,247,.95),rgba(250,250,247,.62)); }.homepage .hero h1 { font-size: 2.8rem; }.homepage .quick-finder { margin-top: -1rem; }.homepage .services-grid,.homepage .scenario-grid { grid-template-columns: 1fr; }.homepage .service-card { min-height: 180px; }.homepage .service-card::after { height: 62px; width: 34%; }.homepage .service-card h3 { max-width: 60%; }.homepage .family-support-image img { height: 310px; }.homepage .travel-showcase .sliding-cards-grid { grid-template-columns: 1fr; }.homepage .features-grid { grid-template-columns: 1fr 1fr; }.homepage .footer-top { grid-template-columns: 1fr 1fr; }.homepage .footer-brand { grid-column: 1 / -1; } }
+
+/* Comfortable reading scale for the compact homepage layout. */
+.homepage { font-size: 16px; }
+.homepage .topbar { height: 36px; font-size: .78rem; }
+.homepage .nav-item, .homepage .navbar.scrolled .nav-item { font-size: .82rem; }
+.homepage .nav-actions .btn { padding: .72rem 1.08rem; font-size: .82rem; }
+.homepage .hero-eyebrow { font-size: .78rem; }
+.homepage .hero h1 { font-size: clamp(2.65rem, 4.8vw, 4.5rem); }
+.homepage .hero-subtitle { font-size: 1.05rem; line-height: 1.55; max-width: 530px; }
+.homepage .hero-location { font-size: .9rem; }
+.homepage .quick-finder h2 { font-size: 1.3rem; }
+.homepage .quick-finder input, .homepage .quick-finder select { padding: .72rem .85rem; font-size: .88rem; }
+.homepage .quick-finder-form .btn { padding: .72rem 1.15rem; font-size: .85rem; }
+.homepage .quick-chips a { font-size: .78rem; padding: .32rem .65rem; }
+.homepage .service-finder-heading .section-title { font-size: 1.75rem; margin-bottom: .25rem; }
+.homepage .service-finder-heading p { font-size: .95rem; }
+.homepage .services-grid { gap: 1rem; }
+.homepage .service-card { min-height: 215px; padding: 1.15rem; }
+.homepage .service-card::after { height: 52px; }
+.homepage .service-icon { width: 2.2rem; height: 2.2rem; font-size: .95rem; }
+.homepage .service-card h3 { font-size: .93rem; min-height: 2.65rem; }
+.homepage .service-card p { font-size: .8rem; line-height: 1.45; }
+.homepage .service-link { font-size: .78rem; }
+.homepage .about-platform-copy p, .homepage .family-support-copy p, .homepage .service-areas p { font-size: .96rem; }
+.homepage .scenario-card span { font-size: .82rem; }.homepage .scenario-card b { font-size: .75rem; }
+.homepage .feature-card h4 { font-size: .88rem; }.homepage .feature-card p { font-size: .75rem; }
+.homepage .step-card h4 { font-size: .82rem; }.homepage .step-card p { font-size: .72rem; }
+.homepage .travel-showcase .sliding-content h3 { font-size: 1rem; }.homepage .travel-showcase .sliding-content p { font-size: .76rem; }
+
+/* Hero and service-card visual update */
+.homepage .brand-copy { display: grid; line-height: 1.05; color: #16483c; }
+.homepage .brand-copy strong { font-size: 1.28rem; letter-spacing: -.04em; }
+.homepage .brand-copy small { font-size: .56rem; letter-spacing: .04em; color: #6a8078; }
+.homepage .nav-brand { gap: .55rem; }
+.homepage .service-hero { background: #eef0eb url('/heartenza-service-collage-hero.png') center right / cover no-repeat; }
+.homepage .service-hero .hero-overlay { background: linear-gradient(90deg, rgba(250,250,247,.98) 0%, rgba(250,250,247,.94) 35%, rgba(250,250,247,.18) 72%); }
+.homepage .service-hero .hero-content { max-width: 570px; }
+.homepage .hero h1 { font-size: clamp(2.45rem, 4.3vw, 4.15rem); max-width: 530px; }
+.homepage .hero-trust { display: flex; flex-wrap: wrap; gap: .85rem; margin: 1.3rem 0 1.8rem; color: #42685c; font-size: .78rem; }
+.homepage .hero-trust span { display: inline-flex; gap: .35rem; align-items: center; }
+.homepage .hero-trust i { color: #277759; }
+
+/* Keep hero copy in the left-side safe area of the collage. */
+.homepage .service-hero .hero-content {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding-left: clamp(4.5rem, 5vw, 6rem);
+  padding-right: 1.5rem;
+}
+.homepage .service-hero .hero-content > * { max-width: 540px; }
+
+.homepage .service-finder-heading .section-title { font-size: 2rem; }
+.homepage .service-finder-heading .section-subtitle { display: none; }
+.homepage .service-card { min-height: 270px; justify-content: flex-end; padding: 1.2rem; border: 0; background: #173f35; }
+.homepage .service-card::before { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(8,28,23,.04) 18%, rgba(8,28,23,.92) 100%); }
+.homepage .service-card::after { inset: 0; z-index: 0; width: auto; height: auto; border-radius: 0; opacity: 1; background-image: url('/service-card-image-sheet.png') !important; background-size: 400% 200%; background-repeat: no-repeat; }
+.homepage .service-card:nth-child(1)::after { background-position: 0% 0%; }
+.homepage .service-card:nth-child(2)::after { background-position: 0% 100%; }
+.homepage .service-card:nth-child(3)::after { background-position: 100% 0%; }
+.homepage .service-card:nth-child(4)::after { background-position: 33.333% 100%; }
+.homepage .service-card:nth-child(5)::after { background-position: 66.666% 100%; }
+.homepage .service-card:nth-child(6)::after { background-position: 33.333% 0%; }
+.homepage .service-card:nth-child(7)::after { background-position: 66.666% 0%; }
+.homepage .service-card:nth-child(8)::after { background-position: 100% 100%; }
+.homepage .service-card > * { position: relative; z-index: 2; }
+.homepage .service-icon { position: absolute; top: 1rem; left: 1rem; width: 2.5rem; height: 2.5rem; margin: 0; color: #175842; background: #fffaf0; }
+.homepage .service-card h3 { max-width: none; min-height: 0; margin: 0 0 .35rem; color: #fff; font-size: 1.05rem; }
+.homepage .service-card p { color: rgba(255,255,255,.86); font-size: .82rem; max-width: 95%; }
+.homepage .service-link { color: #ffd28d; margin-top: .8rem; }
+.homepage .service-card-other { background: #173f35; }.homepage .service-card-other h3 { color: #fff; }.homepage .service-card-other p { color: rgba(255,255,255,.86); }
+
+@media (max-width: 768px) { .homepage .brand-copy strong { font-size: 1.1rem; }.homepage .brand-copy small { font-size: .5rem; }.homepage .nav-brand img { height: 38px; }.homepage .hero-trust { gap: .55rem; font-size: .72rem; }.homepage .service-card { min-height: 250px; }.homepage .service-card h3 { font-size: 1.05rem; }.homepage .service-card p { font-size: .84rem; } }
+
+@media (max-width: 768px) { .homepage .service-hero .hero-content { padding-left: 1.5rem; padding-right: 1.5rem; }.homepage .service-hero .hero-content > * { max-width: 100%; } }
+
+/* One consistent left alignment for all hero copy and actions. */
+.homepage .service-hero .hero-content { text-align: left !important; }
+.homepage .service-hero .hero-content .animated-title { display: block; margin-left: 0; margin-right: 0; }
+.homepage .service-hero .hero-content .hero-subtitle,
+.homepage .service-hero .hero-content .hero-trust,
+.homepage .service-hero .hero-content .hero-buttons { margin-left: 0; margin-right: 0; justify-content: flex-start; }
+
+/* Refined hero WhatsApp action and quick-finder heading accent. */
+.homepage .hero-buttons .btn-outline {
+  border: 1.5px solid #25d366;
+  color: #176c3b;
+  background: rgba(255,255,255,.84);
+}
+.homepage .hero-buttons .btn-outline:hover { background: #effcf4; color: #126132; }
+.homepage .hero-buttons .btn-outline .fa-whatsapp { color: #25d366; font-size: 1.05em; }
+.homepage .quick-finder h2 {
+  display: inline-block;
+  padding-left: .7rem;
+  border-left: 3px solid #c7a34c;
+}
+
+/* Consistent gold accent for primary homepage section headings. */
+.homepage .section-title {
+  display: inline-block;
+  padding-left: .75rem;
+  border-left: 3px solid #c7a34c;
+}
+
+/* Premium gold-outline About button: motion-only hover. */
+.homepage .about-platform .btn-outline-dark {
+  border: 1.5px solid #c7a34c;
+  color: #9f7924;
+  background: transparent;
+  box-shadow: none;
+}
+.homepage .about-platform .btn-outline-dark:hover {
+  border-color: #c7a34c;
+  color: #9f7924;
+  background: transparent;
+  box-shadow: none;
+  transform: translateY(-3px);
+}
+
+/* Family-support feature panel and inset scenario area. */
+.homepage .family-support {
+  position: relative;
+  max-width: 1200px;
+  margin: 1.25rem auto 0;
+  border: 1px solid #dedbd3;
+  border-radius: 1.4rem;
+  overflow: hidden;
+  box-shadow: 0 16px 34px rgba(0,0,0,.07);
+}
+.homepage .family-support-image { overflow: hidden; }
+.homepage .family-support-image::before,
+.homepage .family-support-image::after {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  border: 1.5px solid rgba(223,184,87,.9);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.homepage .family-support-image::before { width: 4.5rem; height: 4.5rem; top: 1.25rem; left: 1.25rem; }
+.homepage .family-support-image::after { width: 1.7rem; height: 1.7rem; top: 5.1rem; left: 5.1rem; background: rgba(255,255,255,.24); }
+.homepage .family-support-copy { position: relative; }
+.homepage .family-support-copy::after {
+  content: '';
+  position: absolute;
+  right: 2.2rem;
+  bottom: 2rem;
+  width: .6rem;
+  height: .6rem;
+  border-radius: 50%;
+  background: #c7a34c;
+  box-shadow: 1.15rem -1.15rem 0 -0.08rem rgba(199,163,76,.55);
+}
+.homepage .family-actions .text-action { padding: .7rem .2rem; }
+
+.homepage .scenarios-section {
+  max-width: 1200px;
+  margin: 1.25rem auto;
+  padding: clamp(3.5rem, 6vw, 5rem) clamp(1rem, 3vw, 2.2rem);
+  border: 1px solid rgba(214,181,98,.25);
+  border-radius: 1.4rem;
+  box-shadow: 0 18px 40px rgba(0,0,0,.2);
+}
+.homepage .scenario-card {
+  min-height: 170px;
+  padding: 1.25rem;
+  border-radius: .95rem;
+  border: 1px solid rgba(214,181,98,.32);
+  background: linear-gradient(145deg, rgba(255,255,255,.09), rgba(255,255,255,.025));
+}
+.homepage .scenario-card b {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: .35rem;
+  padding: .42rem .68rem;
+  border: 1px solid rgba(214,181,98,.55);
+  border-radius: 999px;
+  background: rgba(214,181,98,.08);
+  transition: transform .2s ease, background .2s ease;
+}
+.homepage .scenario-card:hover b { transform: translateX(3px); background: rgba(214,181,98,.16); }
+
+@media (max-width: 768px) {
+  .homepage .family-support { margin: 1rem; border-radius: 1rem; }
+  .homepage .scenarios-section { margin: 1rem; border-radius: 1rem; }
+  .homepage .family-support-image::before { width: 3.6rem; height: 3.6rem; top: .85rem; left: .85rem; }
+  .homepage .family-support-image::after { width: 1.4rem; height: 1.4rem; top: 3.9rem; left: 3.9rem; }
+}
+
+/* Family support: overlapping circular image and rounded content panel. */
+.homepage .family-support {
+  max-width: 1120px;
+  min-height: 450px;
+  margin: 3rem auto;
+  padding: 3.5rem 3rem 3.5rem 18rem;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+}
+.homepage .family-support-grid { display: block; }
+.homepage .family-support-image {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 50%;
+  width: 330px;
+  height: 330px;
+  transform: translateY(-50%);
+  border: 6px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 16px 34px rgba(0,0,0,.14);
+}
+.homepage .family-support-image img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+.homepage .family-support-image::before { width: 4.25rem; height: 4.25rem; top: -1.3rem; left: -.7rem; border-color: #c7a34c; background: #fff; }
+.homepage .family-support-image::after { width: 1.25rem; height: 1.25rem; top: auto; bottom: 1.3rem; left: auto; right: -.65rem; background: #c7a34c; border: 3px solid #fff; }
+.homepage .family-support-copy {
+  min-height: 340px;
+  padding: 3rem 4rem 3rem 9rem;
+  border: 1.5px solid #171717;
+  border-radius: 0 3.5rem 3.5rem 3.5rem;
+  background: #fff;
+  box-shadow: none;
+}
+.homepage .family-support-copy::after { right: 2rem; bottom: 1.8rem; background: #c7a34c; box-shadow: 1.1rem -1.1rem 0 -.12rem #d7d7d4; }
+
+/* Restore the original full-width Everyday Scenarios presentation. */
+.homepage .scenarios-section {
+  max-width: none;
+  margin: 0;
+  padding: clamp(4.5rem, 8vw, 8rem) 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+.homepage .scenario-card {
+  min-height: 142px;
+  padding: 1rem;
+  border-radius: .6rem;
+  border-color: rgba(255,255,255,.12);
+  background: rgba(255,255,255,.05);
+}
+.homepage .scenario-card b {
+  display: block;
+  align-self: auto;
+  padding: .75rem 0 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+.homepage .scenario-card:hover b { transform: none; background: transparent; }
+
+@media (max-width: 768px) {
+  .homepage .family-support { min-height: 0; margin: 2.5rem 1rem; padding: 10rem 0 0; }
+  .homepage .family-support-image { left: 50%; top: 0; width: 210px; height: 210px; transform: translate(-50%, 0); }
+  .homepage .family-support-copy { min-height: 0; padding: 8rem 1.5rem 2.5rem; border-radius: 1.6rem; }
+}
+
+/* Remove the grey container and enlarge the family-support feature. */
+.homepage .family-support {
+  width: 100%;
+  max-width: none;
+  min-height: 690px;
+  margin: 0;
+  padding: 3.5rem 0;
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+  box-shadow: none;
+}
+.homepage .family-support-grid {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: none;
+  min-height: 620px;
+  margin: 0 auto;
+  padding: 4.5rem 7vw 4.5rem 35vw;
+}
+.homepage .family-support-image {
+  width: min(33vw, 530px);
+  height: min(33vw, 530px);
+  left: 5vw;
+}
+.homepage .family-support-copy {
+  min-height: 500px;
+  padding: 5rem 5.5rem 5rem 12rem;
+  border-radius: 0 5rem 5rem 5rem;
+}
+.homepage .family-support-copy .section-title { font-size: clamp(2.5rem, 3.8vw, 3.7rem); }
+.homepage .family-support-copy p { max-width: 650px; font-size: 1.1rem; }
+
+@media (max-width: 768px) {
+  .homepage .family-support { min-height: 0; margin: 0; padding: 3rem 1rem; }
+  .homepage .family-support-grid { min-height: 0; padding: 9rem 0 0; }
+  .homepage .family-support-image { width: 210px; height: 210px; left: 50%; }
+  .homepage .family-support-copy { min-height: 0; padding: 8rem 1.5rem 2.5rem; border-radius: 1.6rem; }
+}
+
+/* Featured packages: all nine packages in a swipeable, auto-advancing carousel. */
+.homepage .travel-showcase .sliding-card:nth-child(n + 4) { display: block; }
+.homepage .travel-showcase .sliding-cards-grid {
+  display: flex;
+  grid-template-columns: none;
+  gap: 1.2rem;
+  overflow-x: auto;
+  padding: .25rem .25rem 1.25rem;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: #c7a34c #ecebe7;
+}
+.homepage .travel-showcase .sliding-cards-grid::-webkit-scrollbar { height: 7px; }
+.homepage .travel-showcase .sliding-cards-grid::-webkit-scrollbar-track { background: #ecebe7; border-radius: 999px; }
+.homepage .travel-showcase .sliding-cards-grid::-webkit-scrollbar-thumb { background: #c7a34c; border-radius: 999px; }
+.homepage .travel-showcase .sliding-card {
+  flex: 0 0 clamp(250px, 28vw, 335px);
+  min-height: 385px;
+  scroll-snap-align: start;
+}
+@media (max-width: 768px) {
+  .homepage .travel-showcase .sliding-cards-grid { display: flex; }
+  .homepage .travel-showcase .sliding-card { flex-basis: 82vw; min-height: 350px; }
+}
+
+/* Let the tour carousel use the full available screen width. */
+.homepage .travel-showcase .container {
+  max-width: none;
+  padding-left: clamp(1.25rem, 4vw, 5rem);
+  padding-right: clamp(1.25rem, 4vw, 5rem);
+}
+.homepage .travel-showcase .sliding-cards-grid {
+  padding-left: 0;
+  padding-right: 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.homepage .travel-showcase .sliding-cards-grid::-webkit-scrollbar { display: none; }
+.homepage .travel-showcase .sliding-card { flex-basis: clamp(220px, 18vw, 300px); }
+@media (max-width: 768px) { .homepage .travel-showcase .sliding-card { flex-basis: 82vw; } }
+
+/* Clear, high-contrast process section. */
+.homepage .how-it-works {
+  isolation: isolate;
+  background: linear-gradient(135deg, #ffffff 0%, #f3f1ec 52%, #e7e5e0 100%);
+  color: #171717;
+}
+.homepage .how-it-works::before { display: none; }
+.homepage .how-it-works .section-title { color: #151515; text-shadow: none; }
+.homepage .how-it-works .section-subtitle { color: #a47d23; }
+.homepage .steps-container { gap: 1.25rem; }
+.homepage .step-card {
+  max-width: 260px;
+  padding: 1.4rem 1rem 1.25rem;
+  border: 1px solid #dedbd3;
+  border-radius: 1.15rem;
+  background: rgba(255, 255, 255, .82);
+  box-shadow: 0 12px 28px rgba(21, 21, 21, .07);
+}
+.homepage .step-number {
+  width: 2.2rem;
+  height: 2.2rem;
+  margin-bottom: .8rem;
+  background: #1b1b1b;
+  color: #e0bd61;
+  box-shadow: 0 0 0 5px rgba(199, 163, 76, .2);
+}
+.homepage .step-icon { color: #171717; background: #f3e5bd; }
+.homepage .step-card h4 { color: #171717; font-size: .95rem; }
+.homepage .step-card p { color: #5e5e5e; font-size: .8rem; }
+.homepage .step-connector { border-color: #c7a34c; opacity: .8; }
+@media (max-width: 768px) {
+  .homepage .step-card { max-width: 360px; width: 100%; }
+  .homepage .step-connector { display: none; }
+}
+
+/* Premium metallic theme: black, white, gold and silver. */
+.homepage { --ink: #171717; --muted-ink: #696969; --canvas: #f6f6f4; --surface: #fff; --line: #d6d6d4; --brand: #151515; --brand-dark: #070707; --accent: #c7a34c; --soft-accent: #f3ead5; background: #f6f6f4; color: #171717; }
+.homepage .topbar { background: linear-gradient(90deg, #050505, #252525); color: #d7d7d7; }.homepage .topbar i { color: #d6b562; }
+.homepage .navbar { background: rgba(255,255,255,.97); border-color: #e2e2e2; }.homepage .nav-item, .homepage .navbar.scrolled .nav-item { color: #222; }.homepage .nav-item.active, .homepage .nav-item:hover { color: #a8832d; }.homepage .nav-social-icon, .homepage .navbar.scrolled .nav-social-icon { color: #242424; border-color: #d2d2d2; }.homepage .nav-actions .btn, .homepage .hero-buttons .btn-primary, .homepage .quick-finder-form .btn, .homepage .family-actions .btn { background: linear-gradient(135deg, #a87d28, #d8bb6a); color: #101010; }
+.homepage .brand-copy { color: #111; }.homepage .brand-copy small { color: #777; }
+.homepage .service-hero { background-color: #ececeb; }.homepage .service-hero .hero-overlay { background: linear-gradient(90deg, rgba(255,255,255,.98) 0%, rgba(255,255,255,.94) 35%, rgba(255,255,255,.18) 72%); }.homepage .hero h1, .homepage .hero h1 .text-gold { color: #111 !important; }.homepage .hero-eyebrow { color: #a27a28; }.homepage .hero-subtitle { color: #4c4c4c; }.homepage .hero-location, .homepage .hero-trust { color: #575757; }.homepage .hero-trust i { color: #ae892f; }.homepage .hero-buttons .btn-outline { color: #1b1b1b; border-color: #979797; background: rgba(255,255,255,.72); }
+.homepage .quick-finder-panel { background: #fff; border-color: #ddd; box-shadow: 0 12px 28px rgba(0,0,0,.12); }.homepage .quick-chips a { background: #eeeeec; color: #3d3d3d; }.homepage .quick-chips a:hover { color: #111; background: #e2c77d; }
+.homepage .service-finder { background: #f7f7f5; }.homepage .service-finder-heading .section-subtitle, .homepage .section-subtitle { color: #a07a2a; }.homepage .service-card { background: #0d0d0d; }.homepage .service-card::before { background: linear-gradient(180deg, rgba(0,0,0,.03) 15%, rgba(0,0,0,.92) 100%); }.homepage .service-icon { color: #181818; background: linear-gradient(135deg, #fff7df, #d7b55d); }.homepage .service-link { color: #f1d48b; }
+.homepage .about-platform { background: #fff; }.homepage .about-platform-points { background: linear-gradient(145deg, #ededeb, #d7d7d4); }.homepage .about-platform-points div { background: rgba(255,255,255,.78); }.homepage .about-platform-points i { color: #af892d; }.homepage .btn-outline-dark { border-color: #222; color: #111; }
+.homepage .family-support { background: #efefed; }.homepage .scenarios-section, .homepage .service-areas { background: linear-gradient(135deg, #090909, #252525); }.homepage .scenario-card { border-color: rgba(214,181,98,.25); background: rgba(255,255,255,.055); }.homepage .scenario-card > i, .homepage .scenario-card b, .homepage .scenarios-section .section-subtitle { color: #d9ba65; }
+.homepage .travel-showcase { background: #fff; }.homepage .features-section { background: #eeeeec; }.homepage .icon-box { color: #191919; background: #efe2bf; }.homepage .how-it-works { background: #fff; }.homepage .step-number { background: #1b1b1b; color: #e5c773; }.homepage .step-icon { color: #171717; background: #eee1bb; }.homepage .step-connector { border-color: #b7b7b5; }.homepage .area-list li { border-color: rgba(214,181,98,.35); }.homepage .cta-section { background-image: linear-gradient(105deg, rgba(0,0,0,.96), rgba(22,22,22,.74)), url('/delivery-family-support.png'); }.homepage .footer { background: #080808; }.homepage .footer-title, .homepage .footer-brand p { color: #fff; }.homepage .footer-contact i, .homepage .social-links a:hover { color: #171717; background: #d2b260; }
+
+/* Final CTA: keep every message clear against the background photo. */
+.homepage .cta-section {
+  background-image: linear-gradient(100deg, rgba(0, 0, 0, .94), rgba(0, 0, 0, .77)), url('/delivery-family-support.png');
+}
+.homepage .cta-section h2,
+.homepage .cta-section .section-title {
+  color: #ffffff !important;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, .55);
+}
+.homepage .cta-section p { color: rgba(255, 255, 255, .94); opacity: 1; }
+.homepage .cta-section .btn-outline { color: #ffffff; border-color: rgba(255, 255, 255, .82); }
+.homepage .cta-section .btn-outline:hover { color: #ffffff; background: transparent; }
+
+/* Footer icons: recognisable service colours with a polished circular treatment. */
+.homepage .social-links a {
+  width: 2.6rem;
+  height: 2.6rem;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, .14);
+}
+.homepage .social-links .social-facebook { background: #1877f2; }
+.homepage .social-links .social-instagram { background: radial-gradient(circle at 28% 105%, #feda75 0 14%, #fa7e1e 31%, #d62976 57%, #962fbf 78%, #4f5bd5 100%); }
+.homepage .social-links .social-x { background: #f5f5f5; color: #111111; }
+.homepage .social-links a:hover { transform: translateY(-4px); color: #ffffff; }
+.homepage .social-links .social-x:hover { color: #111111; background: #ffffff; }
+
+.homepage .footer-contact i {
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 2.15rem;
+  width: 2.15rem;
+  height: 2.15rem;
+  margin-top: 0;
+  border-radius: 50%;
+  font-size: .9rem;
+}
+.homepage .footer-contact .contact-location { color: #ffffff; background: #d94f45; }
+.homepage .footer-contact .contact-phone { color: #ffffff; background: #2fa866; }
+.homepage .footer-contact .contact-email { color: #ffffff; background: #438bd7; }
+/* Alternate display face for the Wayanad coverage message. */
+.homepage .service-areas .section-title {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -.025em;
+  line-height: 1.08;
+}
