@@ -1,318 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="/logo.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Services | Heartenza Services</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore Heartenza Services in Wayanad: customised travel planning, professional drivers, home and vehicle maintenance, delivery, elderly companion, and medical assistance.">
+  <meta name="keywords" content="Wayanad services, Wayanad travel planner, driver service Wayanad, house maintenance Wayanad, vehicle maintenance Wayanad, delivery service Wayanad, elderly companion Wayanad, medical assistance Wayanad">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://heartenzaservices.com/services.html">
+  <meta property="og:title" content="Services in Wayanad | Heartenza">
+  <meta property="og:description" content="One trusted local team for travel, home, vehicle, delivery, health and family support in Wayanad.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://heartenzaservices.com/services.html">
+  <meta property="og:image" content="https://heartenzaservices.com/heartenza-services-hero.png">
+  <title>Local Services in Wayanad | Travel, Home, Health &amp; Family Support | Heartenza</title>
+  <link rel="icon" type="image/png" href="/logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="./style.css">
   <style>
-    .page-hero {
-      padding: 10rem 0 6rem;
-      background-color: var(--bg-navy);
-      background-image: linear-gradient(rgba(10, 31, 68, 0.9), rgba(10, 31, 68, 0.9)), url('https://res.cloudinary.com/dm1ig0zit/image/upload/v1773919344/wayanad_bgg4g5.jpg');
-      background-size: cover;
-      background-position: center;
-      color: white;
-      text-align: center;
-    }
-
-    .page-hero h1 {
-      color: white;
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-
-    .service-detail-card {
-      background: white;
-      border-radius: var(--radius-xl);
-      padding: 3rem;
-      margin-bottom: 3rem;
-      box-shadow: var(--shadow-sm);
-      display: flex;
-      align-items: center;
-      gap: 3rem;
-      border: 1px solid rgba(0, 0, 0, 0.05);
-      transition: transform var(--transition-normal), box-shadow var(--transition-normal);
-    }
-
-    .service-detail-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-xl);
-      border-color: rgba(250, 204, 21, 0.3);
-      /* faint gold border on hover */
-    }
-
-    .service-detail-card:nth-child(even) {
-      flex-direction: row-reverse;
-    }
-
-    .sd-icon-box {
-      width: 120px;
-      height: 120px;
-      background: rgba(30, 58, 138, 0.05);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 4rem;
-      color: var(--primary-royal-blue);
-      flex-shrink: 0;
-      transition: all var(--transition-normal);
-    }
-
-    .service-detail-card:hover .sd-icon-box {
-      background: var(--primary-royal-blue);
-      color: var(--accent-gold);
-      transform: scale(1.1) rotate(5deg);
-    }
-
-    .sd-content h3 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-    }
-
-    .sd-content p {
-      color: var(--text-gray);
-      font-size: 1.1rem;
-      margin-bottom: 1.5rem;
-    }
-
-    @media (max-width: 992px) {
-
-      .service-detail-card,
-      .service-detail-card:nth-child(even) {
-        flex-direction: column;
-        text-align: center;
-        gap: 2rem;
-        padding: 2.5rem;
-      }
-    }
+    .services-page { background:#f6f6f4; color:#171717; }.services-page .navbar{position:sticky;top:0;z-index:50;padding:.7rem 0;background:rgba(255,255,255,.96);border-bottom:1px solid #dededb;backdrop-filter:blur(16px)}.services-page .navbar .container{display:flex;align-items:center;justify-content:space-between;gap:1rem}.services-page .nav-brand{display:flex;align-items:center;gap:.65rem;color:#121212}.services-page .nav-brand img{width:42px;height:42px;object-fit:contain}.services-page .brand-copy{display:grid;line-height:1.05}.services-page .brand-copy strong{font-size:1.15rem;letter-spacing:-.03em}.services-page .brand-copy small{font-size:.6rem;color:#6e6e6e}.services-page .nav-links{display:flex;align-items:center;gap:1.7rem;margin:0}.services-page .nav-item{color:#242424;font-size:.82rem;font-weight:600;text-transform:none;letter-spacing:0}.services-page .nav-item:hover,.services-page .nav-item.active{color:#a57b24}.services-page .nav-book{padding:.68rem 1rem;border-radius:.5rem;background:linear-gradient(135deg,#a87d28,#d8bb6a);color:#111;font-size:.78rem;font-weight:700;white-space:nowrap}.services-page .mobile-menu-btn{display:none}
+    .services-hero{position:relative;min-height:500px;display:grid;align-items:center;overflow:hidden;background:#111}.services-hero:before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.92),rgba(0,0,0,.78) 43%,rgba(0,0,0,.18) 76%),url('/heartenza-services-hero.png') center/cover no-repeat}.services-hero .container{position:relative;z-index:1;width:100%}.services-kicker{display:inline-flex;align-items:center;gap:.6rem;margin-bottom:1rem;color:#d9ba65;font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase}.services-kicker:before{content:'';width:2.4rem;height:1px;background:#d9ba65}.services-hero h1{max-width:700px;margin:0 0 1rem;color:#fff;font-size:clamp(2.5rem,5vw,4.8rem);line-height:1.03;letter-spacing:-.055em}.services-hero p{max-width:600px;margin:0;color:rgba(255,255,255,.85);font-size:1.04rem;line-height:1.7}.hero-actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.7rem}.services-page .btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;border-radius:.55rem;font-size:.84rem;font-weight:700}.services-page .btn-gold{padding:.85rem 1.15rem;background:linear-gradient(135deg,#ad8129,#ddc06d);color:#101010}.services-page .btn-white{padding:.8rem 1.1rem;border:1px solid rgba(255,255,255,.72);color:#fff}
+    .services-intro{padding:5rem 0 2.2rem;text-align:center}.services-intro .section-subtitle,.service-details-heading .section-subtitle,.enquiry-banner .section-subtitle{color:#a57b24;font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase}.services-intro .section-title{max-width:780px;margin:.55rem auto .75rem;color:#171717;font-size:clamp(2rem,4vw,3.55rem);letter-spacing:-.045em;line-height:1.08}.services-intro p{max-width:670px;margin:0 auto;color:#5e5e5e}.service-directory{padding:1.5rem 0 5rem}.service-directory-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}.directory-card{position:relative;min-height:245px;padding:1.3rem;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;border-radius:1rem;background:#141414;color:#fff;isolation:isolate}.directory-card:before{content:'';position:absolute;z-index:-1;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.02) 15%,rgba(0,0,0,.9) 100%)}.directory-card:after{content:'';position:absolute;z-index:-2;inset:0;background-image:url('/service-card-image-sheet.png');background-size:400% 200%;transition:transform .45s ease}.directory-card:hover:after{transform:scale(1.06)}.directory-card:nth-child(1):after{background-position:0 0}.directory-card:nth-child(2):after{background-position:0 100%}.directory-card:nth-child(3):after{background-position:75% 0}.directory-card:nth-child(4):after{background-position:25% 100%}.directory-card:nth-child(5):after{background-position:50% 100%}.directory-card:nth-child(6):after{background-position:25% 0}.directory-card:nth-child(7):after{background-position:50% 0}.directory-card:nth-child(8):after{background-position:75% 100%}.directory-icon{display:grid;place-items:center;width:2.4rem;height:2.4rem;margin-bottom:auto;border-radius:50%;background:linear-gradient(135deg,#fff4d7,#cda54a);color:#151515;font-size:.95rem}.directory-card h2{margin:0 0 .35rem;color:#fff;font-family:var(--font-body);font-size:1.1rem;line-height:1.2}.directory-card p{margin:0;color:rgba(255,255,255,.8);font-size:.79rem;line-height:1.45}.directory-card a{display:inline-flex;align-items:center;gap:.45rem;margin-top:.7rem;color:#f0d48a;font-size:.76rem;font-weight:700}
+    .service-details{padding:5rem 0;background:#fff}.service-details-heading{display:flex;align-items:end;justify-content:space-between;gap:2rem;margin-bottom:2.3rem}.service-details-heading .section-title{margin:.55rem 0 0;color:#151515;font-size:clamp(2rem,3.5vw,3.2rem);letter-spacing:-.045em}.service-details-heading p{max-width:480px;margin:0;color:#5f5f5f}.service-detail-list{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}.service-detail{scroll-margin-top:5.5rem;padding:1.6rem;border:1px solid #dededb;border-radius:1rem;background:#fafaf8}.service-detail-top{display:flex;align-items:start;gap:1rem}.service-detail-icon{display:grid;place-items:center;flex:0 0 2.8rem;width:2.8rem;height:2.8rem;border-radius:.8rem;background:#efe1b8;color:#181818}.service-detail h2{margin:.35rem 0 0;color:#171717;font-size:1.22rem}.service-detail p{margin:.9rem 0 1rem;color:#5d5d5d;font-size:.9rem;line-height:1.65}.service-detail ul{display:grid;grid-template-columns:repeat(2,1fr);gap:.45rem .75rem;padding:0;margin:0 0 1.25rem;list-style:none}.service-detail li{color:#4d4d4d;font-size:.78rem}.service-detail li:before{content:'✓';margin-right:.4rem;color:#a57b24;font-weight:800}.service-detail-actions{display:flex;flex-wrap:wrap;gap:.65rem}.service-detail-actions .btn{padding:.68rem .85rem;border:1px solid #c5a24c;color:#191919;background:transparent;font-size:.76rem}.service-detail-actions .btn-primary{border-color:#b58e36;background:#c7a34c}.enquiry-banner{padding:4.5rem 0;background:linear-gradient(105deg,#090909,#262626);color:#fff;text-align:center}.enquiry-banner .section-subtitle{color:#dfc271}.enquiry-banner h2{max-width:760px;margin:.7rem auto 1rem;color:#fff;font-size:clamp(2rem,4vw,3.4rem);letter-spacing:-.045em;line-height:1.1}.enquiry-banner p{max-width:650px;margin:0 auto 1.5rem;color:rgba(255,255,255,.8)}.services-page .footer{background:#080808}.services-page .footer-brand p,.services-page .footer-title{color:#fff}.services-page .footer-contact i{color:#d9ba65}
+    @media(max-width:960px){.service-directory-grid{grid-template-columns:repeat(2,1fr)}.service-detail-list{grid-template-columns:1fr}.services-page .nav-links{gap:.8rem}}@media(max-width:700px){.services-page .nav-links,.services-page .nav-book{display:none}.services-page .mobile-menu-btn{display:block;color:#171717}.services-hero{min-height:540px}.services-hero:before{background-image:linear-gradient(180deg,rgba(0,0,0,.86),rgba(0,0,0,.45)),url('/heartenza-services-hero.png');background-position:62% center}.services-hero h1{font-size:2.65rem}.services-intro,.service-details{padding-top:3.7rem}.service-directory{padding-bottom:3.7rem}.service-directory-grid{grid-template-columns:1fr}.directory-card{min-height:240px}.service-details-heading{display:block}.service-details-heading p{margin-top:.8rem}.service-detail ul{grid-template-columns:1fr}.footer-top{grid-template-columns:1fr 1fr}.footer-brand{grid-column:1/-1}}
   </style>
-  <style>
-    #loader-wrapper {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background-color: #111111;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 999999;
-      transition: opacity 0.8s cubic-bezier(0.77, 0, 0.175, 1), visibility 0.8s;
-    }
-  </style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Heartenza Local Services in Wayanad","itemListElement":[{"@type":"ListItem","position":1,"name":"Travel Planning and Tour Packages","url":"https://heartenzaservices.com/tours.html"},{"@type":"ListItem","position":2,"name":"Professional Driver Services","url":"https://heartenzaservices.com/services.html#driver-services"},{"@type":"ListItem","position":3,"name":"House Maintenance","url":"https://heartenzaservices.com/services.html#house-maintenance"},{"@type":"ListItem","position":4,"name":"Vehicle Maintenance","url":"https://heartenzaservices.com/services.html#vehicle-maintenance"},{"@type":"ListItem","position":5,"name":"Delivery and Errands","url":"https://heartenzaservices.com/services.html#delivery-errands"},{"@type":"ListItem","position":6,"name":"Elderly Companion Services","url":"https://heartenzaservices.com/services.html#elderly-companion"},{"@type":"ListItem","position":7,"name":"Medical Assistance","url":"https://heartenzaservices.com/services.html#medical-assistance"},{"@type":"ListItem","position":8,"name":"Gifts and Special Occasions","url":"https://heartenzaservices.com/services.html#gifts-occasions"}]}</script>
 </head>
-
-<body>
-  <!-- Premium Loading Screen -->
-  <div id="loader-wrapper">
-    <div class="loader-content">
-      <div class="loader-circle"></div>
-      <h2 class="loader-text">Heartenza</h2>
-    </div>
-  </div>
-
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="container">
-      <a href="./" class="nav-brand">
-        <img src="./logo.png" alt="Heartenza Logo">
-      </a>
-      <ul class="nav-links">
-        <li><a href="./" class="nav-item">Home</a></li>
-        <li><a href="./tours.html" class="nav-item">Tour Packages</a></li>
-        <li><a href="./services.html" class="nav-item active">Services</a></li>
-        <li><a href="./about.html" class="nav-item">About Us</a></li>
-        <!-- <li><a href="./testimonials.html" class="nav-item">Testimonials</a></li> -->
-        <li><a href="./contact.html" class="nav-item">Contact</a></li>
-      </ul>
-      <div class="nav-actions">
-        <div class="nav-social-icons">
-          <a href="https://www.facebook.com/people/Heartenza-Services/61580805522497/?rdid=ZsrL0GyI7la36WSu&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F189HRvgWbF%2F"
-            target="_blank" class="nav-social-icon"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com/heart_enzaservices?igsh=Z3Z0YTl0aWNzMWFo" target="_blank"
-            class="nav-social-icon"><i class="fa-brands fa-instagram"></i></a>
-        </div>
-        <a href="https://wa.me/918111844058" class="btn btn-primary" target="_blank">Book Tour <i
-            class="fa-brands fa-whatsapp" style="margin-left: 8px;"></i></a>
-      </div>
-      <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
-    </div>
-  </nav>
-
-  <!-- Floating WhatsApp -->
-  <a href="https://wa.me/918111844058" class="whatsapp-float" target="_blank">
-    <i class="fa-brands fa-whatsapp"></i>
-  </a>
-
-  <!-- Page Header -->
-  <header class="page-header"
-    style="background-image: url('https://res.cloudinary.com/dm1ig0zit/image/upload/v1773918159/Heaven_oxn1bu.jpg')">
-    <div class="container fade-in">
-      <span class="section-subtitle text-gold">Our Services</span>
-      <h1>What We Offer</h1>
-      <p class="header-subtitle">Tailored Solutions for Modern Travelers</p>
-    </div>
-  </header>
-
-  <!-- Detailed Services List -->
-  <section class="section-padding bg-light-gray">
-    <div class="container" style="max-width: 1000px;">
-
-      <!-- Service 1 -->
-      <div class="service-detail-card fade-in">
-        <div class="sd-icon-box"><i class="fa-solid fa-plane-departure"></i></div>
-        <div class="sd-content">
-          <h3>Tour Package Planning</h3>
-          <p>We craft end-to-end, pre-designed travel itineraries combining premium hotel stays, comfortable transport,
-            and local sightseeing for individuals, couples, and large families. Say goodbye to the stress of travel
-            planning.</p>
-          <a href="https://wa.me/918111844058?text=I'm%20interested%20in%20Tour%20Package%20Planning%20services."
-            class="btn btn-outline-dark" target="_blank">Inquire Now</a>
-        </div>
-      </div>
-
-      <!-- Service 1.5: Custom Tour Package -->
-      <div class="service-detail-card fade-in">
-        <div class="sd-icon-box"><i class="fa-solid fa-map-location-dot"></i></div>
-        <div class="sd-content">
-          <h3>Custom Tour Package</h3>
-          <p>Client-centric travel planning where you decide the destination, budget, and duration. We provide full
-            support in making your dream journey a reality, tailored exactly to your preferences.</p>
-          <a href="https://wa.me/918111844058?text=I'm%20interested%20in%20Custom%20Tour%20Package%20services."
-            class="btn btn-outline-dark" target="_blank">Inquire Now</a>
-        </div>
-      </div>
-
-      <!-- Service 2 -->
-      <div class="service-detail-card fade-in">
-        <div class="sd-icon-box"><i class="fa-solid fa-car"></i></div>
-        <div class="sd-content">
-          <h3>Professional Driver Services <span class="badge-coming-soon">Coming Soon</span></h3>
-          <p>Need a temporary, verified, and professional driver for an outstation trip or a special event? We provide
-            experienced chauffeurs to ensure a safe and smooth journey in the comfort of your own car.</p>
-          <a href="https://wa.me/918111844058?text=I'm%20interested%20in%20Driver%20Services."
-            class="btn btn-outline-dark" target="_blank">Inquire Now</a>
-        </div>
-      </div>
-
-      <!-- Service 3 -->
-      <div class="service-detail-card fade-in">
-        <div class="sd-icon-box"><i class="fa-solid fa-house-chimney-crack"></i></div>
-        <div class="sd-content">
-          <h3>House Maintenance <span class="badge-coming-soon">Coming Soon</span></h3>
-          <p>From deep cleaning to sudden plumbing issues and electrical repairs, our vetted local repair specialists
-            are available on-call to ensure your house remains in perfect condition without you lifting a finger.</p>
-          <a href="https://wa.me/918111844058?text=I'm%20interested%20in%20House%20Maintenance%20services."
-            class="btn btn-outline-dark" target="_blank">Inquire Now</a>
-        </div>
-      </div>
-
-      <!-- Service 4 -->
-      <div class="service-detail-card fade-in">
-        <div class="sd-icon-box"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-        <div class="sd-content">
-          <h3>Vehicle Maintenance <span class="badge-coming-soon">Coming Soon</span></h3>
-          <p>Don’t have time to drop your car off for a service or wash? We will pick up your vehicle from your
-            location, get it professionally serviced or detailed, and drop it back safely. Ultimate convenience for busy
-            professionals.</p>
-          <a href="https://wa.me/918111844058?text=I'm%20interested%20in%20Vehicle%20Maintenance."
-            class="btn btn-outline-dark" target="_blank">Inquire Now</a>
-        </div>
-      </div>
-
-      <!-- Service 5 -->
-      <div class="service-detail-card fade-in">
-        <div class="sd-icon-box"><i class="fa-solid fa-box-open"></i></div>
-        <div class="sd-content">
-          <h3>Fast Delivery Service <span class="badge-coming-soon">Coming Soon</span></h3>
-          <p>Forgot an important document? Need a package delivered urgently across town? Our rapid delivery personnel
-            ensure your items reach their destination securely and on time.</p>
-          <a href="https://wa.me/918111844058?text=I'm%20interested%20in%20Delivery%20services."
-            class="btn btn-outline-dark" target="_blank">Inquire Now</a>
-        </div>
-      </div>
-
-      <!-- Service 6 -->
-      <div class="service-detail-card fade-in">
-        <div class="sd-icon-box"><i class="fa-solid fa-hands-holding-child"></i></div>
-        <div class="sd-content">
-          <h3>Companion Service <span class="badge-coming-soon">Coming Soon</span></h3>
-          <p>Living far from aging parents? We offer compassionate companion services where our trained staff can spend
-            quality time, assist with banking, shopping, or daily tasks to support the elderly.</p>
-          <a href="https://wa.me/918111844058?text=I'm%20interested%20in%20Companion%20Services."
-            class="btn btn-outline-dark" target="_blank">Inquire Now</a>
-        </div>
-      </div>
-
-      <!-- Service 7 -->
-      <div class="service-detail-card fade-in">
-        <div class="sd-icon-box"><i class="fa-solid fa-notes-medical"></i></div>
-        <div class="sd-content">
-          <h3>Medical Assistance <span class="badge-coming-soon">Coming Soon</span></h3>
-          <p>We provide reliable assistance for hospital visits, including scheduling doctor appointments,
-            transportation to local clinics, and picking up pharmacy prescriptions for your loved ones.</p>
-          <a href="https://wa.me/918111844058?text=I'm%20interested%20in%20Medical%20Assistance."
-            class="btn btn-outline-dark" target="_blank">Inquire Now</a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <img src="./logo.png" alt="Heartenza Logo" style="border-radius: 8px; padding: 5px;">
-          <p>Providing reliable travel and lifestyle support services tailored for busy professionals and families.</p>
-          <div class="social-links">
-            <a href="https://www.facebook.com/people/Heartenza-Services/61580805522497/?rdid=ZsrL0GyI7la36WSu&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F189HRvgWbF%2F"
-              target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/heart_enzaservices?igsh=Z3Z0YTl0aWNzMWFo" target="_blank"><i
-                class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-          </div>
-        </div>
-        <div>
-          <h4 class="footer-title">Quick Links</h4>
-          <ul class="footer-links">
-            <li><a href="./">Home</a></li>
-            <li><a href="./tours.html">Tour Packages</a></li>
-            <li><a href="./about.html">About Us</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="footer-title">Support</h4>
-          <ul class="footer-links">
-            <li><a href="./contact.html">Contact Us</a></li>
-            <!-- <li><a href="./testimonials.html">Testimonials</a></li> -->
-          </ul>
-        </div>
-        <div>
-          <h4 class="footer-title">Contact</h4>
-          <ul class="footer-contact">
-            <li><i class="fa-solid fa-location-dot"></i><span>Building No 407/B, Kammana (P.O), Mananthavady, Wayanad,
-                Kerala</span></li>
-            <li><i class="fa-solid fa-phone"></i><span>+91 8111844058</span></li>
-            <li>
-              <i class="fa-solid fa-envelope"></i>
-              <span>heartenzaservices@gmail.com</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Heartenza Services. All Rights Reserved.</p>
-      </div>
-    </div>
-  </footer>
+<body class="services-page">
+  <nav class="navbar" aria-label="Primary navigation"><div class="container"><a href="./" class="nav-brand" aria-label="Heartenza home"><img src="./logo.png" alt="Heartenza"><span class="brand-copy"><strong>Heartenza</strong><small>People · Place · Peace of Mind</small></span></a><ul class="nav-links"><li><a href="./" class="nav-item">Home</a></li><li><a href="./services.html" class="nav-item active">Services</a></li><li><a href="./tours.html" class="nav-item">Travel &amp; Tours</a></li><li><a href="./about.html" class="nav-item">About Us</a></li><li><a href="./contact.html" class="nav-item">Contact</a></li></ul><a class="nav-book" href="./contact.html">Book a Service</a><button class="mobile-menu-btn" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button></div></nav>
+  <main>
+    <header class="services-hero"><div class="container"><span class="services-kicker">One local team, many ways to help</span><h1>Services that make life in Wayanad easier.</h1><p>From a personalised Wayanad trip to trusted help for your home, vehicle, family and health needs, send one enquiry and our local team will guide you.</p><div class="hero-actions"><a class="btn btn-gold" href="#all-services">Explore all services <i class="fa-solid fa-arrow-right"></i></a><a class="btn btn-white" href="https://wa.me/918111844058" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a></div></div></header>
+    <section class="services-intro" id="all-services"><div class="container"><span class="section-subtitle">Choose the support you need</span><h2 class="section-title">One trusted platform for everyday life.</h2><p>Every service is coordinated locally in Wayanad. We confirm availability and provide a personalised quote after your enquiry—no online pricing required.</p></div></section>
+    <section class="service-directory" aria-label="Service categories"><div class="container"><div class="service-directory-grid">
+      <article class="directory-card"><span class="directory-icon"><i class="fa-solid fa-route"></i></span><h2>Travel &amp; Tour Packages</h2><p>Handpicked packages and customised Wayanad travel planning.</p><a href="./tours.html">Explore travel <i class="fa-solid fa-arrow-right"></i></a></article><article class="directory-card"><span class="directory-icon"><i class="fa-solid fa-car"></i></span><h2>Professional Drivers</h2><p>Safe, reliable drivers for your own vehicle and journey.</p><a href="#driver-services">View service <i class="fa-solid fa-arrow-right"></i></a></article><article class="directory-card"><span class="directory-icon"><i class="fa-solid fa-house"></i></span><h2>House Maintenance</h2><p>Trusted coordination for repairs, cleaning and home upkeep.</p><a href="#house-maintenance">View service <i class="fa-solid fa-arrow-right"></i></a></article><article class="directory-card"><span class="directory-icon"><i class="fa-solid fa-screwdriver-wrench"></i></span><h2>Vehicle Maintenance</h2><p>Convenient vehicle care, servicing and cleaning support.</p><a href="#vehicle-maintenance">View service <i class="fa-solid fa-arrow-right"></i></a></article><article class="directory-card"><span class="directory-icon"><i class="fa-solid fa-box"></i></span><h2>Delivery &amp; Errands</h2><p>Local pickups, deliveries and important everyday errands.</p><a href="#delivery-errands">View service <i class="fa-solid fa-arrow-right"></i></a></article><article class="directory-card"><span class="directory-icon"><i class="fa-solid fa-hand-holding-heart"></i></span><h2>Elderly Companion</h2><p>Kind local support and updates for the people who matter.</p><a href="#elderly-companion">View service <i class="fa-solid fa-arrow-right"></i></a></article><article class="directory-card"><span class="directory-icon"><i class="fa-solid fa-stethoscope"></i></span><h2>Medical Assistance</h2><p>Help coordinating hospital visits, appointments and medicines.</p><a href="#medical-assistance">View service <i class="fa-solid fa-arrow-right"></i></a></article><article class="directory-card"><span class="directory-icon"><i class="fa-solid fa-gift"></i></span><h2>Gifts &amp; Occasions</h2><p>Thoughtful local arrangements for celebrations and surprises.</p><a href="#gifts-occasions">View service <i class="fa-solid fa-arrow-right"></i></a></article>
+    </div></div></section>
+    <section class="service-details"><div class="container"><div class="service-details-heading"><div><span class="section-subtitle">What we can arrange</span><h2 class="section-title">Support designed around your request.</h2></div><p>Select a service below, tell us what you need, and the Heartenza team will confirm the practical next steps.</p></div><div class="service-detail-list">
+      <article class="service-detail" id="driver-services"><div class="service-detail-top"><span class="service-detail-icon"><i class="fa-solid fa-car"></i></span><h2>Professional Driver Services</h2></div><p>Request a responsible, local driver for your own car—whether it is a short city trip, a special occasion or an outstation journey.</p><ul><li>Temporary driver requests</li><li>Local and outstation travel</li><li>Family and event journeys</li><li>Availability confirmation</li></ul><div class="service-detail-actions"><a class="btn btn-primary" href="./contact.html?service=professional-driver-services">Enquire about drivers</a><a class="btn" href="https://wa.me/918111844058?text=I%20need%20a%20professional%20driver%20service." target="_blank" rel="noopener noreferrer">WhatsApp us</a></div></article>
+      <article class="service-detail" id="house-maintenance"><div class="service-detail-top"><span class="service-detail-icon"><i class="fa-solid fa-house-chimney"></i></span><h2>House Maintenance</h2></div><p>Get dependable coordination for home repairs and regular maintenance in Wayanad, especially when you are busy or living away.</p><ul><li>Repair and maintenance requests</li><li>Plumbing and electrical support</li><li>Cleaning coordination</li><li>Service updates</li></ul><div class="service-detail-actions"><a class="btn btn-primary" href="./contact.html?service=house-maintenance">Request home support</a><a class="btn" href="https://wa.me/918111844058?text=I%20need%20house%20maintenance%20support." target="_blank" rel="noopener noreferrer">WhatsApp us</a></div></article>
+      <article class="service-detail" id="vehicle-maintenance"><div class="service-detail-top"><span class="service-detail-icon"><i class="fa-solid fa-screwdriver-wrench"></i></span><h2>Vehicle Maintenance</h2></div><p>Arrange convenient vehicle care through a local team that helps coordinate servicing, cleaning and related support.</p><ul><li>Service and repair coordination</li><li>Vehicle cleaning support</li><li>Pickup and drop assistance</li><li>Local vendor coordination</li></ul><div class="service-detail-actions"><a class="btn btn-primary" href="./contact.html?service=vehicle-maintenance">Request vehicle support</a><a class="btn" href="https://wa.me/918111844058?text=I%20need%20vehicle%20maintenance%20support." target="_blank" rel="noopener noreferrer">WhatsApp us</a></div></article>
+      <article class="service-detail" id="delivery-errands"><div class="service-detail-top"><span class="service-detail-icon"><i class="fa-solid fa-box"></i></span><h2>Delivery &amp; Errands</h2></div><p>Send an enquiry for local pickups, document delivery, shopping assistance and other important day-to-day errands.</p><ul><li>Document and parcel delivery</li><li>Shopping and pickups</li><li>Local errand coordination</li><li>Request status updates</li></ul><div class="service-detail-actions"><a class="btn btn-primary" href="./contact.html?service=delivery-and-errands">Arrange a delivery</a><a class="btn" href="https://wa.me/918111844058?text=I%20need%20delivery%20or%20errand%20support." target="_blank" rel="noopener noreferrer">WhatsApp us</a></div></article>
+      <article class="service-detail" id="elderly-companion"><div class="service-detail-top"><span class="service-detail-icon"><i class="fa-solid fa-hand-holding-heart"></i></span><h2>Elderly Companion Services</h2></div><p>Compassionate local support for parents and loved ones, with clear communication for family members living elsewhere.</p><ul><li>Companion visits</li><li>Shopping assistance</li><li>Safe local transportation</li><li>Regular family updates</li></ul><div class="service-detail-actions"><a class="btn btn-primary" href="./contact.html?service=elderly-companion-services">Request companion support</a><a class="btn" href="https://wa.me/918111844058?text=I%20need%20elderly%20companion%20support." target="_blank" rel="noopener noreferrer">WhatsApp us</a></div></article>
+      <article class="service-detail" id="medical-assistance"><div class="service-detail-top"><span class="service-detail-icon"><i class="fa-solid fa-stethoscope"></i></span><h2>Medical Assistance</h2></div><p>Get practical non-clinical help to coordinate appointments, hospital visits, prescription collection and local transport.</p><ul><li>Hospital visit assistance</li><li>Appointment coordination</li><li>Medicine collection</li><li>Transport arrangement</li></ul><div class="service-detail-actions"><a class="btn btn-primary" href="./contact.html?service=medical-assistance">Request medical support</a><a class="btn" href="https://wa.me/918111844058?text=I%20need%20medical%20assistance%20support." target="_blank" rel="noopener noreferrer">WhatsApp us</a></div></article>
+      <article class="service-detail" id="gifts-occasions"><div class="service-detail-top"><span class="service-detail-icon"><i class="fa-solid fa-gift"></i></span><h2>Gifts &amp; Special Occasions</h2></div><p>Make important moments feel close with help arranging gifts, flowers, celebrations and thoughtful local surprises.</p><ul><li>Gift and flower delivery</li><li>Birthday surprises</li><li>Special-occasion coordination</li><li>Personalised local requests</li></ul><div class="service-detail-actions"><a class="btn btn-primary" href="./contact.html?service=gifts-and-special-occasions">Plan a surprise</a><a class="btn" href="https://wa.me/918111844058?text=I%20need%20help%20with%20a%20gift%20or%20special%20occasion." target="_blank" rel="noopener noreferrer">WhatsApp us</a></div></article>
+      <article class="service-detail" id="travel-tour-packages"><div class="service-detail-top"><span class="service-detail-icon"><i class="fa-solid fa-route"></i></span><h2>Travel Planning &amp; Tour Packages</h2></div><p>Discover Wayanad through ready-made packages or a travel plan shaped around your dates, group and interests.</p><ul><li>Wayanad tour packages</li><li>Custom travel planning</li><li>Transport and stay support</li><li>Local sightseeing plans</li></ul><div class="service-detail-actions"><a class="btn btn-primary" href="./tours.html">Explore tour packages</a><a class="btn" href="./contact.html?service=custom-wayanad-trip">Plan a custom trip</a></div></article>
+    </div></div></section>
+    <section class="enquiry-banner"><div class="container"><span class="section-subtitle">No prices shown online</span><h2>Tell us what you need. We’ll confirm the right support and quote.</h2><p>Each request is different. Our local team will check availability, discuss the details with you and share a personalised price before anything is arranged.</p><div class="hero-actions" style="justify-content:center"><a class="btn btn-gold" href="./contact.html">Send an enquiry <i class="fa-solid fa-arrow-right"></i></a><a class="btn btn-white" href="https://wa.me/918111844058" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a></div></div></section>
+  </main>
+  <footer class="footer"><div class="container"><div class="footer-top"><div class="footer-brand"><img src="./logo.png" alt="Heartenza Logo"><p>Reliable travel, care and everyday support services for families and professionals in Wayanad.</p></div><div><h4 class="footer-title">Quick Links</h4><ul class="footer-links"><li><a href="./">Home</a></li><li><a href="./services.html">Services</a></li><li><a href="./tours.html">Travel &amp; Tours</a></li><li><a href="./about.html">About Us</a></li></ul></div><div><h4 class="footer-title">Contact</h4><ul class="footer-contact"><li><i class="fa-solid fa-location-dot"></i><span>Kammana P.O., Mananthavady, Wayanad, Kerala</span></li><li><i class="fa-solid fa-phone"></i><span>+91 8111844058</span></li><li><i class="fa-solid fa-envelope"></i><span>heartenzaservices@gmail.com</span></li></ul></div></div><div class="footer-bottom"><p>© 2026 Heartenza Services. All Rights Reserved.</p></div></div></footer>
+  <a href="https://wa.me/918111844058" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with Heartenza on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
   <script type="module" src="./main.js"></script>
 </body>
-
 </html>
