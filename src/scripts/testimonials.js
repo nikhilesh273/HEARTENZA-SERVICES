@@ -1,5 +1,5 @@
-import './style.css';
-import { tourData } from './tours-data.js';
+import '../styles/style.css';
+import { tourData } from '../data/tours-data.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // --- EXISTING LOGIC ---

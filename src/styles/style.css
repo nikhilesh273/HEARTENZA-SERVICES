@@ -522,7 +522,7 @@ button {
 }
 
 .service-hero {
-  background-image: linear-gradient(90deg, rgba(8, 13, 15, .91) 0%, rgba(8, 13, 15, .72) 47%, rgba(8, 13, 15, .2) 100%), url('/heartenza-services-hero.png');
+  background-image: linear-gradient(90deg, rgba(8, 13, 15, .91) 0%, rgba(8, 13, 15, .72) 47%, rgba(8, 13, 15, .2) 100%), url('/assets/images/heartenza-services-hero.png');
   background-size: cover;
   background-position: center;
 }
@@ -1097,7 +1097,7 @@ button {
 /* How It Works */
 .how-it-works {
   position: relative;
-  background-image: url('/public/HIW-BG.jpg');
+  background-image: url('/assets/images/HIW-BG.jpg');
   /* Wayanad-like tea garden/nature */
   background-size: cover;
   background-position: center;
@@ -2354,7 +2354,7 @@ button {
 .homepage .how-it-works .section-title { color: var(--ink); }.homepage .steps-container { align-items: stretch; }.homepage .step-card { padding: 0; max-width: 230px; }.homepage .step-number { background: var(--brand); color: #fff; }.homepage .step-icon { color: var(--brand); background: #e6f0e9; width: 3.1rem; height: 3.1rem; border-radius: 1rem; margin: 1rem auto; display: grid; place-items: center; }.homepage .step-card h4 { color: var(--ink); font-family: var(--font-body); }.homepage .step-card p { color: var(--muted-ink); }.homepage .step-connector { border-top: 1px dashed #b8c1ba; background: none; }
 
 .homepage .service-areas { background: var(--brand); }.homepage .area-list li { border-color: rgba(255,255,255,.25); border-radius: .5rem; }
-.homepage .cta-section { background-image: linear-gradient(105deg, rgba(12,43,36,.95), rgba(12,43,36,.72)), url('/delivery-family-support.png'); background-attachment: scroll; }.homepage .cta-section h2 { max-width: 760px; margin-left: auto; margin-right: auto; font-size: clamp(2.1rem, 4vw, 3.5rem); letter-spacing: -.05em; }.homepage .cta-section p { max-width: 650px; margin-left: auto; margin-right: auto; }.homepage .cta-actions .btn { border-radius: .65rem; }
+.homepage .cta-section { background-image: linear-gradient(105deg, rgba(12,43,36,.95), rgba(12,43,36,.72)), url('/assets/images/delivery-family-support.png'); background-attachment: scroll; }.homepage .cta-section h2 { max-width: 760px; margin-left: auto; margin-right: auto; font-size: clamp(2.1rem, 4vw, 3.5rem); letter-spacing: -.05em; }.homepage .cta-section p { max-width: 650px; margin-left: auto; margin-right: auto; }.homepage .cta-actions .btn { border-radius: .65rem; }
 .homepage .footer { background: #102c27; }
 
 @media (max-width: 1024px) { .homepage .services-grid { grid-template-columns: repeat(2, 1fr); }.homepage .about-platform-grid, .homepage .family-support-grid { grid-template-columns: 1fr; }.homepage .family-support-image { max-width: 720px; }.homepage .features-grid { grid-template-columns: repeat(2, 1fr); } }
@@ -2371,7 +2371,7 @@ button {
 
 .homepage .quick-finder { margin-top: -1.8rem; }.homepage .quick-finder-panel { padding: 1rem 1.15rem 1.05rem; max-width: 1120px; border-radius: .7rem; box-shadow: 0 10px 28px rgba(22,58,47,.14); }.homepage .quick-finder h2 { font-size: 1.1rem; }.homepage .quick-finder .section-subtitle { display: none; }.homepage .quick-finder-form { margin-top: .65rem; }.homepage .quick-finder input, .homepage .quick-finder select { padding: .65rem .8rem; font-size: .75rem; }.homepage .quick-finder-form .btn { padding: .65rem 1.1rem; background: #e96527; color: #fff; border-radius: .4rem; }.homepage .quick-chips { margin-top: .65rem; }.homepage .quick-chips a { font-size: .68rem; padding: .28rem .58rem; }
 
-.homepage .service-finder { padding-top: 3.6rem; padding-bottom: 4.5rem; }.homepage .service-finder-heading { max-width: none; margin: 0 0 1.5rem; text-align: left; }.homepage .service-finder-heading .section-title { font-size: 1.45rem; margin-bottom: .15rem; }.homepage .service-finder-heading p { font-size: .78rem; margin: 0; }.homepage .services-grid { gap: .8rem; }.homepage .service-card { min-height: 188px; padding: 1rem; border-radius: .65rem; position: relative; overflow: hidden; }.homepage .service-card::after { content: ''; position: absolute; top: .72rem; right: .72rem; width: 42%; height: 45px; border-radius: .45rem; background-size: cover; background-position: center; opacity: .96; }.homepage .service-card:nth-child(1)::after { background-image: url('https://res.cloudinary.com/dm1ig0zit/image/upload/v1773909908/download_9_bindsh.jpg'); }.homepage .service-card:nth-child(2)::after, .homepage .service-card:nth-child(5)::after { background-image: url('/heartenza-services-hero.png'); }.homepage .service-card:nth-child(3)::after, .homepage .service-card:nth-child(4)::after { background-image: url('/delivery-family-support.png'); }.homepage .service-card:nth-child(6)::after, .homepage .service-card:nth-child(7)::after { background-image: url('/elderly-medical-support.png'); }.homepage .service-card:nth-child(8)::after { background-image: url('/delivery-family-support.png'); }.homepage .service-icon { width: 2rem; height: 2rem; margin-bottom: .9rem; border-radius: 50%; font-size: .85rem; background: #edf3ef; position: relative; z-index: 1; }.homepage .service-card h3 { max-width: 50%; min-height: 2.45rem; font-size: .78rem; line-height: 1.2; }.homepage .service-card p { font-size: .69rem; line-height: 1.35; max-width: 100%; }.homepage .service-link { font-size: .68rem; color: #e96527; }.homepage .service-card-other { background: #fff; border-color: #e5e5df; }.homepage .service-card-other h3 { color: #183832; }.homepage .service-card-other p { color: #66756f; }.homepage .service-card-other .service-icon { color: #e96527; background: #fff0e8; }
+.homepage .service-finder { padding-top: 3.6rem; padding-bottom: 4.5rem; }.homepage .service-finder-heading { max-width: none; margin: 0 0 1.5rem; text-align: left; }.homepage .service-finder-heading .section-title { font-size: 1.45rem; margin-bottom: .15rem; }.homepage .service-finder-heading p { font-size: .78rem; margin: 0; }.homepage .services-grid { gap: .8rem; }.homepage .service-card { min-height: 188px; padding: 1rem; border-radius: .65rem; position: relative; overflow: hidden; }.homepage .service-card::after { content: ''; position: absolute; top: .72rem; right: .72rem; width: 42%; height: 45px; border-radius: .45rem; background-size: cover; background-position: center; opacity: .96; }.homepage .service-card:nth-child(1)::after { background-image: url('https://res.cloudinary.com/dm1ig0zit/image/upload/v1773909908/download_9_bindsh.jpg'); }.homepage .service-card:nth-child(2)::after, .homepage .service-card:nth-child(5)::after { background-image: url('/assets/images/heartenza-services-hero.png'); }.homepage .service-card:nth-child(3)::after, .homepage .service-card:nth-child(4)::after { background-image: url('/assets/images/delivery-family-support.png'); }.homepage .service-card:nth-child(6)::after, .homepage .service-card:nth-child(7)::after { background-image: url('/assets/images/elderly-medical-support.png'); }.homepage .service-card:nth-child(8)::after { background-image: url('/assets/images/delivery-family-support.png'); }.homepage .service-icon { width: 2rem; height: 2rem; margin-bottom: .9rem; border-radius: 50%; font-size: .85rem; background: #edf3ef; position: relative; z-index: 1; }.homepage .service-card h3 { max-width: 50%; min-height: 2.45rem; font-size: .78rem; line-height: 1.2; }.homepage .service-card p { font-size: .69rem; line-height: 1.35; max-width: 100%; }.homepage .service-link { font-size: .68rem; color: #e96527; }.homepage .service-card-other { background: #fff; border-color: #e5e5df; }.homepage .service-card-other h3 { color: #183832; }.homepage .service-card-other p { color: #66756f; }.homepage .service-card-other .service-icon { color: #e96527; background: #fff0e8; }
 
 .homepage .about-platform { padding-top: 4rem; padding-bottom: 4rem; border-top: 1px solid #edf0eb; }.homepage .about-platform-grid { gap: 3.5rem; }.homepage .about-platform-copy .section-title { font-size: 2rem; }.homepage .about-platform-copy p { font-size: .86rem; line-height: 1.65; }.homepage .about-platform-points { min-height: 290px; padding: 4.8rem 1rem 1rem; }.homepage .platform-illustration { width: 145px; height: 145px; top: -4.6rem; }.homepage .about-platform-points div { padding: .75rem; font-size: .75rem; }
 
@@ -2425,7 +2425,7 @@ button {
 .homepage .brand-copy strong { font-size: 1.28rem; letter-spacing: -.04em; }
 .homepage .brand-copy small { font-size: .56rem; letter-spacing: .04em; color: #6a8078; }
 .homepage .nav-brand { gap: .55rem; }
-.homepage .service-hero { background: #eef0eb url('/heartenza-service-collage-hero.png') center right / cover no-repeat; }
+.homepage .service-hero { background: #eef0eb url('/assets/images/heartenza-service-collage-hero.png') center right / cover no-repeat; }
 .homepage .service-hero .hero-overlay { background: linear-gradient(90deg, rgba(250,250,247,.98) 0%, rgba(250,250,247,.94) 35%, rgba(250,250,247,.18) 72%); }
 .homepage .service-hero .hero-content { max-width: 570px; }
 .homepage .hero h1 { font-size: clamp(2.45rem, 4.3vw, 4.15rem); max-width: 530px; }
@@ -2447,7 +2447,7 @@ button {
 .homepage .service-finder-heading .section-subtitle { display: none; }
 .homepage .service-card { min-height: 270px; justify-content: flex-end; padding: 1.2rem; border: 0; background: #173f35; }
 .homepage .service-card::before { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(8,28,23,.04) 18%, rgba(8,28,23,.92) 100%); }
-.homepage .service-card::after { inset: 0; z-index: 0; width: auto; height: auto; border-radius: 0; opacity: 1; background-image: url('/service-card-image-sheet.png') !important; background-size: 400% 200%; background-repeat: no-repeat; }
+.homepage .service-card::after { inset: 0; z-index: 0; width: auto; height: auto; border-radius: 0; opacity: 1; background-image: url('/assets/images/service-card-image-sheet.png') !important; background-size: 400% 200%; background-repeat: no-repeat; }
 .homepage .service-card:nth-child(1)::after { background-position: 0% 0%; }
 .homepage .service-card:nth-child(2)::after { background-position: 0% 100%; }
 .homepage .service-card:nth-child(3)::after { background-position: 100% 0%; }
@@ -2778,11 +2778,11 @@ button {
 .homepage .service-finder { background: #f7f7f5; }.homepage .service-finder-heading .section-subtitle, .homepage .section-subtitle { color: #a07a2a; }.homepage .service-card { background: #0d0d0d; }.homepage .service-card::before { background: linear-gradient(180deg, rgba(0,0,0,.03) 15%, rgba(0,0,0,.92) 100%); }.homepage .service-icon { color: #181818; background: linear-gradient(135deg, #fff7df, #d7b55d); }.homepage .service-link { color: #f1d48b; }
 .homepage .about-platform { background: #fff; }.homepage .about-platform-points { background: linear-gradient(145deg, #ededeb, #d7d7d4); }.homepage .about-platform-points div { background: rgba(255,255,255,.78); }.homepage .about-platform-points i { color: #af892d; }.homepage .btn-outline-dark { border-color: #222; color: #111; }
 .homepage .family-support { background: #efefed; }.homepage .scenarios-section, .homepage .service-areas { background: linear-gradient(135deg, #090909, #252525); }.homepage .scenario-card { border-color: rgba(214,181,98,.25); background: rgba(255,255,255,.055); }.homepage .scenario-card > i, .homepage .scenario-card b, .homepage .scenarios-section .section-subtitle { color: #d9ba65; }
-.homepage .travel-showcase { background: #fff; }.homepage .features-section { background: #eeeeec; }.homepage .icon-box { color: #191919; background: #efe2bf; }.homepage .how-it-works { background: #fff; }.homepage .step-number { background: #1b1b1b; color: #e5c773; }.homepage .step-icon { color: #171717; background: #eee1bb; }.homepage .step-connector { border-color: #b7b7b5; }.homepage .area-list li { border-color: rgba(214,181,98,.35); }.homepage .cta-section { background-image: linear-gradient(105deg, rgba(0,0,0,.96), rgba(22,22,22,.74)), url('/delivery-family-support.png'); }.homepage .footer { background: #080808; }.homepage .footer-title, .homepage .footer-brand p { color: #fff; }.homepage .footer-contact i, .homepage .social-links a:hover { color: #171717; background: #d2b260; }
+.homepage .travel-showcase { background: #fff; }.homepage .features-section { background: #eeeeec; }.homepage .icon-box { color: #191919; background: #efe2bf; }.homepage .how-it-works { background: #fff; }.homepage .step-number { background: #1b1b1b; color: #e5c773; }.homepage .step-icon { color: #171717; background: #eee1bb; }.homepage .step-connector { border-color: #b7b7b5; }.homepage .area-list li { border-color: rgba(214,181,98,.35); }.homepage .cta-section { background-image: linear-gradient(105deg, rgba(0,0,0,.96), rgba(22,22,22,.74)), url('/assets/images/delivery-family-support.png'); }.homepage .footer { background: #080808; }.homepage .footer-title, .homepage .footer-brand p { color: #fff; }.homepage .footer-contact i, .homepage .social-links a:hover { color: #171717; background: #d2b260; }
 
 /* Final CTA: keep every message clear against the background photo. */
 .homepage .cta-section {
-  background-image: linear-gradient(100deg, rgba(0, 0, 0, .94), rgba(0, 0, 0, .77)), url('/delivery-family-support.png');
+  background-image: linear-gradient(100deg, rgba(0, 0, 0, .94), rgba(0, 0, 0, .77)), url('/assets/images/delivery-family-support.png');
 }
 .homepage .cta-section h2,
 .homepage .cta-section .section-title {

@@ -1,210 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="/logo.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tour Details | Heartenza Services</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    #loader-wrapper {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background-color: #111111;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 999999;
-      transition: opacity 0.8s cubic-bezier(0.77, 0, 0.175, 1), visibility 0.8s;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f3ec">
+  <title>Wayanad Tour Details &amp; Custom Planning | Heartenza</title>
+  <meta name="description" content="Explore a Wayanad travel area, choose the places that interest you and ask Heartenza’s local team for a customised itinerary and personalised quote.">
+  <link id="canonical-url" rel="canonical" href="https://heartenzaservices.com/tours.html">
+  <meta property="og:type" content="website">
+  <meta id="og-title" property="og:title" content="Wayanad tour details | Heartenza">
+  <meta id="og-description" property="og:description" content="Discover places to visit and request a customised Wayanad trip from Heartenza’s local team.">
+  <meta id="og-url" property="og:url" content="https://heartenzaservices.com/tours.html">
+  <meta id="og-image" property="og:image" content="https://heartenzaservices.com/assets/images/logo.png">
+  <link rel="icon" type="image/png" href="/assets/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://res.cloudinary.com">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/styles/homepage.css">
+  <link rel="stylesheet" href="./src/styles/tour-details.css">
+  <script id="tour-schema" type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Wayanad Tour Details","url":"https://heartenzaservices.com/tours.html"}</script>
+  <script type="module" src="./src/scripts/tour-details.js"></script>
 </head>
-
-<body>
-  <!-- Premium Loading Screen -->
-  <div id="loader-wrapper">
-    <div class="loader-content">
-      <div class="loader-circle"></div>
-      <h2 class="loader-text">Heartenza</h2>
-    </div>
-  </div>
-
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="container">
-      <a href="./" class="nav-brand">
-        <img src="./logo.png" alt="Heartenza Logo">
-      </a>
-      <ul class="nav-links">
-        <li><a href="./" class="nav-item">Home</a></li>
-        <li><a href="./tours.html" class="nav-item active">Tour Packages</a></li>
-        <li><a href="./services.html" class="nav-item">Services</a></li>
-        <li><a href="./about.html" class="nav-item">About Us</a></li>
-        <!-- <li><a href="./testimonials.html" class="nav-item">Testimonials</a></li> -->
-        <li><a href="./contact.html" class="nav-item">Contact</a></li>
-      </ul>
-      <div class="nav-actions">
-        <div class="nav-social-icons">
-          <a href="https://www.facebook.com/people/Heartenza-Services/61580805522497/?rdid=ZsrL0GyI7la36WSu&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F189HRvgWbF%2F"
-            target="_blank" class="nav-social-icon"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com/heart_enzaservices?igsh=Z3Z0YTl0aWNzMWFo" target="_blank"
-            class="nav-social-icon"><i class="fa-brands fa-instagram"></i></a>
-        </div>
-        <a href="https://wa.me/918111844058" class="btn btn-primary" target="_blank">Book Tour <i
-            class="fa-brands fa-whatsapp" style="margin-left: 8px;"></i></a>
-      </div>
-      <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
-    </div>
-  </nav>
-
-  <!-- Floating WhatsApp -->
-  <a href="https://wa.me/918111844058" class="whatsapp-float wa-booking-btn" target="_blank">
-    <i class="fa-brands fa-whatsapp"></i>
-  </a>
-
-  <!-- Page Header (Dynamic) -->
-  <header class="page-header dynamic-hero">
-    <div class="container fade-in">
-      <span class="section-subtitle text-gold font-accent">Wayanad Special</span>
-      <h1 class="font-heading">Loading Tour...</h1>
-      <p class="header-subtitle font-accent">Please wait while we fetch the details.</p>
+<body class="tour-detail-redesign" id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="announcement"><div class="wrap announcement-inner"><span><svg class="icon " aria-hidden="true"><use href="/assets/icons/home-icons.svg#pin"></use></svg> Rooted in Wayanad. Here for you.</span><a href="tel:+918111844058">Let’s talk <span>+91 81118 44058</span> <svg class="icon " aria-hidden="true"><use href="/assets/icons/home-icons.svg#arrow-up"></use></svg></a></div></div>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="./" aria-label="Heartenza home"><img src="/assets/images/logo.png" alt="" width="46" height="46"><span><strong>Heartenza<span class="brand-dot">.</span></strong><small>People · Place · Peace of Mind</small></span></a>
+      <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false"><span class="menu-label">Menu</span><span class="menu-lines" aria-hidden="true"></span></button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
+        <a href="./">Home</a><a href="./services.html">Services</a><a href="./tours.html" aria-current="page">Travel &amp; tours</a><a href="./about.html">Our story</a><a href="./contact.html">Contact</a>
+        <a class="button button-small" href="./contact.html">Let’s get started <svg class="icon " aria-hidden="true"><use href="/assets/icons/home-icons.svg#arrow-up"></use></svg></a>
+      </nav>
     </div>
   </header>
+  <main id="main">
+    <section class="tour-not-found wrap" hidden aria-labelledby="not-found-title">
+      <p class="eyebrow"><span class="status-dot"></span> Travel with Heartenza</p>
+      <h2 id="not-found-title">We couldn’t find<br><em>that journey.</em></h2>
+      <p>The link may be incomplete. Explore all nine Wayanad areas, or ask our local team to help you choose.</p>
+      <div><a class="button" href="./tours.html">Explore all journeys <svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#arrow"></use></svg></a><a class="whatsapp-link" href="https://wa.me/918111844058?text=Hello%20Heartenza%2C%20can%20you%20help%20me%20choose%20a%20Wayanad%20trip%3F" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#whatsapp"></use></svg> Ask our team</a></div>
+    </section>
 
-  <!-- Tour Content -->
-  <section class="section-padding bg-light-gray tour-details-section">
-    <div class="container">
-      <div class="tour-layout">
-
-        <!-- Main Content -->
-        <div class="tour-main-content fade-in">
-
-          <div class="content-section">
-            <h2 class="section-title text-navy">Overview</h2>
-            <p class="tour-overview-text">
-              Discover the breathtaking beauty and rich heritage of this magnificent region.
-            </p>
+    <div class="tour-valid">
+      <!-- Dynamic place introduction -->
+      <section class="detail-hero wrap" aria-labelledby="detail-title">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="./">Home</a><span aria-hidden="true">/</span><a href="./tours.html">Travel &amp; tours</a><span aria-hidden="true">/</span><span id="breadcrumb-place" aria-current="page">Wayanad</span></nav>
+        <div class="detail-hero-grid">
+          <div class="detail-hero-copy">
+            <p class="eyebrow"><span class="status-dot"></span><span id="detail-eyebrow">A local Wayanad journey</span></p>
+            <h1 id="detail-title"><span id="detail-place">Wayanad</span>,<br><em id="detail-phrase">at your pace.</em></h1>
+            <p id="detail-summary">Discover a Wayanad journey shaped around your interests, available days and preferred pace.</p>
+            <div class="detail-hero-actions"><a class="button wa-enquiry" href="https://wa.me/918111844058" target="_blank" rel="noopener noreferrer">Enquire about this trip <span class="button-circle"><svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#whatsapp"></use></svg></span></a><a class="text-link" href="#places">See places <svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#arrow"></use></svg></a></div>
+            <dl class="detail-facts"><div><dt>The mood</dt><dd id="detail-mood">Nature &amp; culture</dd></div><div><dt>Places shown</dt><dd id="detail-place-count">—</dd></div><div><dt>Planning</dt><dd>Customisable</dd></div></dl>
           </div>
-
-          <div class="content-section">
-            <h2 class="section-title text-navy">Top Destinations</h2>
-            <!-- Dynamic Destinations List -->
-            <div class="places-list">
-              <!-- Populated by JS -->
-            </div>
-          </div>
-
-          <!-- General Inclusions -->
-          <div class="content-section inclusion-section">
-            <h3 class="inclusion-title">What's Included</h3>
-            <div class="inclusion-grid">
-              <ul class="inclusion-list">
-                <li><i class="fa-solid fa-circle-check"></i> Premium Transportation</li>
-                <li><i class="fa-solid fa-circle-check"></i> Expert Local Guide</li>
-              </ul>
-              <ul class="inclusion-list">
-                <li><i class="fa-solid fa-circle-check"></i> Entry Permits & Fees</li>
-                <li><i class="fa-solid fa-circle-check"></i> Refreshments</li>
-              </ul>
-            </div>
+          <div class="detail-hero-art">
+            <figure class="detail-hero-photo"><img id="detail-hero-image" alt="" width="1200" height="900" fetchpriority="high"><figcaption><svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#pin"></use></svg> <span id="hero-caption">Wayanad, Kerala</span></figcaption></figure>
+            <div class="detail-route" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div class="detail-postcard" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#spark"></use></svg><span id="detail-postcard">Take the<br><em>scenic route.</em></span></div>
           </div>
         </div>
+      </section>
 
-        <!-- Sidebar -->
-        <div class="booking-sidebar fade-in">
-          <h3>Book Your Journey</h3>
-          <p>Ready to explore the wonders of Wayanad? Chat with our experts to customize your itinerary and confirm your
-            dates.</p>
-
-          <div class="sidebar-contact-info">
-            <div class="contact-item">
-              <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
-              <div class="contact-text">
-                <p>Call for support</p>
-                <p>+91 8111844058</p>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
-              <div class="contact-text">
-                <p>Email Us</p>
-                <p>heartenzaservices@gmail.com</p>
-              </div>
-            </div>
-          </div>
-
-          <a href="#" class="btn btn-gold wa-booking-btn">
-            <i class="fa-brands fa-whatsapp"></i> Book via WhatsApp
-          </a>
+      <!-- Overview -->
+      <section class="detail-overview" aria-labelledby="overview-title">
+        <div class="wrap overview-grid">
+          <div class="overview-heading"><p class="eyebrow">Meet this side of Wayanad</p><span class="overview-index">01</span><h2 id="overview-title">The story<br><em>of the journey.</em></h2></div>
+          <div class="overview-copy"><p class="overview-lead" id="tour-overview"></p><div class="overview-notes"><div><span>Lovely for</span><p id="detail-best-for"></p></div><div><span>The pace</span><p id="detail-pace"></p></div></div><aside><svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#chat"></use></svg><p>This is a flexible starting point, not a fixed itinerary. We will discuss travel time, access and your preferences before confirming a plan.</p></aside></div>
         </div>
+      </section>
 
-      </div>
+      <!-- Dynamic attraction cards -->
+      <section class="detail-places section-space" id="places" aria-labelledby="places-title">
+        <div class="wrap">
+          <div class="section-heading"><div><p class="eyebrow">Places to consider</p><h2 id="places-title">Add a few stops<br><em>to your story.</em></h2></div><p>Select the places that catch your eye. We’ll include them in your WhatsApp enquiry so our team knows where to start.</p></div>
+          <div class="place-grid" id="places-grid"></div>
+          <div class="selection-bar" id="selection-bar" hidden><div><span id="selection-count">0 places selected</span><button id="clear-selection" type="button">Clear</button></div><a class="button button-light" id="selected-enquiry" href="https://wa.me/918111844058" target="_blank" rel="noopener noreferrer">Enquire with my choices <svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#whatsapp"></use></svg></a></div>
+          <p class="places-note"><svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#spark"></use></svg> Suggested places are subject to current access, operating conditions, permits and the time available.</p>
+        </div>
+      </section>
+
+      <!-- Planning -->
+      <section class="detail-planning" id="how-it-works" aria-labelledby="planning-title">
+        <div class="wrap detail-planning-grid">
+          <div class="planning-copy"><p class="eyebrow">A route made around you</p><h2 id="planning-title">You choose the feeling.<br><em>We’ll work out the details.</em></h2><p>Tell us who is travelling, when you hope to visit and what matters most. We will discuss a practical itinerary and a personalised quote before anything is confirmed.</p><a class="button button-light wa-enquiry" href="https://wa.me/918111844058" target="_blank" rel="noopener noreferrer">Start planning <svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#arrow-up"></use></svg></a></div>
+          <ol class="detail-steps">
+            <li><span>01</span><div><h3>Share your travel dates</h3><p>Tell us the preferred dates, group size and where you will be travelling from.</p></div></li>
+            <li><span>02</span><div><h3>Shape the route together</h3><p>Choose suggested stops or combine this area with another part of Wayanad.</p></div></li>
+            <li><span>03</span><div><h3>Review before confirming</h3><p>We share the plan, availability and personalised quote for your approval.</p></div></li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Neighbouring options -->
+      <section class="related-journeys section-space wrap" aria-labelledby="related-title">
+        <div class="section-heading"><div><p class="eyebrow">Keep exploring</p><h2 id="related-title">Two more ways<br><em>into Wayanad.</em></h2></div><a class="text-link" href="./tours.html">View all nine journeys <svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#arrow"></use></svg></a></div>
+        <div class="related-grid" id="related-grid"></div>
+      </section>
+
+      <section class="faq-section section-space wrap" aria-labelledby="faq-title">
+        <div><p class="eyebrow">Before you decide</p><h2 id="faq-title">Useful<br><em>to know.</em></h2><p>Need an answer specific to your group? Talk directly with our Wayanad team.</p><a class="text-link" href="tel:+918111844058">Call our team <svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#phone"></use></svg></a></div>
+        <div class="faq-list">
+          <details><summary>Is this a fixed itinerary? <svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#plus"></use></svg></summary><p>No. The listed attractions are ideas for your enquiry. The final route depends on your dates, available time, interests and current local access.</p></details>
+          <details><summary>How will I know the price? <svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#plus"></use></svg></summary><p>Share your group, dates and requirements. We will discuss the itinerary and provide a personalised quote directly before you confirm.</p></details>
+          <details><summary>Can I combine this area with another? <svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#plus"></use></svg></summary><p>Yes. We can discuss places from other Wayanad areas and help create a practical route based on travel time and the number of days available.</p></details>
+          <details><summary>Does selecting a place confirm a booking? <svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#plus"></use></svg></summary><p>No. Selecting places only adds them to your enquiry message. Nothing is booked until you discuss the plan and confirm it with our team.</p></details>
+          <details><summary>Can access to an attraction change? <svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#plus"></use></svg></summary><p>Yes. Weather, permits, maintenance and local operating conditions can affect access. Our team will help check practical details during planning.</p></details>
+        </div>
+      </section>
+
+      <section class="contact-band detail-contact" aria-labelledby="contact-title"><div class="wrap contact-band-inner"><div><p class="eyebrow">Your Wayanad story starts here</p><h2 id="contact-title">One local conversation.<br><em>A journey made for you.</em></h2></div><div><a class="button button-light wa-enquiry" href="https://wa.me/918111844058" target="_blank" rel="noopener noreferrer">Enquire on WhatsApp <svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#whatsapp"></use></svg></a><p class="contact-call">Prefer a call? <a href="tel:+918111844058">+91 81118 44058</a></p></div></div></section>
     </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <img src="./logo.png" alt="Heartenza Logo" style="border-radius: 8px; padding: 5px;">
-          <p>Providing reliable travel and lifestyle support services tailored for busy professionals and families.</p>
-          <div class="social-links">
-            <a href="https://www.facebook.com/people/Heartenza-Services/61580805522497/?rdid=ZsrL0GyI7la36WSu&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F189HRvgWbF%2F"
-              target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/heart_enzaservices?igsh=Z3Z0YTl0aWNzMWFo" target="_blank"><i
-                class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-          </div>
-        </div>
-        <div>
-          <h4 class="footer-title">Quick Links</h4>
-          <ul class="footer-links">
-            <li><a href="./">Home</a></li>
-            <li><a href="./about.html">About Us</a></li>
-            <li><a href="./tours.html">Tour Packages</a></li>
-            <li><a href="./services.html">Services</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="footer-title">Support</h4>
-          <ul class="footer-links">
-            <li><a href="./contact.html">Contact Us</a></li>
-            <!-- <li><a href="./testimonials.html">Testimonials</a></li> -->
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="footer-title">Contact Details</h4>
-          <ul class="footer-contact">
-            <li>
-              <i class="fa-solid fa-location-dot"></i>
-              <span>Building No 407/B, Kammana (P.O), Mananthavady, Wayanad, Kerala</span>
-            </li>
-            <li>
-              <i class="fa-solid fa-phone"></i>
-              <span>+91 8111844058</span>
-            </li>
-            <li>
-              <i class="fa-solid fa-envelope"></i>
-              <span>heartenzaservices@gmail.com</span>
-            </li>
-          </ul>
-
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Heartenza Services. All Rights Reserved.</p>
-      </div>
-    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap footer-grid"><div class="footer-about"><a class="brand" href="./"><img src="/assets/images/logo.png" alt="" width="46" height="46"><span><strong>Heartenza.</strong><small>People · Place · Peace of Mind</small></span></a><p>For a happier, easier tomorrow.<br>Your people in Wayanad.</p><div class="social-links"><a class="social-facebook" href="https://www.facebook.com/people/Heartenza-Services/61580805522497/" aria-label="Heartenza on Facebook" target="_blank" rel="noopener noreferrer"><svg class="icon " aria-hidden="true"><use href="/assets/icons/home-icons.svg#facebook"></use></svg></a><a class="social-instagram" href="https://www.instagram.com/heart_enzaservices/" aria-label="Heartenza on Instagram" target="_blank" rel="noopener noreferrer"><svg class="icon " aria-hidden="true"><use href="/assets/icons/home-icons.svg#instagram"></use></svg></a></div></div><div><h3>Explore</h3><a href="./services.html">Our services</a><a href="./tours.html">Travel &amp; tours</a><a href="./about.html">Our story</a><a href="#how-it-works">How it works</a><a href="./contact.html">Get in touch</a></div><div><h3>Here to help</h3><a href="./elderly-companion-services.html">Family &amp; companion support</a><a href="./house-maintenance.html">Home maintenance</a><a href="./driver-services.html">Driver services</a><a href="./medical-assistance.html">Medical assistance</a><a href="./services.html">All services <svg class="icon " aria-hidden="true"><use href="/assets/icons/home-icons.svg#arrow-up"></use></svg></a></div><div class="footer-contact"><h3>Let’s talk</h3><a href="tel:+918111844058"><svg class="icon " aria-hidden="true"><use href="/assets/icons/home-icons.svg#phone"></use></svg> +91 81118 44058</a><a href="mailto:heartenzaservices@gmail.com"><svg class="icon " aria-hidden="true"><use href="/assets/icons/home-icons.svg#mail"></use></svg> heartenzaservices@gmail.com</a><p><svg class="icon " aria-hidden="true"><use href="/assets/icons/home-icons.svg#pin"></use></svg> <span>Building No 407/B, Kammana P.O.<br>Mananthavady, Wayanad, Kerala</span></p></div></div>
+    <div class="wrap footer-bottom"><span>© 2026 Heartenza Services. All rights reserved.</span><span>Local people. Real support.</span><a href="#top">Back to top <svg class="icon " aria-hidden="true"><use href="/assets/icons/home-icons.svg#arrow-up"></use></svg></a></div>
+    <div class="footer-wordmark" aria-hidden="true">Heartenza<span>↗</span></div>
   </footer>
-
-  <script type="module" src="./main.js"></script>
+  <a class="floating-chat" href="https://wa.me/918111844058" target="_blank" rel="noopener noreferrer" aria-label="Chat with Heartenza on WhatsApp"><svg class="icon " aria-hidden="true"><use href="/assets/icons/home-icons.svg#whatsapp"></use></svg><span>Let’s talk</span></a>
 </body>
-
 </html>

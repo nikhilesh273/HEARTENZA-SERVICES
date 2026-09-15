@@ -1,0 +1,216 @@
+import { tourData } from '../data/tours-data.js';
+
+const icon = name => `<svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#${name}"></use></svg>`;
+const escapeHTML = value => String(value).replace(/[&<>'"]/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' })[character]);
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+const profiles = {
+  mananthavady: {
+    name: 'Mananthavady', phrase: 'stories, rivers & sunrise.', eyebrow: 'North Wayanad · Heritage & nature', mood: 'Rivers & heritage', pace: 'Unhurried, with room for nature and local stories', bestFor: ['heritage walks', 'sunrise views', 'quiet nature'], postcard: 'North Wayanad<br><em>unhurried.</em>',
+    cover: 'https://res.cloudinary.com/dm1ig0zit/image/upload/v1773916905/download_9_sm3lg5.jpg',
+    overview: 'Discover the cultural and historical character of north Wayanad. Mananthavady brings together peaceful river landscapes, places connected to regional history, hilltop views and forest-framed waterfalls.'
+  },
+  bathery: {
+    name: 'Sulthan Bathery', phrase: 'wild at heart.', eyebrow: 'South Wayanad · Wildlife & heritage', mood: 'Wildlife & history', pace: 'A varied day of forest, heritage and open hill views', bestFor: ['wildlife interest', 'family outings', 'heritage stops'], postcard: 'Where history<br><em>meets the wild.</em>',
+    cover: 'https://res.cloudinary.com/dm1ig0zit/image/upload/v1773917095/Sulthan_bathery_Art_itvdn5.jpg',
+    overview: 'Explore a side of Wayanad where forest landscapes and old stone architecture sit close together. Sulthan Bathery can combine wildlife interest, historic places, gentle outdoor stops and wide hill views.'
+  },
+  meppadi: {
+    name: 'Meppadi', phrase: 'made for the mist.', eyebrow: 'High Wayanad · Peaks & waterfalls', mood: 'Peaks & waterfalls', pace: 'Active and scenic, adjusted to your comfort', bestFor: ['mountain views', 'waterfalls', 'outdoor adventure'], postcard: 'Breathe in<br><em>the highlands.</em>',
+    cover: 'https://res.cloudinary.com/dm1ig0zit/image/upload/v1773917154/CHEMBRA_PEAK_2026_All_You_Need_to_Know_BEFORE_You_Go_with_Photos_-_Tripadvisor_j497zd.jpg',
+    overview: 'Meppadi is a beautiful starting point for Wayanad’s highland landscapes. Think mountain paths, layers of mist, forest roads and dramatic cascades—with the final route shaped around access and your preferred activity level.'
+  },
+  ambalavayal: {
+    name: 'Ambalavayal', phrase: 'where stone tells stories.', eyebrow: 'South Wayanad · Caves & culture', mood: 'Caves & culture', pace: 'Curious and scenic, with time to explore', bestFor: ['history lovers', 'cave visits', 'family discovery'], postcard: 'Walk through<br><em>older stories.</em>',
+    cover: 'https://res.cloudinary.com/dm1ig0zit/image/upload/v1773917238/Karapuzha_DAM_qux3xg.jpg',
+    overview: 'Ambalavayal offers a compelling mix of archaeology, unusual rock landscapes, local heritage and reservoir views. It suits travellers who enjoy discovering the stories behind a place as much as its scenery.'
+  },
+  kalpetta: {
+    name: 'Kalpetta & Vythiri', phrase: 'easy days, lovely views.', eyebrow: 'Central Wayanad · Lakes & viewpoints', mood: 'Lakes & viewpoints', pace: 'Relaxed and flexible, with easy-to-combine stops', bestFor: ['first-time visitors', 'families', 'scenic drives'], postcard: 'The heart of<br><em>Wayanad.</em>',
+    cover: 'https://res.cloudinary.com/dm1ig0zit/image/upload/v1773917481/LAKKIDI_VIEW_POINT_-_Wayanad_Kerala_qs9ul8.jpg',
+    overview: 'Around Kalpetta and Vythiri, forest-framed lakes, mountain gateways and cultural experiences create an approachable introduction to Wayanad. Stops can be combined to suit families, shorter visits and a gentler pace.'
+  },
+  pulpally: {
+    name: 'Pulpally', phrase: 'along the river.', eyebrow: 'East Wayanad · Nature & local lore', mood: 'Riverways & culture', pace: 'Slow, spacious and close to the landscape', bestFor: ['river nature', 'local culture', 'quiet journeys'], postcard: 'Follow the<br><em>river stories.</em>',
+    cover: 'https://res.cloudinary.com/dm1ig0zit/image/upload/v1773917466/download_10_docb5y.jpg',
+    overview: 'Pulpally opens onto the eastern landscapes of Wayanad, with river islands, forest-edge scenery and places connected to local faith and history. It is a fitting choice for an unhurried day away from busier routes.'
+  },
+  thalappuzha: {
+    name: 'Thalappuzha', phrase: 'above the clouds.', eyebrow: 'Northwest Wayanad · Tea hills & viewpoints', mood: 'Misty viewpoints', pace: 'Scenic and slow, led by weather and light', bestFor: ['valley views', 'tea-country roads', 'quiet mornings'], postcard: 'Chase a little<br><em>morning mist.</em>',
+    cover: 'https://res.cloudinary.com/dm1ig0zit/image/upload/v1773917469/Attamala_View_point_-_Wayanad_Kerala_mceap7.jpg',
+    overview: 'In Thalappuzha, tea-country roads rise toward open viewpoints and deep green valleys. The experience changes with the clouds and light, making it especially rewarding for travellers who enjoy the journey between stops.'
+  },
+  thirunelly: {
+    name: 'Thirunelly', phrase: 'stillness in the hills.', eyebrow: 'North Wayanad · Temple & mountains', mood: 'Sacred valley', pace: 'Reflective, with optional active stretches', bestFor: ['temple visits', 'forest landscapes', 'hill experiences'], postcard: 'A quieter<br><em>kind of wonder.</em>',
+    cover: 'https://res.cloudinary.com/dm1ig0zit/image/upload/v1773917465/Brahmagiri_hills_eynksg.jpg',
+    overview: 'Thirunelly sits in a remarkable valley surrounded by the Brahmagiri landscape. An ancient temple, forest atmosphere and mountain experiences make this a meaningful route for both reflective and active travellers.'
+  },
+  padinjarathara: {
+    name: 'Padinjarathara', phrase: 'where water meets sky.', eyebrow: 'West Wayanad · Reservoirs & hills', mood: 'Water & wide horizons', pace: 'Scenic, with options for gentle or active days', bestFor: ['reservoir views', 'waterfalls', 'hill landscapes'], postcard: 'Go where the<br><em>horizon opens.</em>',
+    cover: 'https://res.cloudinary.com/dm1ig0zit/image/upload/v1773917464/Meenmutty_Waterfalls_pqhhgd.jpg',
+    overview: 'Padinjarathara is shaped by the Banasura reservoir, surrounding hills and forest waterfalls. It is a strong choice for open views and nature-led days, with the route adapted to current conditions and your interests.'
+  }
+};
+
+const aliases = { 'sulthan-bathery': 'bathery', 'sultan-bathery': 'bathery', 'kalpetta-vythiri': 'kalpetta' };
+const requested = new URLSearchParams(window.location.search).get('tour')?.trim().toLocaleLowerCase();
+const key = aliases[requested] || requested;
+const data = tourData[key];
+const profile = profiles[key];
+
+// Shared mobile navigation.
+const header = document.querySelector('.site-header');
+const menuButton = document.querySelector('.menu-toggle');
+const navigation = document.querySelector('#primary-nav');
+const mobile = window.matchMedia('(max-width: 900px)');
+document.body.classList.add('nav-enhanced');
+const setMenu = (open, returnFocus = false) => {
+  menuButton.setAttribute('aria-expanded', String(open));
+  menuButton.querySelector('.menu-label').textContent = open ? 'Close' : 'Menu';
+  navigation.classList.toggle('is-open', open);
+  if (returnFocus) menuButton.focus();
+};
+menuButton.addEventListener('click', () => setMenu(menuButton.getAttribute('aria-expanded') !== 'true'));
+navigation.addEventListener('click', event => { if (event.target.closest('a')) setMenu(false); });
+document.addEventListener('keydown', event => { if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') setMenu(false, true); });
+document.addEventListener('click', event => { if (!header.contains(event.target)) setMenu(false); });
+header.addEventListener('focusout', () => requestAnimationFrame(() => { if (!header.contains(document.activeElement)) setMenu(false); }));
+mobile.addEventListener('change', () => setMenu(false));
+const updateHeader = () => header.classList.toggle('is-scrolled', window.scrollY > 20);
+window.addEventListener('scroll', updateHeader, { passive: true });
+updateHeader();
+
+const setMeta = (selector, value) => {
+  const element = document.querySelector(selector);
+  if (element) element.setAttribute('content', value);
+};
+
+const showNotFound = () => {
+  document.querySelector('.tour-valid').hidden = true;
+  document.querySelector('.tour-not-found').hidden = false;
+  document.title = 'Wayanad Journey Not Found | Heartenza';
+  let robots = document.querySelector('meta[name="robots"]');
+  if (!robots) {
+    robots = document.createElement('meta');
+    robots.name = 'robots';
+    document.head.append(robots);
+  }
+  robots.content = 'noindex, follow';
+};
+
+const renderTour = () => {
+  const canonical = `https://heartenzaservices.com/tour-details.html?tour=${encodeURIComponent(key)}`;
+  const metaDescription = `Explore ${profile.name} in Wayanad, including ${data.places.slice(0, 3).map(place => place.name).join(', ')}. Request a customised itinerary and personalised quote from Heartenza.`;
+  document.title = `${profile.name} Wayanad Tour & Custom Itinerary | Heartenza`;
+  document.querySelector('#canonical-url').href = canonical;
+  setMeta('meta[name="description"]', metaDescription);
+  setMeta('#og-title', `${profile.name}, ${profile.phrase.replace(/[.]$/, '')} | Heartenza`);
+  setMeta('#og-description', metaDescription);
+  setMeta('#og-url', canonical);
+  setMeta('#og-image', profile.cover);
+
+  document.querySelector('#breadcrumb-place').textContent = profile.name;
+  document.querySelector('#detail-eyebrow').textContent = profile.eyebrow;
+  document.querySelector('#detail-place').textContent = profile.name;
+  document.querySelector('#detail-phrase').textContent = profile.phrase;
+  document.querySelector('#detail-summary').textContent = data.description;
+  document.querySelector('#detail-mood').textContent = profile.mood;
+  document.querySelector('#detail-place-count').textContent = `${data.places.length} suggested`;
+  document.querySelector('#hero-caption').textContent = `${profile.name}, Wayanad`;
+  document.querySelector('#detail-postcard').innerHTML = profile.postcard;
+  const heroImage = document.querySelector('#detail-hero-image');
+  heroImage.src = profile.cover;
+  heroImage.alt = `${profile.name} landscape in Wayanad`;
+  document.querySelector('#tour-overview').textContent = profile.overview;
+  document.querySelector('#detail-best-for').textContent = profile.bestFor.join(' · ');
+  document.querySelector('#detail-pace').textContent = profile.pace;
+
+  const enquiryMessage = `Hello Heartenza, I would like to enquire about a ${profile.name} Wayanad trip. Please help me plan the itinerary.`;
+  document.querySelectorAll('.wa-enquiry').forEach(link => {
+    link.href = `https://wa.me/918111844058?text=${encodeURIComponent(enquiryMessage)}`;
+  });
+
+  const selected = new Set();
+  const selectionBar = document.querySelector('#selection-bar');
+  const selectionCount = document.querySelector('#selection-count');
+  const selectedEnquiry = document.querySelector('#selected-enquiry');
+  const updateSelection = () => {
+    const names = [...selected];
+    selectionBar.hidden = names.length === 0;
+    selectionCount.textContent = `${names.length} ${names.length === 1 ? 'place' : 'places'} selected`;
+    const message = `Hello Heartenza, I am interested in a ${profile.name} Wayanad trip. Places I would like to discuss: ${names.join(', ')}. Please help me plan the itinerary.`;
+    selectedEnquiry.href = `https://wa.me/918111844058?text=${encodeURIComponent(message)}`;
+    document.querySelectorAll('.place-toggle').forEach(button => {
+      const isSelected = selected.has(button.dataset.place);
+      button.setAttribute('aria-pressed', String(isSelected));
+      button.innerHTML = `${icon(isSelected ? 'check' : 'plus')}<span>${isSelected ? 'Added to my trip' : 'Add to my trip'}</span>`;
+    });
+  };
+
+  document.querySelector('#places-grid').innerHTML = data.places.map((place, index) => `
+    <article class="detail-place-card" data-reveal>
+      <figure class="detail-place-image"><img src="${escapeHTML(place.img)}" alt="${escapeHTML(place.name)} in the ${escapeHTML(profile.name)} area of Wayanad" width="700" height="520" loading="lazy"><span class="detail-place-number">${String(index + 1).padStart(2, '0')}</span></figure>
+      <div class="detail-place-copy"><h3>${escapeHTML(place.name)}</h3><p>${escapeHTML(place.desc)}</p><button class="place-toggle" type="button" data-place="${escapeHTML(place.name)}" aria-pressed="false">${icon('plus')}<span>Add to my trip</span></button></div>
+    </article>`).join('');
+  document.querySelectorAll('.place-toggle').forEach(button => button.addEventListener('click', () => {
+    selected.has(button.dataset.place) ? selected.delete(button.dataset.place) : selected.add(button.dataset.place);
+    updateSelection();
+  }));
+  document.querySelector('#clear-selection').addEventListener('click', () => {
+    selected.clear();
+    updateSelection();
+    document.querySelector('#places-title').focus({ preventScroll: true });
+  });
+
+  const keys = Object.keys(profiles);
+  const position = keys.indexOf(key);
+  const related = [keys[(position + 1) % keys.length], keys[(position + 2) % keys.length]];
+  document.querySelector('#related-grid').innerHTML = related.map(relatedKey => {
+    const item = profiles[relatedKey];
+    return `<article class="related-card" data-reveal><figure><img src="${escapeHTML(item.cover)}" alt="${escapeHTML(item.name)} landscape in Wayanad" width="650" height="500" loading="lazy"></figure><div><p class="eyebrow">${escapeHTML(item.mood)}</p><h3>${escapeHTML(item.name)}</h3><p>${escapeHTML(item.overview)}</p><a class="text-link" href="./tour-details.html?tour=${encodeURIComponent(relatedKey)}">Explore this journey ${icon('arrow')}</a></div></article>`;
+  }).join('');
+
+  const faqEntities = [
+    ['Is this a fixed itinerary?', 'No. The listed attractions are ideas for your enquiry. The final route depends on your dates, available time, interests and current local access.'],
+    ['How will I know the price?', 'Share your group, dates and requirements. Heartenza will discuss the itinerary and provide a personalised quote directly before confirmation.'],
+    ['Can I combine this area with another?', 'Yes. Places from other Wayanad areas can be discussed and combined where travel time, access and the number of available days allow.']
+  ].map(([name, text]) => ({ '@type': 'Question', name, acceptedAnswer: { '@type': 'Answer', text } }));
+  document.querySelector('#tour-schema').textContent = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@graph': [
+      { '@type': 'WebPage', '@id': `${canonical}#page`, url: canonical, name: document.title, description: metaDescription },
+      { '@type': 'TouristDestination', '@id': `${canonical}#destination`, name: `${profile.name}, Wayanad`, description: profile.overview, image: profile.cover, url: canonical, containsPlace: data.places.map(place => ({ '@type': 'TouristAttraction', name: place.name, description: place.desc, image: place.img })) },
+      { '@type': 'BreadcrumbList', itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://heartenzaservices.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Travel & Tours', item: 'https://heartenzaservices.com/tours.html' },
+        { '@type': 'ListItem', position: 3, name: profile.name, item: canonical }
+      ] },
+      { '@type': 'FAQPage', mainEntity: faqEntities }
+    ]
+  });
+};
+
+if (!data || !profile) showNotFound();
+else renderTour();
+
+// Add brief scroll reveals only after dynamic content is available.
+if (data && profile && 'IntersectionObserver' in window && !reducedMotion.matches) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: .08 });
+  document.querySelectorAll('[data-reveal]').forEach(element => {
+    if (element.getBoundingClientRect().top > window.innerHeight) element.classList.add('reveal-pending');
+    observer.observe(element);
+  });
+  reducedMotion.addEventListener('change', () => {
+    if (reducedMotion.matches) {
+      observer.disconnect();
+      document.querySelectorAll('.reveal-pending').forEach(element => element.classList.add('is-visible'));
+    }
+  });
+}
