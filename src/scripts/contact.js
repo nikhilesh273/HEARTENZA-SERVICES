@@ -57,7 +57,7 @@ const formTitle = document.querySelector('#form-title');
 const serviceLabels = {
   'travel-tour-packages': 'Travel & tour packages',
   'driver-services': 'Driver services',
-  'house-maintenance': 'House maintenance',
+  'house-maintenance': 'House & garden maintenance',
   'vehicle-maintenance': 'Vehicle maintenance',
   'delivery-errands': 'Delivery & errands',
   'elderly-companion-services': 'Elderly companion services',

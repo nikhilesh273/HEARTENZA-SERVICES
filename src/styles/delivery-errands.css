@@ -1,0 +1,27 @@
+/* A connected, parcel-focused variation of the shared service-detail layout. */
+.delivery-page .service-hero-art figure {
+  inset: 0 3% 0 1%;
+  border-radius: 3rem 48% 3rem 48% / 3rem 34% 3rem 34%;
+  background: #d0d6d6;
+}
+.delivery-page .service-hero-art img { object-position: 61% center; }
+.delivery-page .art-disc {
+  top: -1.4rem;
+  right: -1.2rem;
+  background: #86b9b0;
+  box-shadow: -10rem 30rem 0 -4rem #d0d6d6;
+}
+.delivery-page .route-card { background: rgba(4, 38, 48, .94); }
+.delivery-page .use-cases { background: #e5efed; }
+.delivery-page .use-case-grid article > .icon { color: #4c7273; }
+.delivery-page .guide-card { background: #041421; }
+.delivery-page .coverage-section { background: #042630; }
+.delivery-page .coverage-pin .icon { background: #86b9b0; color: #041421; }
+.delivery-page .contact-band { background: #4c7273; }
+@media (max-width: 700px) {
+  .delivery-page .service-hero-art figure {
+    inset: 0;
+    border-radius: 1.5rem 43% 1.5rem 43% / 1.5rem 29% 1.5rem 29%;
+  }
+  .delivery-page .service-hero-art img { object-position: 58% center; }
+}
