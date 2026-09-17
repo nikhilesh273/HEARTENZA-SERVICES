@@ -1,330 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="/logo.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us | Heartenza Services</title>
-  <!-- FontAwesome for Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    #loader-wrapper {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background-color: #111111;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 999999;
-      transition: opacity 0.8s cubic-bezier(0.77, 0, 0.175, 1), visibility 0.8s;
-    }
-  </style>
-  <style>
-    .page-hero {
-      padding: 10rem 0 6rem;
-      background-color: var(--bg-navy);
-      background-image: linear-gradient(rgba(20, 100, 219, 0.9), rgba(118, 119, 121, 0)), url('https://res.cloudinary.com/dm1ig0zit/image/upload/v1773918740/download_11_wpeky6.jpg');
-      background-size: cover;
-      background-position: center;
-      color: white;
-      text-align: center;
-    }
-
-    .page-hero h1 {
-      color: white;
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-
-    .about-content-section p {
-      font-size: 1.1rem;
-      color: var(--text-gray);
-      margin-bottom: 1.5rem;
-    }
-
-    .mission-vision-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      margin-top: 4rem;
-    }
-
-    .mv-card {
-      background: var(--bg-light-gray);
-      padding: 3rem;
-      border-radius: var(--radius-xl);
-      text-align: center;
-      box-shadow: var(--shadow-sm);
-      transition: transform var(--transition-normal);
-    }
-
-    .mv-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-md);
-    }
-
-    .mv-icon {
-      font-size: 3rem;
-      color: var(--accent-gold);
-      margin-bottom: 1.5rem;
-    }
-
-    .values-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-
-    .value-item {
-      text-align: center;
-      padding: 2rem;
-      background: white;
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-sm);
-      border: 1px solid rgba(0, 0, 0, 0.05);
-    }
-
-    .value-item i {
-      font-size: 2.5rem;
-      color: var(--primary-royal-blue);
-      margin-bottom: 1rem;
-    }
-
-    @media (max-width: 992px) {
-      .mission-vision-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .values-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 768px) {
-      .values-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .page-hero {
-        padding: 8rem 0 4rem;
-      }
-
-      .page-hero h1 {
-        font-size: 2.5rem;
-      }
-    }
-  </style>
-  <script type="module" crossorigin src="/assets/main-CSUKtnlf.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/main-DykBa5ok.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#041421">
+  <title>About Heartenza | Local Support Services in Wayanad</title>
+  <meta name="description" content="Meet Heartenza, Wayanad’s multi-service platform for travel, drivers, home and vehicle maintenance, delivery, elderly companionship and medical assistance.">
+  <link rel="canonical" href="https://heartenzaservices.com/about.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="About Heartenza — Local help, made more human">
+  <meta property="og:description" content="One Wayanad team for travel, home, family and everyday support. Learn why Heartenza exists and how we coordinate each request.">
+  <meta property="og:url" content="https://heartenzaservices.com/about.html">
+  <meta property="og:image" content="https://heartenzaservices.com/assets/images/heartenza-services-hero.png">
+  <link rel="icon" type="image/png" href="/assets/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"AboutPage","@id":"https://heartenzaservices.com/about.html#page","url":"https://heartenzaservices.com/about.html","name":"About Heartenza Services","description":"Learn about Heartenza, a local multi-service platform coordinating travel, home, vehicle, delivery, family and non-emergency medical assistance in Wayanad.","mainEntity":{"@id":"https://heartenzaservices.com/#organization"}},{"@type":"Organization","@id":"https://heartenzaservices.com/#organization","name":"Heartenza Services","url":"https://heartenzaservices.com/","logo":"https://heartenzaservices.com/assets/images/logo.png","email":"heartenzaservices@gmail.com","telephone":"+918111844058","slogan":"People · Place · Peace of Mind","address":{"@type":"PostalAddress","streetAddress":"Building No 407/B, Kammana P.O.","addressLocality":"Mananthavady","addressRegion":"Kerala","addressCountry":"IN"},"areaServed":{"@type":"AdministrativeArea","name":"Wayanad"},"sameAs":["https://www.facebook.com/people/Heartenza-Services/61580805522497/","https://www.instagram.com/heart_enzaservices/"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Heartenza Services","itemListElement":[{"@type":"OfferCatalog","name":"Travel & tour packages","url":"https://heartenzaservices.com/tours.html"},{"@type":"OfferCatalog","name":"Driver services","url":"https://heartenzaservices.com/driver-services.html"},{"@type":"OfferCatalog","name":"House maintenance","url":"https://heartenzaservices.com/house-maintenance.html"},{"@type":"OfferCatalog","name":"Vehicle maintenance","url":"https://heartenzaservices.com/vehicle-maintenance.html"},{"@type":"OfferCatalog","name":"Delivery & errands","url":"https://heartenzaservices.com/delivery-errands.html"},{"@type":"OfferCatalog","name":"Elderly companion","url":"https://heartenzaservices.com/elderly-companion-services.html"},{"@type":"OfferCatalog","name":"Medical assistance","url":"https://heartenzaservices.com/medical-assistance.html"},{"@type":"OfferCatalog","name":"Gifts & occasions","url":"https://heartenzaservices.com/gifts-special-occasions.html"}]}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://heartenzaservices.com/"},{"@type":"ListItem","position":2,"name":"About Heartenza","item":"https://heartenzaservices.com/about.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What kind of company is Heartenza?","acceptedAnswer":{"@type":"Answer","text":"Heartenza is a local multi-service platform in Wayanad that helps coordinate travel, home, vehicle, delivery, companion, medical-assistance and occasion-related requests."}},{"@type":"Question","name":"Can someone living outside Wayanad arrange help for family there?","acceptedAnswer":{"@type":"Answer","text":"Yes. Customers living in another city or abroad can discuss support for parents and loved ones in Wayanad, subject to the person’s consent and service availability."}},{"@type":"Question","name":"How does Heartenza provide pricing?","acceptedAnswer":{"@type":"Answer","text":"Heartenza first discusses the request, location, timing and requirements, then shares a personalised quote directly before confirmation."}}]}]}</script>
+  <script type="module" crossorigin src="/assets/about-D2mjCjCv.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/modulepreload-polyfill-3xzlJT5O.js">
+  <link rel="stylesheet" crossorigin href="/assets/about-DSh4mjEv.css">
+  <link rel="stylesheet" crossorigin href="/assets/homepage-0CT4Ta-g.css">
 </head>
-
-<body>
-  <!-- Premium Loading Screen -->
-  <div id="loader-wrapper">
-    <div class="loader-content">
-      <div class="loader-circle"></div>
-      <h2 class="loader-text">Heartenza</h2>
-    </div>
-  </div>
-
-  <!-- Navbar (Same as index.html, with active class updated) -->
-  <nav class="navbar">
-    <div class="container">
-      <a href="./" class="nav-brand">
-        <img src="./logo.png" alt="Heartenza Logo">
-      </a>
-      <ul class="nav-links">
-        <li><a href="./" class="nav-item">Home</a></li>
-        <li><a href="./tours.html" class="nav-item">Tour Packages</a></li>
-        <li><a href="./services.html" class="nav-item">Services</a></li>
-        <li><a href="./about.html" class="nav-item active">About Us</a></li>
-        <!-- <li><a href="./testimonials.html" class="nav-item">Testimonials</a></li> -->
-        <li><a href="./contact.html" class="nav-item">Contact</a></li>
-      </ul>
-      <div class="nav-actions">
-        <div class="nav-social-icons">
-          <a href="https://www.facebook.com/people/Heartenza-Services/61580805522497/?rdid=ZsrL0GyI7la36WSu&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F189HRvgWbF%2F"
-            target="_blank" class="nav-social-icon"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com/heart_enzaservices?igsh=Z3Z0YTl0aWNzMWFo" target="_blank"
-            class="nav-social-icon"><i class="fa-brands fa-instagram"></i></a>
-        </div>
-        <a href="https://wa.me/918111844058" class="btn btn-primary" target="_blank">Book Tour <i
-            class="fa-brands fa-whatsapp" style="margin-left: 8px;"></i></a>
-      </div>
-      <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
-    </div>
-  </nav>
-
-  <!-- Floating WhatsApp -->
-  <a href="https://wa.me/918111844058" class="whatsapp-float" target="_blank">
-    <i class="fa-brands fa-whatsapp"></i>
-  </a>
-
-  <!-- Page Hero -->
-  <header class="page-hero">
-    <div class="container fade-in">
-      <h1>About Heartenza Services</h1>
-      <p>Premium travel planning and lifestyle services.</p>
+<body class="about-redesign" id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="announcement"><div class="wrap announcement-inner"><span><svg class="icon " aria-hidden="true"><use href="/assets/icons/home-icons.svg#pin"></use></svg> Rooted in Wayanad. Here for you.</span><a href="tel:+918111844058">Let’s talk <span>+91 81118 44058</span> <svg class="icon " aria-hidden="true"><use href="/assets/icons/home-icons.svg#arrow-up"></use></svg></a></div></div>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="./" aria-label="Heartenza home"><img src="/assets/images/logo.png" alt="" width="46" height="46"><span><strong>Heartenza<span class="brand-dot">.</span></strong><small>People · Place · Peace of Mind</small></span></a>
+      <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false"><span class="menu-label">Menu</span><span class="menu-lines" aria-hidden="true"></span></button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
+        <a href="./">Home</a><a href="./services.html">Services</a><a href="./tours.html">Travel &amp; tours</a><a href="./about.html" aria-current="page">Our story</a><a href="./contact.html">Contact</a>
+        <a class="button button-small" href="./contact.html">Let’s get started <svg class="icon " aria-hidden="true"><use href="/assets/icons/home-icons.svg#arrow-up"></use></svg></a>
+      </nav>
     </div>
   </header>
+  <main id="main">
+    <!-- About hero -->
+    <section class="about-hero-wrap wrap" aria-labelledby="about-title">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="./">Home</a><span aria-hidden="true">/</span><span aria-current="page">About Heartenza</span></nav>
+      <div class="about-hero">
+        <img src="/assets/images/heartenza-services-hero.png" alt="A Heartenza service coordinator speaking with a family outside their home in Wayanad" width="1942" height="809" fetchpriority="high">
+        <div class="about-hero-shade"></div>
+        <div class="about-hero-copy"><p class="eyebrow"><span class="status-dot"></span> Your people in Wayanad</p><h1 id="about-title">Local help.<br>Made more <em>human.</em></h1><p>Heartenza brings travel, home, health, family and everyday support together through one approachable local team.</p><a class="button button-light" href="#our-purpose">Meet Heartenza <svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#arrow"></use></svg></a></div>
+        <div class="about-hero-note" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#heart"></use></svg><span>People.<br>Place.<br><em>Peace of mind.</em></span></div>
+        <span class="about-hero-caption"><svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#pin"></use></svg> Mananthavady, Wayanad</span>
+      </div>
+    </section>
 
-  <!-- Company Intro & Why Heartenza -->
-  <section class="section-padding about-content-section" style="padding-bottom: 2rem;">
-    <div class="container">
-      <div class="about-grid" style="align-items: start;">
-        <div class="fade-in">
-          <span class="section-subtitle">Our Journey</span>
-          <h2 class="section-title">Who We Are</h2>
-          <p><strong>Heartenza Services</strong> provides reliable travel planning and comprehensive lifestyle support
-            services. In today's fast-paced world, professionals and families often struggle to find time for detailed
-            vacation planning or dealing with daily maintenance issues. That’s where we step in.</p>
-          <p>From curating the perfect itinerary to ensuring your house is well-maintained while you are away, we act as
-            your personal service partner. Our team is dedicated to offering personalized, premium experiences so you
-            can focus on what truly matters.</p>
+    <!-- Why Heartenza exists -->
+    <section class="about-purpose section-space wrap" id="our-purpose" aria-labelledby="purpose-title">
+      <div class="purpose-heading"><p class="eyebrow">Why we are here</p><h2 id="purpose-title">Life asks for many kinds of help.<br><em>Finding it should feel simple.</em></h2></div>
+      <div class="purpose-copy"><p>Heartenza exists to make local support easier to find and easier to coordinate. A visitor may need help planning a Wayanad trip. A busy family may need a driver or a home repair. Someone living far away may want dependable assistance for a parent nearby.</p><p>These needs may look different, but they begin the same way: with a conversation. You tell us what is happening, and our local team helps clarify the requirement, check availability and explain the next practical step.</p><blockquote>“One familiar local point of contact for the journeys, tasks and people that matter.”</blockquote></div>
+    </section>
 
-          <h3 style="margin: 2rem 0 1rem; font-size: 1.5rem;">Why Heartenza?</h3>
-          <ul style="list-style-type: none; padding-left: 0;">
-            <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 10px;">
-              <i class="fa-solid fa-circle-check text-gold"></i> Trusted and verified professionals.
-            </li>
-            <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 10px;">
-              <i class="fa-solid fa-circle-check text-gold"></i> Highly personalized services for your needs.
-            </li>
-            <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 10px;">
-              <i class="fa-solid fa-circle-check text-gold"></i> Affordable and transparent pricing.
-            </li>
-          </ul>
-        </div>
-        <div class="fade-in">
-          <img
-            src="https://res.cloudinary.com/dm1ig0zit/image/upload/v1773919667/yash-parashar-Wag11Ja47zI-unsplash_sjozog.jpg"
-            alt="Our Team" style="border-radius: var(--radius-xl); box-shadow: var(--shadow-xl);">
+    <!-- Who the platform is designed for -->
+    <section class="about-people">
+      <div class="wrap section-space">
+        <div class="section-heading"><div><p class="eyebrow">Built around real lives</p><h2>Different people.<br><em>One place to turn.</em></h2></div><p>Heartenza is designed for anyone who values clear communication, local understanding and support shaped around a real requirement.</p></div>
+        <div class="people-grid">
+          <article data-reveal><span class="people-icon"><svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#heart"></use></svg></span><span class="people-no">01</span><h3>Families living away</h3><p>Arrange practical support for parents or loved ones in Wayanad while staying informed from another city or country.</p></article>
+          <article data-reveal><span class="people-icon"><svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#home"></use></svg></span><span class="people-no">02</span><h3>Local families</h3><p>Find help with home upkeep, vehicles, errands, appointments and occasions when everyday life becomes too busy.</p></article>
+          <article data-reveal><span class="people-icon"><svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#mountain"></use></svg></span><span class="people-no">03</span><h3>Visitors to Wayanad</h3><p>Discover local travel areas and discuss a trip shaped around your dates, group, interests and preferred pace.</p></article>
+          <article data-reveal><span class="people-icon"><svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#chat"></use></svg></span><span class="people-no">04</span><h3>Working professionals</h3><p>Delegate time-consuming local tasks through one team that understands the request and communicates the next steps.</p></article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Mission & Vision -->
-  <section class="section-padding bg-light-gray" style="padding-top: 4rem;">
-    <div class="container">
-      <div class="mission-vision-grid">
-        <div class="mv-card fade-in">
-          <div class="mv-icon"><i class="fa-solid fa-bullseye"></i></div>
-          <h3 style="margin-bottom: 1rem; font-size: 1.8rem;">Our Mission</h3>
-          <p style="color: var(--text-gray); font-size: 1.1rem;">To provide reliable, high-quality travel and lifestyle
-            support services that simplify our clients' lives and create unforgettable memories.</p>
-        </div>
-        <div class="mv-card fade-in" style="transition-delay: 0.2s;">
-          <div class="mv-icon"><i class="fa-regular fa-eye"></i></div>
-          <h3 style="margin-bottom: 1rem; font-size: 1.8rem;">Our Vision</h3>
-          <p style="color: var(--text-gray); font-size: 1.1rem;">To become the most trusted and sought-after service
-            partner for professionals and families across the region.</p>
+    <!-- The full multi-service platform -->
+    <section class="about-services section-space wrap" aria-labelledby="about-services-title">
+      <div class="section-heading"><div><p class="eyebrow">More than one service</p><h2 id="about-services-title">One platform.<br><em>Eight ways to help.</em></h2></div><p>Travel and tours is one part of Heartenza. Every active service has its own permanent page, clear scope and enquiry route.</p></div>
+      <div class="about-service-list">
+          <a class="about-service" href="./tours.html" data-reveal><span class="about-service-no">01</span><span class="about-service-icon"><svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#mountain"></use></svg></span><span><strong>Travel & tour packages</strong><small>Local Wayanad experiences and customised travel planning.</small></span><svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#arrow-up"></use></svg></a>
+          <a class="about-service" href="./driver-services.html" data-reveal><span class="about-service-no">02</span><span class="about-service-icon"><svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#car"></use></svg></span><span><strong>Driver services</strong><small>Professional drivers requested around your route, date and timing.</small></span><svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#arrow-up"></use></svg></a>
+          <a class="about-service" href="./house-maintenance.html" data-reveal><span class="about-service-no">03</span><span class="about-service-icon"><svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#home"></use></svg></span><span><strong>House maintenance</strong><small>Coordination for repairs, cleaning and essential home upkeep.</small></span><svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#arrow-up"></use></svg></a>
+          <a class="about-service" href="./vehicle-maintenance.html" data-reveal><span class="about-service-no">04</span><span class="about-service-icon"><svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#tool"></use></svg></span><span><strong>Vehicle maintenance</strong><small>Support arranging vehicle servicing, care, cleaning and related tasks.</small></span><svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#arrow-up"></use></svg></a>
+          <a class="about-service" href="./delivery-errands.html" data-reveal><span class="about-service-no">05</span><span class="about-service-icon"><svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#box"></use></svg></span><span><strong>Delivery & errands</strong><small>Local pickups, deliveries, shopping and everyday errands.</small></span><svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#arrow-up"></use></svg></a>
+          <a class="about-service" href="./elderly-companion-services.html" data-reveal><span class="about-service-no">06</span><span class="about-service-icon"><svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#heart"></use></svg></span><span><strong>Elderly companion</strong><small>Thoughtful non-clinical companionship and practical local assistance.</small></span><svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#arrow-up"></use></svg></a>
+          <a class="about-service" href="./medical-assistance.html" data-reveal><span class="about-service-no">07</span><span class="about-service-icon"><svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#health"></use></svg></span><span><strong>Medical assistance</strong><small>Non-emergency help coordinating appointments and hospital visits.</small></span><svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#arrow-up"></use></svg></a>
+          <a class="about-service" href="./gifts-special-occasions.html" data-reveal><span class="about-service-no">08</span><span class="about-service-icon"><svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#gift"></use></svg></span><span><strong>Gifts & occasions</strong><small>Local help arranging gifts, surprises and meaningful celebrations.</small></span><svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#arrow-up"></use></svg></a>
+      </div>
+    </section>
+
+    <!-- Mission and promise -->
+    <section class="about-belief">
+      <div class="wrap belief-grid">
+        <div class="belief-illustration"><span class="belief-orbit orbit-one"></span><span class="belief-orbit orbit-two"></span><img src="/assets/images/service-platform-illustration.png" alt="Illustration showing a Wayanad family connected with several Heartenza services" width="1120" height="1346" loading="lazy"></div>
+        <div class="belief-copy"><p class="eyebrow">Our purpose &amp; direction</p><h2>Make support feel closer.<br><em>Make everyday life feel lighter.</em></h2><div class="belief-statements"><article><span>Our purpose</span><p>To connect people with thoughtful local coordination for travel, family and everyday needs in Wayanad.</p></article><article><span>Our direction</span><p>To grow as a trusted multi-service platform while keeping every request personal, practical and grounded in the community.</p></article></div><a class="text-link" href="./services.html">Explore all services <svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#arrow"></use></svg></a></div>
+      </div>
+    </section>
+
+    <!-- Principles -->
+    <section class="about-principles section-space wrap" aria-labelledby="principles-title">
+      <div class="principles-intro"><p class="eyebrow">How we want every request to feel</p><h2 id="principles-title">Care is in<br><em>the details.</em></h2><p>Our principles guide how we listen, coordinate and communicate from the first message onward.</p></div>
+      <ol class="principle-list">
+        <li data-reveal><span>01</span><div><h3>Personal, from the beginning</h3><p>No two requests are exactly alike. We start by understanding the person, place, timing and outcome you need.</p></div></li>
+        <li data-reveal><span>02</span><div><h3>Clear about the next step</h3><p>We explain availability, the proposed arrangement and the personalised quote before you confirm.</p></div></li>
+        <li data-reveal><span>03</span><div><h3>Local in how we work</h3><p>Our service model is rooted in Wayanad, with attention to local locations, travel time and practical conditions.</p></div></li>
+        <li data-reveal><span>04</span><div><h3>Thoughtful about people</h3><p>Family and companion requests are handled with respect, consent, privacy and appropriate communication.</p></div></li>
+      </ol>
+    </section>
+
+    <!-- What the service model means -->
+    <section class="about-clarity">
+      <div class="wrap clarity-grid">
+        <div><p class="eyebrow">Clear from the start</p><h2>What Heartenza is.<br><em>And what it isn’t.</em></h2><p>Clarity builds trust. We want customers to understand how the platform works before sending a request.</p></div>
+        <div class="clarity-columns">
+          <article><span class="clarity-symbol yes"><svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#check"></use></svg></span><h3>Heartenza is</h3><ul><li>A local coordination point for multiple services</li><li>A personalised enquiry and confirmation process</li><li>A way to arrange help for yourself or loved ones</li><li>A team that discusses scope and availability first</li></ul></article>
+          <article><span class="clarity-symbol no"><svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#plus"></use></svg></span><h3>Heartenza is not</h3><ul><li>An instant checkout or fixed-price marketplace</li><li>A guarantee that every request is immediately available</li><li>A substitute for doctors, nurses or emergency services</li><li>A confirmed booking until details are agreed</li></ul></article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Core Values -->
-  <section class="section-padding">
-    <div class="container">
-      <div class="text-center fade-in" style="margin-bottom: 2rem;">
-        <span class="section-subtitle">Heartenza Ethos</span>
-        <h2 class="section-title">Our Values</h2>
+    <!-- Local presence -->
+    <section class="about-local section-space wrap" aria-labelledby="local-title">
+      <div class="local-copy"><p class="eyebrow">Wayanad is home</p><h2 id="local-title">Close to the place.<br><em>Closer to the need.</em></h2><p>Heartenza is based in Mananthavady and serves supported locations across Wayanad. Availability depends on the service, date and exact location, so every enquiry begins with a quick confirmation.</p><div class="local-contact"><a href="tel:+918111844058"><svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#phone"></use></svg><span>Call our local team<strong>+91 81118 44058</strong></span></a><a href="mailto:heartenzaservices@gmail.com"><svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#mail"></use></svg><span>Write to us<strong>heartenzaservices@gmail.com</strong></span></a></div></div>
+      <div class="local-map" aria-label="Heartenza service locations in Wayanad"><span class="map-ring ring-one"></span><span class="map-ring ring-two"></span><span class="map-centre"><svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#pin"></use></svg><strong>Heartenza</strong><small>Mananthavady</small></span><ul><li>Kalpetta</li><li>Sulthan Bathery</li><li>Meppadi</li><li>Ambalavayal</li><li>Pulpally</li><li>Thirunelly</li></ul><p>Other Wayanad areas may be supported after confirmation.</p></div>
+    </section>
+
+    <!-- Working together -->
+    <section class="about-process section-space" id="how-it-works" aria-labelledby="process-title">
+      <div class="wrap"><div class="section-heading"><div><p class="eyebrow">Working with Heartenza</p><h2 id="process-title">Start with what you need.<br><em>We’ll take it from there.</em></h2></div><p>Our process stays conversational because the right solution depends on the details.</p></div><ol class="about-process-grid"><li data-reveal><span class="process-number">01</span><svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#search"></use></svg><h3>Choose or describe</h3><p>Pick a service, or simply tell us the situation if you are not sure where it fits.</p></li><li data-reveal><span class="process-number">02</span><svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#chat"></use></svg><h3>Discuss the details</h3><p>Share the location, preferred timing and any important practical requirements.</p></li><li data-reveal><span class="process-number">03</span><svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#check"></use></svg><h3>Review and confirm</h3><p>We discuss availability, the plan and your personalised quote before arranging the service.</p></li></ol></div>
+    </section>
+
+    <section class="faq-section section-space wrap" aria-labelledby="faq-title">
+      <div><p class="eyebrow">A little more about us</p><h2 id="faq-title">Questions,<br><em>answered simply.</em></h2><p>If your question is more personal, you can speak directly with our team.</p><a class="text-link" href="tel:+918111844058">Call Heartenza <svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#phone"></use></svg></a></div>
+      <div class="faq-list">
+        <details><summary>What kind of company is Heartenza? <svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#plus"></use></svg></summary><p>Heartenza is a local multi-service platform based in Wayanad. We help coordinate travel, driver, home, vehicle, delivery, companion, medical-assistance and occasion-related requests.</p></details>
+        <details><summary>Can I arrange support while living elsewhere? <svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#plus"></use></svg></summary><p>Yes. You can discuss assistance for parents or loved ones in Wayanad even when you live in another city or abroad. We will clarify consent, communication and practical requirements first.</p></details>
+        <details><summary>Why is there no pricing on the website? <svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#plus"></use></svg></summary><p>Requirements vary by service, location, timing and scope. We first understand what you need, then share a personalised quote directly before confirmation.</p></details>
+        <details><summary>Can I request more than one service? <svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#plus"></use></svg></summary><p>Yes. Tell us the complete situation and we can discuss how related requests may be coordinated, subject to availability.</p></details>
+        <details><summary>Does Heartenza provide emergency or clinical care? <svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#plus"></use></svg></summary><p>No. Medical assistance is non-emergency and non-clinical. It does not replace a doctor, nurse, ambulance or emergency service.</p></details>
       </div>
-      <div class="values-grid">
-        <div class="value-item fade-in">
-          <i class="fa-solid fa-handshake-angle"></i>
-          <h4>Trust</h4>
-          <p style="font-size: 0.9rem; color: var(--text-gray); margin-top: 10px;">Building lasting relationships
-            through transparency.</p>
-        </div>
-        <div class="value-item fade-in" style="transition-delay: 0.1s;">
-          <i class="fa-solid fa-medal"></i>
-          <h4>Quality</h4>
-          <p style="font-size: 0.9rem; color: var(--text-gray); margin-top: 10px;">Delivering premium experiences
-            without compromise.</p>
-        </div>
-        <div class="value-item fade-in" style="transition-delay: 0.2s;">
-          <i class="fa-solid fa-mug-hot"></i>
-          <h4>Convenience</h4>
-          <p style="font-size: 0.9rem; color: var(--text-gray); margin-top: 10px;">Simplifying your life so you can
-            relax more.</p>
-        </div>
-        <div class="value-item fade-in" style="transition-delay: 0.3s;">
-          <i class="fa-solid fa-face-smile"></i>
-          <h4>Satisfaction</h4>
-          <p style="font-size: 0.9rem; color: var(--text-gray); margin-top: 10px;">Your happiness is our ultimate
-            priority.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <img src="./logo.png" alt="Heartenza Logo" style=" border-radius: 8px; padding: 5px;">
-          <p>Providing reliable travel and lifestyle support services tailored for busy professionals and families.</p>
-          <div class="social-links">
-            <a href="https://www.facebook.com/people/Heartenza-Services/61580805522497/?rdid=ZsrL0GyI7la36WSu&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F189HRvgWbF%2F"
-              target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/heart_enzaservices?igsh=Z3Z0YTl0aWNzMWFo" target="_blank"><i
-                class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-          </div>
-        </div>
-
-        <div>
-          <h4 class="footer-title">Quick Links</h4>
-          <ul class="footer-links">
-            <li><a href="./">Home</a></li>
-            <li><a href="./about.html">About Us</a></li>
-            <li><a href="./tours.html">Tour Packages</a></li>
-            <li><a href="./services.html">Services</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="footer-title">Support</h4>
-          <ul class="footer-links">
-            <li><a href="./contact.html">Contact Us</a></li>
-            <!-- <li><a href="./testimonials.html">Testimonials</a></li> -->
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="footer-title">Contact Details</h4>
-          <ul class="footer-contact">
-            <li>
-              <i class="fa-solid fa-location-dot"></i>
-              <span>Building No 407/B, Kammana (P.O), Mananthavady, Wayanad, Kerala</span>
-            </li>
-            <li>
-              <i class="fa-solid fa-phone"></i>
-              <span>+91 8111844058</span>
-            </li>
-            <li>
-              <i class="fa-solid fa-envelope"></i>
-              <span>heartenzaservices@gmail.com</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>&copy; 2026 Heartenza Services. All Rights Reserved.</p>
-      </div>
-    </div>
-  </footer>
+    <section class="contact-band about-contact" aria-labelledby="contact-title"><div class="wrap contact-band-inner"><div><p class="eyebrow">People · Place · Peace of Mind</p><h2 id="contact-title">Tell us what would<br><em>make life easier.</em></h2></div><div><a class="button button-light" href="https://wa.me/918111844058?text=Hello%20Heartenza%2C%20I%20would%20like%20to%20discuss%20a%20service." target="_blank" rel="noopener noreferrer">Start a conversation <svg class="icon" aria-hidden="true"><use href="/assets/icons/home-icons.svg#whatsapp"></use></svg></a><p class="contact-call">Prefer a form? <a href="./contact.html">Send an enquiry</a></p></div></div></section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap footer-grid"><div class="footer-about"><a class="brand" href="./"><img src="/assets/images/logo.png" alt="" width="46" height="46"><span><strong>Heartenza.</strong><small>People · Place · Peace of Mind</small></span></a><p>For a happier, easier tomorrow.<br>Your people in Wayanad.</p><div class="social-links"><a class="social-facebook" href="https://www.facebook.com/people/Heartenza-Services/61580805522497/" aria-label="Heartenza on Facebook" target="_blank" rel="noopener noreferrer"><svg class="icon " aria-hidden="true"><use href="/assets/icons/home-icons.svg#facebook"></use></svg></a><a class="social-instagram" href="https://www.instagram.com/heart_enzaservices/" aria-label="Heartenza on Instagram" target="_blank" rel="noopener noreferrer"><svg class="icon " aria-hidden="true"><use href="/assets/icons/home-icons.svg#instagram"></use></svg></a></div></div><div><h3>Explore</h3><a href="./services.html">Our services</a><a href="./tours.html">Travel &amp; tours</a><a href="./about.html">Our story</a><a href="#how-it-works">How it works</a><a href="./contact.html">Get in touch</a></div><div><h3>Here to help</h3><a href="./elderly-companion-services.html">Family &amp; companion support</a><a href="./house-maintenance.html">Home maintenance</a><a href="./driver-services.html">Driver services</a><a href="./medical-assistance.html">Medical assistance</a><a href="./services.html">All services <svg class="icon " aria-hidden="true"><use href="/assets/icons/home-icons.svg#arrow-up"></use></svg></a></div><div class="footer-contact"><h3>Let’s talk</h3><a href="tel:+918111844058"><svg class="icon " aria-hidden="true"><use href="/assets/icons/home-icons.svg#phone"></use></svg> +91 81118 44058</a><a href="mailto:heartenzaservices@gmail.com"><svg class="icon " aria-hidden="true"><use href="/assets/icons/home-icons.svg#mail"></use></svg> heartenzaservices@gmail.com</a><p><svg class="icon " aria-hidden="true"><use href="/assets/icons/home-icons.svg#pin"></use></svg> <span>Building No 407/B, Kammana P.O.<br>Mananthavady, Wayanad, Kerala</span></p></div></div>
+    <div class="wrap footer-bottom"><span>© 2026 Heartenza Services. All rights reserved.</span><span>Local people. Real support.</span><a href="#top">Back to top <svg class="icon " aria-hidden="true"><use href="/assets/icons/home-icons.svg#arrow-up"></use></svg></a></div>
+    <div class="footer-wordmark" aria-hidden="true">Heartenza<span>↗</span></div>
+  </footer>
+  <a class="floating-chat" href="https://wa.me/918111844058" target="_blank" rel="noopener noreferrer" aria-label="Chat with Heartenza on WhatsApp"><svg class="icon " aria-hidden="true"><use href="/assets/icons/home-icons.svg#whatsapp"></use></svg><span>Let’s talk</span></a>
 </body>
-
 </html>
