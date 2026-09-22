@@ -1,6 +1,6 @@
 /* Services directory — extends the approved homepage identity. */
 .services-redesign { --directory-surface: #ffffff; }
-.services-intro { padding-block: 26px 66px; }
+.services-intro { padding-block: 26px 118px; }
 .breadcrumbs { display: flex; gap: 11px; align-items: center; color: var(--muted); font-size: .7rem; }
 .breadcrumbs a { text-decoration: underline; text-underline-offset: 3px; }
 .breadcrumbs > span:last-child { color: var(--ink); }
@@ -14,9 +14,9 @@
 .intro-thread, .intro-art-label { display: none; }
 .intro-photo { position: absolute; aspect-ratio: 1; overflow: hidden; box-shadow: 0 15px 32px #0426301a; }
 .intro-photo-care { z-index: 1; top: 3px; left: 0; width: 49%; border-radius: 48% 48% 12px 12px; }
-.intro-photo-home { z-index: 2; right: 2%; top: 13px; width: 40%; border-radius: 15px; transform: rotate(4deg); border: 7px solid var(--paper); }
-.intro-photo-travel { z-index: 2; right: 18%; bottom: 0; width: 37%; border: 7px solid var(--paper); border-radius: 15px; transform: rotate(-5deg); }
-.intro-note { position: absolute; z-index: 3; left: 4%; bottom: 46px; display: flex; align-items: center; gap: 13px; padding: 15px 21px; border-radius: 7px; background: var(--lavender); box-shadow: 0 10px 24px #04263014; font-size: .74rem; line-height: 1.35; transform: rotate(-4deg); }
+.intro-photo-home { z-index: 2; right: 0; top: 13px; width: 40%; border-radius: 15px; transform: rotate(4deg); border: 7px solid var(--paper); }
+.intro-photo-travel { z-index: 2; right: 0; bottom: 0; width: 37%; border: 7px solid var(--paper); border-radius: 15px; transform: rotate(-5deg); }
+.intro-note { position: absolute; z-index: 3; left: 0; bottom: 9px; display: flex; align-items: center; gap: 13px; padding: 15px 21px; border-radius: 7px; background: var(--lavender); box-shadow: 0 10px 24px #04263014; font-size: .74rem; line-height: 1.35; transform: rotate(-4deg); }
 .intro-note > .icon { width: 30px; height: 30px; }
 .intro-note em { font-size: 2rem; }
 .intro-art-label { position: absolute; right: -13px; bottom: 29px; writing-mode: vertical-rl; align-items: center; gap: 7px; font-size: .6rem; letter-spacing: .03em; }
@@ -97,7 +97,7 @@
   .services-intro-art { width: min(100%, 400px); height: 325px; }
   .intro-note { padding: 15px 20px; }
   .intro-note em { font-size: 1.75rem; }
-  .intro-photo-travel { right: 16%; bottom: 0; }
+  .intro-photo-travel { right: 0; bottom: 0; }
   .directory-service { gap: 18px; padding: 18px; grid-template-columns: 125px minmax(0, 1fr); }
   .directory-copy h3 { font-size: 1.1rem; }
   .directory-actions { gap: 4px 8px; }
@@ -105,7 +105,7 @@
   .directory-local-grid { gap: 8%; }
 }
 @media (max-width: 900px) {
-  .services-intro { padding-bottom: 50px; }
+  .services-intro { padding-bottom: 70px; }
   .services-intro-grid { gap: 6%; grid-template-columns: 1.2fr .85fr; margin-top: 34px; }
   .services-intro-copy h1 { font-size: 3.45rem; }
   .services-intro-copy .eyebrow { font-size: .62rem; }
@@ -113,8 +113,8 @@
   .services-intro-art { width: 100%; height: 300px; }
   .intro-photo-care { width: 54%; left: 0; }
   .intro-photo-home { top: 9px; width: 43%; right: 0; }
-  .intro-photo-travel { display: block; right: 16%; width: 38%; }
-  .intro-note { left: 0; bottom: 28px; padding: 12px 15px; gap: 8px; }
+  .intro-photo-travel { display: block; right: 0; width: 38%; }
+  .intro-note { left: 0; bottom: 7px; padding: 12px 15px; gap: 8px; }
   .directory-heading { display: block; }
   .directory-search { width: 100%; max-width: 600px; margin-top: 28px; }
   .directory-service { grid-template-columns: 100px minmax(0, 1fr); gap: 14px; }
@@ -144,8 +144,8 @@
   .services-intro-art { width: 100%; max-width: 380px; height: 245px; justify-self: center; }
   .intro-photo-care { width: 47%; left: 0; }
   .intro-photo-home { width: 39%; top: 6px; right: 1%; }
-  .intro-photo-travel { display: block; width: 35%; bottom: 0; right: 17%; }
-  .intro-note { left: 2%; bottom: 29px; padding: 12px 16px; }
+  .intro-photo-travel { display: block; width: 35%; bottom: 0; right: 0; }
+  .intro-note { left: 0; bottom: 5px; padding: 12px 16px; }
   .intro-note em { font-size: 1.85rem; }
   .intro-art-label { display: none; }
   .directory-section { padding-top: 42px; }
