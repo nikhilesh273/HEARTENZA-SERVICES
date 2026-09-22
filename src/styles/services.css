@@ -12,7 +12,8 @@
 .services-intro-art { position: relative; width: min(100%, 460px); height: 370px; justify-self: end; }
 /* A compact collage gives every image a clear place instead of leaving an empty route line. */
 .intro-thread, .intro-art-label { display: none; }
-.intro-photo { position: absolute; aspect-ratio: 1; overflow: hidden; box-shadow: 0 15px 32px #0426301a; }
+/* More specific than the shared .service-photo component: production must keep this collage absolute. */
+.services-intro-art .intro-photo { position: absolute; aspect-ratio: 1; overflow: hidden; box-shadow: 0 15px 32px #0426301a; }
 .intro-photo-care { z-index: 1; top: 3px; left: 0; width: 49%; border-radius: 48% 48% 12px 12px; }
 .intro-photo-home { z-index: 2; right: 0; top: 13px; width: 40%; border-radius: 15px; transform: rotate(4deg); border: 7px solid var(--paper); }
 .intro-photo-travel { z-index: 2; right: 0; bottom: 0; width: 37%; border: 7px solid var(--paper); border-radius: 15px; transform: rotate(-5deg); }
