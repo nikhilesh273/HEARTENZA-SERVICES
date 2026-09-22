@@ -9,16 +9,17 @@
 .services-intro-copy h1 em { color: var(--accent); letter-spacing: -.025em; white-space: nowrap; }
 .services-intro-copy > p:not(.eyebrow) { max-width: 470px; margin-top: 24px; font-size: .96rem; line-height: 1.85; color: var(--muted); }
 .services-intro-copy > .text-link { margin-top: 25px; }
-.services-intro-art { position: relative; width: min(100%, 480px); height: 345px; justify-self: end; }
-.intro-thread { position: absolute; width: 100%; height: 100%; }
-.intro-photo { position: absolute; aspect-ratio: 1; box-shadow: 0 10px 25px #0426300a; }
-.intro-photo-care { top: 0; left: 5%; width: 43%; border-radius: 48% 48% 10px 10px; }
-.intro-photo-home { right: 0; top: 27px; width: 35%; border-radius: 13px; transform: rotate(5deg); border: 7px solid var(--paper); }
-.intro-photo-travel { right: 18%; bottom: 3px; width: 30%; border: 7px solid var(--paper); border-radius: 15px; transform: rotate(-6deg); }
-.intro-note { position: absolute; left: 0; bottom: 26px; display: flex; align-items: center; gap: 13px; padding: 17px 25px; border-radius: 4px; background: var(--lavender); font-size: .74rem; line-height: 1.35; transform: rotate(-5deg); }
+.services-intro-art { position: relative; width: min(100%, 460px); height: 370px; justify-self: end; }
+/* A compact collage gives every image a clear place instead of leaving an empty route line. */
+.intro-thread, .intro-art-label { display: none; }
+.intro-photo { position: absolute; aspect-ratio: 1; overflow: hidden; box-shadow: 0 15px 32px #0426301a; }
+.intro-photo-care { z-index: 1; top: 3px; left: 0; width: 49%; border-radius: 48% 48% 12px 12px; }
+.intro-photo-home { z-index: 2; right: 2%; top: 13px; width: 40%; border-radius: 15px; transform: rotate(4deg); border: 7px solid var(--paper); }
+.intro-photo-travel { z-index: 2; right: 18%; bottom: 0; width: 37%; border: 7px solid var(--paper); border-radius: 15px; transform: rotate(-5deg); }
+.intro-note { position: absolute; z-index: 3; left: 4%; bottom: 46px; display: flex; align-items: center; gap: 13px; padding: 15px 21px; border-radius: 7px; background: var(--lavender); box-shadow: 0 10px 24px #04263014; font-size: .74rem; line-height: 1.35; transform: rotate(-4deg); }
 .intro-note > .icon { width: 30px; height: 30px; }
 .intro-note em { font-size: 2rem; }
-.intro-art-label { position: absolute; right: -13px; bottom: 29px; writing-mode: vertical-rl; display: flex; align-items: center; gap: 7px; font-size: .6rem; letter-spacing: .03em; }
+.intro-art-label { position: absolute; right: -13px; bottom: 29px; writing-mode: vertical-rl; align-items: center; gap: 7px; font-size: .6rem; letter-spacing: .03em; }
 .intro-art-label .icon { width: 14px; height: 14px; }
 .services-intro-copy { animation: hero-enter .7s both; }
 .services-intro-art { animation: hero-enter .8s .1s both; }
@@ -93,10 +94,10 @@
 .services-redesign .contact-band h2 { max-width: 720px; font-size: clamp(2.5rem, 3.9vw, 3.8rem); }
 
 @media (max-width: 1100px) {
-  .services-intro-art { height: 300px; }
+  .services-intro-art { width: min(100%, 400px); height: 325px; }
   .intro-note { padding: 15px 20px; }
   .intro-note em { font-size: 1.75rem; }
-  .intro-photo-travel { right: 12%; bottom: 5px; }
+  .intro-photo-travel { right: 16%; bottom: 0; }
   .directory-service { gap: 18px; padding: 18px; grid-template-columns: 125px minmax(0, 1fr); }
   .directory-copy h3 { font-size: 1.1rem; }
   .directory-actions { gap: 4px 8px; }
@@ -109,12 +110,11 @@
   .services-intro-copy h1 { font-size: 3.45rem; }
   .services-intro-copy .eyebrow { font-size: .62rem; }
   .services-intro-copy > p:not(.eyebrow) { font-size: .88rem; }
-  .services-intro-art { height: 310px; }
-  .intro-photo-care { width: 65%; left: 0; }
-  .intro-photo-home { top: 108px; width: 54%; }
-  .intro-photo-travel { display: none; }
-  .intro-note { left: -8px; bottom: 10px; padding: 14px 18px; gap: 8px; }
-  .intro-art-label { display: none; }
+  .services-intro-art { width: 100%; height: 300px; }
+  .intro-photo-care { width: 54%; left: 0; }
+  .intro-photo-home { top: 9px; width: 43%; right: 0; }
+  .intro-photo-travel { display: block; right: 16%; width: 38%; }
+  .intro-note { left: 0; bottom: 28px; padding: 12px 15px; gap: 8px; }
   .directory-heading { display: block; }
   .directory-search { width: 100%; max-width: 600px; margin-top: 28px; }
   .directory-service { grid-template-columns: 100px minmax(0, 1fr); gap: 14px; }
@@ -142,10 +142,10 @@
   .services-intro-copy h1 { font-size: clamp(3rem, 10.2vw, 4rem); }
   .services-intro-copy > p:not(.eyebrow) { font-size: .91rem; margin-top: 20px; }
   .services-intro-art { width: 100%; max-width: 380px; height: 245px; justify-self: center; }
-  .intro-photo-care { width: 40%; left: 5%; }
-  .intro-photo-home { width: 35%; top: 8px; right: 4%; }
-  .intro-photo-travel { display: block; width: 31%; bottom: 0; right: 17%; }
-  .intro-note { left: 2%; bottom: 4px; padding: 14px 19px; }
+  .intro-photo-care { width: 47%; left: 0; }
+  .intro-photo-home { width: 39%; top: 6px; right: 1%; }
+  .intro-photo-travel { display: block; width: 35%; bottom: 0; right: 17%; }
+  .intro-note { left: 2%; bottom: 29px; padding: 12px 16px; }
   .intro-note em { font-size: 1.85rem; }
   .intro-art-label { display: none; }
   .directory-section { padding-top: 42px; }
