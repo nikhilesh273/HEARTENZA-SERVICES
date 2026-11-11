@@ -1,0 +1,12 @@
+/* A watchful, security-focused variation of the shared service-detail layout. */
+.cctv-page .service-hero-art figure { inset: 0 3% 0 2%; border-radius: 2rem 2rem 46% 46% / 2rem 2rem 34% 34%; background: #b9c6c9; }
+.cctv-page .service-hero-art img { object-position: 55% center; }
+.cctv-page .art-disc { top: -1.2rem; right: -1.3rem; background: #86b9b0; box-shadow: -10rem 30rem 0 -4rem #d0d6d6; }
+.cctv-page .route-card { background: rgba(4, 20, 33, .94); }
+.cctv-page .use-cases { background: #dfe8ea; }
+.cctv-page .use-case-grid article > .icon { color: #365a5b; }
+.cctv-page .guide-card { background: #041421; }
+.cctv-page .coverage-section { background: #041421; }
+.cctv-page .coverage-pin .icon { background: #86b9b0; color: #041421; }
+.cctv-page .contact-band { background: #365a5b; }
+@media (max-width: 700px) { .cctv-page .service-hero-art figure { inset: 0; border-radius: 1.5rem 1.5rem 45% 45% / 1.5rem 1.5rem 28% 28%; } .cctv-page .service-hero-art img { object-position: 58% center; } }

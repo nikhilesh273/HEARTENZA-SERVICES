@@ -63,6 +63,8 @@ const serviceLabels = {
   'elderly-companion-services': 'Elderly companion services',
   'medical-assistance': 'Medical assistance',
   'gifts-special-occasions': 'Gifts & special occasions',
+  'cctv-installation': 'CCTV installation & service',
+  'website-design-development': 'Website design & development',
   other: 'Other or not sure'
 };
 const serviceAliases = {
@@ -74,6 +76,8 @@ const serviceAliases = {
   'elderly-companion': 'elderly-companion-services', 'elderly-companion-services': 'elderly-companion-services',
   medical: 'medical-assistance', 'medical-assistance': 'medical-assistance',
   gifts: 'gifts-special-occasions', 'gifts-occasions': 'gifts-special-occasions', 'gifts-special-occasions': 'gifts-special-occasions',
+  cctv: 'cctv-installation', 'cctv-installation': 'cctv-installation', 'cctv-implementation': 'cctv-installation', 'cctv-service': 'cctv-installation',
+  website: 'website-design-development', web: 'website-design-development', 'website-design': 'website-design-development', 'website-development': 'website-design-development', 'website-design-development': 'website-design-development',
   general: 'other', other: 'other'
 };
 

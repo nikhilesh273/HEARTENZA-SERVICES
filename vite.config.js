@@ -18,6 +18,8 @@ export default defineConfig({
         'delivery-errands': resolve(__dirname, 'delivery-errands.html'),
         'elderly-companion-services': resolve(__dirname, 'elderly-companion-services.html'),
         'gifts-special-occasions': resolve(__dirname, 'gifts-special-occasions.html'),
+        'cctv-installation': resolve(__dirname, 'cctv-installation.html'),
+        'website-design-development': resolve(__dirname, 'website-design-development.html'),
         testimonials: resolve(__dirname, 'testimonials.html'),
         tours: resolve(__dirname, 'tours.html'),
         'tour-details': resolve(__dirname, 'tour-details.html')

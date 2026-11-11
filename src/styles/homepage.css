@@ -144,6 +144,9 @@ h3 { font-size: 1.1rem; line-height: 1.4; letter-spacing: -.025em; }
 .photo-companion::before { background-position: 33.333% 0%; }
 .photo-medical::before { background-position: 66.666% 0%; }
 .photo-gifts::before { background-position: 100% 100%; }
+/* Placeholder tiles: repoint when dedicated CCTV and website artwork is available. */
+.photo-cctv::before { background-position: 100% 0%; }
+.photo-web::before { background-position: 66.666% 100%; }
 .service-photo-icon { position: absolute; left: 12px; bottom: 12px; display: grid; place-items: center; width: 37px; height: 37px; border-radius: 50%; background: var(--paper); }
 .service-photo-icon .icon { width: 20px; height: 20px; }
 .service-number { position: absolute; top: 10px; right: 10px; background: #ffffffeb; font-size: .6rem; border-radius: 20px; padding: 2px 8px; }
