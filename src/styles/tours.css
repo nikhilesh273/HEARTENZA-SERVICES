@@ -196,3 +196,18 @@
 @media (prefers-reduced-motion: reduce) {
   .tour-sun::before { animation: none; }
 }
+
+.tour-terms-note {
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: .82rem;
+  line-height: 1.7;
+}
+
+.tour-terms-note a {
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+

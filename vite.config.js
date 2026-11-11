@@ -21,6 +21,8 @@ export default defineConfig({
         'cctv-installation': resolve(__dirname, 'cctv-installation.html'),
         'website-design-development': resolve(__dirname, 'website-design-development.html'),
         testimonials: resolve(__dirname, 'testimonials.html'),
+        'privacy-policy': resolve(__dirname, 'privacy-policy.html'),
+        'terms-and-conditions': resolve(__dirname, 'terms-and-conditions.html'),
         tours: resolve(__dirname, 'tours.html'),
         'tour-details': resolve(__dirname, 'tour-details.html')
       }
